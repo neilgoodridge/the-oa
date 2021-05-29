@@ -19,13 +19,13 @@ user1 = User.create!(
   email: "malcolm@gmail.com",
   name: "Malcolm",
   password: "123456",
-  password_confirmation: "123456"
+  password_confirmation: "123456",
   points: '0'
 )
 
 
 cause1 = Cause.create!(
-  name: ' #blacklivesmatter'
+  name: '#blacklivesmatter'
 )
 
 cause2 = Cause.create!(
@@ -61,32 +61,32 @@ cause9 = Cause.create!(
 )
 
 task1 = Task.create!(
-  name: 'Sign this petition'
-  points: '10'
-  content: 'Make a difference by signing the petition on Change.org. '
-  cause_id: cause1
+  name: 'Sign this petition',
+  points: '10',
+  content: 'Make a difference by signing the petition on Change.org.',
+  cause_id: cause1.id,
   time: '10'
   )
 
 
 task2 = Task.create!(
-  name: 'Email the representative at blm.com'
-  points: '20'
-  content: 'This service will assist you by matching your ZIP code to your congressional district, with links to your members website and contact page.  '
-  cause_id: cause1
+  name: 'Email the representative at blm.com',
+  points: '20',
+  content: 'This service will assist you by matching your ZIP code to your congressional district, with links to your members website and contact page.',
+  cause_id: cause1.id,
   time: '20'
   )
 
 action1 = Action.create!(
-  completed: false
-  user_id: user1
-  task_id: task1
+  completed: false,
+  user_id: user1.id,
+  task_id: task1.id,
   )
 
 action2 = Action.create!(
-  completed: true
-  user_id: user1
-  task_id: task2
+  completed: true,
+  user_id: user1.id,
+  task_id: task2.id,
   )
 
 puts 'Seed: Finished seeding!'
