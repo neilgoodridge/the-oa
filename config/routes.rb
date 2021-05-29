@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     end
 
     resources :causes, only: [ :index, :show ] do
+      resources :tasks, only:  [ :index, :create ] do
+    end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users, only:  [:show, :create, :new ] do
