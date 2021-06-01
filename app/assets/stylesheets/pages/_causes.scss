@@ -1,0 +1,77 @@
+// Specific CSS for your home-page
+.container {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+}
+.cause-cards {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: space-between;
+  text-align: center;
+}
+.cause-card {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  height: 17vh;
+  border-radius: 8px;
+  position: relative;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.cause-card-i {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  border-radius: 8px;
+  font-size: italic;
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background-color: #d1dfd4;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.submit-card {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  text-align: center;
+}
+.time-container {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+}
+.time-card{
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.time-cards {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: space-between;
+  text-align: center;
+}
+.welcome {
+  border: #d1dfd4 4px solid;
+  margin: 8px;
+  height: 100%;
+}
+.choose {
+  border: #d1dfd4 4px solid;
+  margin: 8px;
+  width: 100%;
+}
+h2 {
+  text-align: center;
+}
