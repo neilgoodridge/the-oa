@@ -4,7 +4,6 @@
   padding: 4px;
   margin-bottom: 8px;
 }
-
 .container-home-left {
   border: #d1dfd4 4px solid;
   padding: 4px;
@@ -38,14 +37,16 @@
   border: #d1dfd4 4px solid;
   padding: 4px;
   margin: 8px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .carousel {
   border: #d1dfd4 4px solid;
   text-align: center;
   margin: 8px;
-  height: 76vh;
+  height: 40vh;
+  position: relative;
 }
 
 .title {
@@ -56,7 +57,7 @@
 
 .welcome {
   display: flex;
-  height: 87vh;
+  height: 93vh;
 }
 
 .buttons {
@@ -64,8 +65,8 @@
   height: 250px;
   position: absolute;
   bottom: 16px;
-  left: 16px;
-  right: 16px;
+  left: 12px;
+  right: 12px;
 }
 
 .button-ta {
