@@ -1,0 +1,63 @@
+.container {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  width: auto;
+}
+.welcome {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+}
+.title h2 {
+  text-align: center;
+  padding: 4px;
+  margin: 8px;
+}
+.cause-carousel {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  height: 25vh;
+  background-color: white;
+}
+.cause-show-card {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  height: 50vh;
+  flex: 2;
+  background-color: white;
+}
+.cause-show-cards {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  display: flex;
+}
+
+.carousel-container h6 {
+  text-align: center;
+  margin-right: 8px;
+}
+.more-info {
+  border: #d1dfd4 4px solid;
+  margin: auto;
+  width: 30%;
+}
+.more-info-show {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  height: 100vh;
+  background-color: white;
+}
+.progess-bar {
+  border: #d1dfd4 4px solid;
+  padding: 8px;
+  margin: auto;
+  height: 20px;
+  width: 50%;
+  border-radius: 10px;
+  background-color: white;
+}
