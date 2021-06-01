@@ -1,1 +1,98 @@
 // Specific CSS for your home-page
+.container {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin-bottom: 4px;
+}
+
+.container-home-left {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  flex: 3;
+  position: relative;
+}
+
+.container-home-right {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  flex: 2;
+  text-align: center;
+}
+
+.container-title {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: space-between;
+  text-align: center;
+}
+
+.card {
+  border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+}
+
+.carousel {
+  border: #d1dfd4 4px solid;
+  text-align: center;
+  margin: 8px;
+  height: 76vh;
+}
+
+.title {
+  border: #d1dfd4 4px solid;
+  text-align: center;
+  margin: 8px;
+}
+
+.welcome {
+  display: flex;
+  height: 87vh;
+}
+
+.buttons {
+  border: #d1dfd4 4px solid;
+  height: 250px;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+}
+
+.button-ta {
+  background: #d1dfd4;
+  border:  1px solid #cccccc;
+  border-radius: 12px;
+  box-shadow:  3px 3px #cccccc;
+  padding:  32px 68px;
+  color:  #ffffff;
+  display:  inline-block;
+  font:  normal normal 30px/1 "Open Sans", sans-serif;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 100px;
+  right: 100px;
+}
+.button-li {
+  background: #d1dfd4;
+  border:  1px solid #cccccc;
+  border-radius: 12px;
+  box-shadow:  3px 3px #cccccc;
+  padding:  16px 32px;
+  color:  #ffffff;
+  display:  inline-block;
+  font:  normal normal 30px/1 "Open Sans", sans-serif;
+  text-align: center;
+  position: absolute;
+  bottom: 16px;
+  left: 150px;
+  right: 150px;}
