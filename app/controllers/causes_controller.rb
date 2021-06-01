@@ -6,6 +6,11 @@ class CausesController < ApplicationController
     end
 
     def show
-        @causes = Cause.find(params[:id])
+        @cause = Cause.find(params[:id])
+    end
+
+    def cause_task_show
+        @cause = Cause.find(params[:id])
+        @tasks = @cause.tasks
     end
 end
