@@ -4,7 +4,7 @@
     <div class="cause-container">
       <h2>Choose a cause you care about</h2>
       <div class="cause-cards">
-        <div class="cause-card">
+        <div class="cause-card" id="border">
           <h3>CAUSE #</h3>
           <div class="cause-card-i">
             <h5>&nbsp;&nbsp;&nbsp;i&nbsp;&nbsp;&nbsp;</h5>
@@ -77,12 +77,11 @@
         </div>
       </div>
     </div>
-  <div class="submit-container">
-    <div class="submit-card">
-      <button>Take Action</button>
-      <%= link_to "continue",cause_task_path(1) %>
+    <div class="submit-container">
+      <div class="submit-card">
+        <button><%= link_to "Take Action",cause_task_path(1) %></button>
+      </div>
     </div>
-  </div>
   </div>
 </div>
 
