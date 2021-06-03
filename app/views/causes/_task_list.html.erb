@@ -1,11 +1,14 @@
 <h6>Click on the links below then mark <br />the task as complete once you're done!</h6>
 <ul>
   <%= form_for(@user) do |f| %>
-    <%= f.collection_check_boxes(:task_ids, @tasks.all, :id, :name) do |task| %>
+      <% @tasks.each do |task| %>
       <li>
-        <%= task.check_box %>
-        <%= task.label %>
+         <input type="checkbox" value="<%= task.id %>" name="user[task_ids][]" id="user_task_ids_<%= task.id %>">
+        <label for="user_task_ids_<%= task.id %>"><%= link_to task.name, task.url %></label>
       </li>
     <% end %>
   <% end %>
 </ul>
+
+
+
