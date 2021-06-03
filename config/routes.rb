@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     end
     # get 'cause_task_show', to: 'causes#cause_task_show'
     get '/causes/:id/tasks', to: 'causes#cause_task_show', as: 'cause_task'
+    get 'causes/tasks/time', to: 'causes#time', as: 'task_time'
     resources :causes, only: [ :index, :show ] do
       resources :tasks, only:  [ :index, :create ] do
     end

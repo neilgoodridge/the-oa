@@ -14,6 +14,9 @@ class TasksController < ApplicationController
   #   @tasks = Task.all
   # end
 
+  def time
+  end 
+
   private
 
   def task_param
