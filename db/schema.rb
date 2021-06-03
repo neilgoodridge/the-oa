@@ -60,8 +60,8 @@ ActiveRecord::Schema.define(version: 2021_06_03_185714) do
     t.bigint "cause_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "time"
     t.text "url"
+    t.integer "time"
     t.index ["cause_id"], name: "index_tasks_on_cause_id"
   end
 
