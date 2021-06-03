@@ -26,11 +26,23 @@ user1 = User.create!(
 
 cause1 = Cause.create!(
   name: '#blacklivesmatter'
+  description: "Black Lives Matter (BLM) is a decentralized political and social movement protesting against incidents of police brutality and all racially motivated violence against black people."
 )
+require "open-uri"
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1622721860/uskmmztdbfks9zb5wcbw.png')
+cause1.photo.attach(io: file, filename: 'uskmmztdbfks9zb5wcbw.png', content_type: 'image/png')
+cause1.save!
+
 
 cause2 = Cause.create!(
   name: '#equalpay'
+  description: "Equal pay for equal work is the concept of labour rights that individuals in the same workplace be given equal pay. It is most commonly used in the context of sexual discrimination, in relation to the gender pay gap."
 )
+require "open-uri"
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1622733504/efiqtjt5gdohb2i0ffs8.png')
+cause2.photo.attach(io: file, filename: 'efiqtjt5gdohb2i0ffs8.png', content_type: 'image/png')
+cause2.save!
+
 
 cause3 = Cause.create!(
   name: '#seaspiracy'

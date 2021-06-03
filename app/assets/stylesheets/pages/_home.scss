@@ -4,7 +4,6 @@
   padding: 4px;
   margin-bottom: 8px;
 }
-
 .container-home-left {
   border: #d1dfd4 4px solid;
   padding: 4px;
@@ -38,14 +37,16 @@
   border: #d1dfd4 4px solid;
   padding: 4px;
   margin: 8px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .carousel {
   border: #d1dfd4 4px solid;
   text-align: center;
   margin: 8px;
-  height: 76vh;
+  height: 40vh;
+  position: relative;
 }
 
 .title {
@@ -56,7 +57,7 @@
 
 .welcome {
   display: flex;
-  height: 87vh;
+  height: 93vh;
 }
 
 .buttons {
@@ -64,11 +65,11 @@
   height: 250px;
   position: absolute;
   bottom: 16px;
-  left: 16px;
-  right: 16px;
+  left: 12px;
+  right: 12px;
 }
 
-.button-ta {
+.button-ta a {
   background: #d1dfd4;
   border:  1px solid #cccccc;
   border-radius: 12px;
@@ -83,7 +84,7 @@
   left: 100px;
   right: 100px;
 }
-.button-li {
+.button-li a {
   background: #d1dfd4;
   border:  1px solid #cccccc;
   border-radius: 12px;
@@ -97,3 +98,28 @@
   bottom: 16px;
   left: 150px;
   right: 150px;}
+button {
+  background: #d1dfd4;
+  border:  1px solid #cccccc;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding:  16px 32px;
+  display:  inline-block;
+  font:  normal normal 30px/1 "Open Sans", sans-serif;
+  text-align: center;
+  a {color: white}
+}
+button:hover {
+  transform: scale(1.05);
+  transition: .2s ease-in-out;
+  a {
+  color: darkgrey;
+  text-decoration: none;
+  transition: .2s ease-in-out;
+  }
+}
+#border:hover
+{
+  box-shadow: inset 0 0 0 20px #d1dfd4;
+  transition: .2s ease-in-out;
+}
