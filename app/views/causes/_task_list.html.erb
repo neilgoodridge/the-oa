@@ -1,0 +1,7 @@
+ <h2>What you can do to help in X minutes</h2>
+  <h6>Try to complete as many tasks as you can! Click on the links below then mark <br>the task as complete once you’re done!</h6>
+   <ul>
+      <% @cause.tasks.each do |task| %>
+      <li>Task: <%= task.name%> Time: <%= task.time %>  Points: <%= task.points %> </li>
+    <% end %>
+   </ul>
