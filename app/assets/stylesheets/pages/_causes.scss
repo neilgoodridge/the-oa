@@ -3,6 +3,16 @@
   border: #d1dfd4 4px solid;
   padding: 4px;
 }
+.welcome {
+  border: #d1dfd4 4px solid;
+  margin: 8px;
+  height: 100%;
+}
+.choose {
+  border: #d1dfd4 4px solid;
+  margin: 8px;
+  width: 100%;
+}
 .cause-cards {
   border: #d1dfd4 4px solid;
   padding: 4px;
@@ -17,6 +27,9 @@
   padding: 4px;
   margin: 8px;
   height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
   position: relative;
   background-color: white;
@@ -63,16 +76,11 @@
   grid-gap: space-between;
   text-align: center;
 }
-.welcome {
-  border: #d1dfd4 4px solid;
-  margin: 8px;
-  height: 100%;
-}
-.choose {
-  border: #d1dfd4 4px solid;
-  margin: 8px;
-  width: 100%;
-}
 h2 {
   text-align: center;
+}
+h3 {
+  color: black;
+  text-align: center;
+  vertical-align: middle;
 }

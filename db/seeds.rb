@@ -68,10 +68,6 @@ cause8 = Cause.create!(
   name: '#fairpay'
 )
 
-cause9 = Cause.create!(
-  name: '#'
-)
-
 task1 = Task.create!(
   name: 'Sign this petition',
   points: '10',
