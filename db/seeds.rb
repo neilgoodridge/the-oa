@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Seed: Deleting existing records...'
 
-Task.destroy_all
 Action.destroy_all
+Task.destroy_all
 Cause.destroy_all
 User.destroy_all
 
