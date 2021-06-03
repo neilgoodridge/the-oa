@@ -7,12 +7,8 @@
     <!-- <p>|<strong>noun</strong>|</p> -->
     <p>a person who believes in political or social change and takes part in activities online to try to make this happen.</p>
     <div class="buttons">
-      <div class="button-ta">
-        <button>Take Action</button>
-      </div>
-      <div class="button-li">
-        <button>Log In</button>
-      </div>
+      <div class="button-ta"> <%= link_to "Take Action", causes_path  %></div>
+      <div class="button-li"><%= link_to "Login", new_user_session_path  %></div>
     </div>
   </div>
   <div class="container-home-right">
