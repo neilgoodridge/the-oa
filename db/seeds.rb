@@ -73,7 +73,7 @@ task1 = Task.create!(
   points: '10',
   content: 'Make a difference by signing the petition on Change.org.',
   cause_id: cause1.id,
-  time: '10',
+  time: 10,
   url: 'blank for now'
   )
 
@@ -83,7 +83,7 @@ task2 = Task.create!(
   points: '20',
   content: 'This service will assist you by matching your ZIP code to your congressional district, with links to your members website and contact page.',
   cause_id: cause1.id,
-  time: '20',
+  time: 20,
   url: 'blank for now'
   )
 
