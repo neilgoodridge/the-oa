@@ -4,7 +4,7 @@
       <% @tasks.each do |task| %>
       <li>
          <input type="checkbox" value="<%= task.id %>" name="user[task_ids][]" id="user_task_ids_<%= task.id %>">
-        <label for="user_task_ids_<%= task.id %>"><%= link_to task.name, task.url %></label>
+        <label for="user_task_ids_<%= task.id %>"><a href="<%=task.url%>" target="_blank"><%=task.name%></a></label>
       </li>
     <% end %>
   <% end %>
