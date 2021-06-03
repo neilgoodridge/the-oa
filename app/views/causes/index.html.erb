@@ -4,58 +4,18 @@
     <div class="cause-container">
       <h2>Choose a cause you care about</h2>
       <div class="cause-cards">
-        <div class="cause-card" id="border">
-          <h3>CAUSE #</h3>
-          <div class="cause-card-i">
-            <h5>&nbsp;&nbsp;&nbsp;i&nbsp;&nbsp;&nbsp;</h5>
-          </div>
-        </div>
+        <% @causes.each do |cause|%>
         <div class="cause-card">
-          <h3>CAUSE #</h3>
+          <h3><%= cause.name %></h3>
           <div class="cause-card-i">
             <h5>&nbsp;&nbsp;&nbsp;i&nbsp;&nbsp;&nbsp;</h5>
           </div>
         </div>
-        <div class="cause-card">
-          <h3>CAUSE #</h3>
-          <div class="cause-card-i">
-            <h5>&nbsp;&nbsp;&nbsp;i&nbsp;&nbsp;&nbsp;</h5>
-          </div>
-        </div>
-        <div class="cause-card">
-          <h3>CAUSE #</h3>
-          <div class="cause-card-i">
-            <h5>&nbsp;&nbsp;&nbsp;i&nbsp;&nbsp;&nbsp;</h5>
-          </div>
-        </div>
-        <div class="cause-card">
-          <h3>CAUSE #</h3>
-          <div class="cause-card-i">
-            <h5>&nbsp;&nbsp;&nbsp;i&nbsp;&nbsp;&nbsp;</h5>
-          </div>
-        </div>
-        <div class="cause-card">
-          <h3>CAUSE #</h3>
-          <div class="cause-card-i">
-            <h5>&nbsp;&nbsp;&nbsp;i&nbsp;&nbsp;&nbsp;</h5>
-          </div>
-        </div>
-        <div class="cause-card">
-          <h3>CAUSE #</h3>
-          <div class="cause-card-i">
-            <h5>&nbsp;&nbsp;&nbsp;i&nbsp;&nbsp;&nbsp;</h5>
-          </div>
-        </div>
-        <div class="cause-card">
-          <h3>CAUSE #</h3>
-          <div class="cause-card-i">
-            <h5>&nbsp;&nbsp;&nbsp;i&nbsp;&nbsp;&nbsp;</h5>
-          </div>
-        </div>
+      <% end %>
       </div>
     </div>
     <div class="time-container">
-      <h2> How many minutes time can you spare to <strong>ignite the fight</strong> today?</h2>
+      <h2> How many minutes can you spare to <strong>ignite the fight</strong> today?</h2>
       <div class="time-cards">
         <div class="time-card">
           <h3>2</h3>
