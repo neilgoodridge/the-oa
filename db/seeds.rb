@@ -25,7 +25,7 @@ user1 = User.create!(
 
 
 cause1 = Cause.create!(
-  name: '#blacklivesmatter'
+  name: '#blacklivesmatter',
   description: "Black Lives Matter (BLM) is a decentralized political and social movement protesting against incidents of police brutality and all racially motivated violence against black people."
 )
 require "open-uri"
@@ -35,7 +35,7 @@ cause1.save!
 
 
 cause2 = Cause.create!(
-  name: '#equalpay'
+  name: '#equalpay',
   description: "Equal pay for equal work is the concept of labour rights that individuals in the same workplace be given equal pay. It is most commonly used in the context of sexual discrimination, in relation to the gender pay gap."
 )
 require "open-uri"
@@ -73,7 +73,8 @@ task1 = Task.create!(
   points: '10',
   content: 'Make a difference by signing the petition on Change.org.',
   cause_id: cause1.id,
-  time: '10'
+  time: 10,
+  url: 'blank for now'
   )
 
 
@@ -82,7 +83,8 @@ task2 = Task.create!(
   points: '20',
   content: 'This service will assist you by matching your ZIP code to your congressional district, with links to your members website and contact page.',
   cause_id: cause1.id,
-  time: '20'
+  time: 20,
+  url: 'blank for now'
   )
 
 action1 = Action.create!(
