@@ -27,6 +27,10 @@ user1 = User.create!(
 cause1 = Cause.create!(
   name: '#blacklivesmatter'
 )
+require "open-uri"
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1622721860/uskmmztdbfks9zb5wcbw.png')
+cause1.photo.attach(io: file, filename: 'uskmmztdbfks9zb5wcbw.png', content_type: 'image/png')
+cause1.save!
 
 cause2 = Cause.create!(
   name: '#equalpay'
