@@ -8,6 +8,7 @@ class TasksController < ApplicationController
       redirect_to_task_path(@task)
     else
       render "causes/show"
+    end
   end
 
   # def index
@@ -15,12 +16,11 @@ class TasksController < ApplicationController
   # end
 
   def time
-  end 
+  end
 
   private
 
   def task_param
-    params.require(:task).permit( :name, :content, :time)
+    params.require(:task).permit(:name, :content, :time)
   end
-
 end
