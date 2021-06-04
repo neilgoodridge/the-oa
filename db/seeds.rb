@@ -39,8 +39,8 @@ cause2 = Cause.create!(
   description: "Equal pay for equal work is the concept of labour rights that individuals in the same workplace be given equal pay. It is most commonly used in the context of sexual discrimination, in relation to the gender pay gap."
 )
 require "open-uri"
-file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1622733504/efiqtjt5gdohb2i0ffs8.png')
-cause2.photo.attach(io: file, filename: 'efiqtjt5gdohb2i0ffs8.png', content_type: 'image/png')
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1622769045/otmh3woj6lgyu2sds08k.png')
+cause2.photo.attach(io: file, filename: 'otmh3woj6lgyu2sds08k.png', content_type: 'image/png')
 cause2.save!
 
 
