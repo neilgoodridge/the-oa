@@ -35,6 +35,15 @@
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
+
+.cause-card:hover {
+  transform: scale(0.90);
+  cursor: pointer;
+  color: #FFF;
+  text-decoration: underline;     
+  text-decoration-color: black;
+}
+
 .cause-card-i {
   border: #d1dfd4 4px solid;
   padding: 4px;
@@ -76,6 +85,15 @@
   grid-gap: space-between;
   text-align: center;
 }
+
+.time-card:hover {
+  transform: scale(0.90);
+  cursor: pointer;
+  color: #FFF;
+  text-decoration: underline;     
+  text-decoration-color: black;
+}
+
 h2 {
   text-align: center;
 }
@@ -83,4 +101,23 @@ h3 {
   color: black;
   text-align: center;
   vertical-align: middle;
+}
+
+h1 {
+  font-weight: 700;
+  color: black;
+  text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
 }
