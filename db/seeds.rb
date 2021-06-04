@@ -29,7 +29,7 @@ cause1 = Cause.create!(
   description: "Black Lives Matter (BLM) is a decentralized political and social movement protesting against incidents of police brutality and all racially motivated violence against black people."
 )
 require "open-uri"
-file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1622721860/uskmmztdbfks9zb5wcbw.png')
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/c_scale,h_140,w_250/v1622721860/uskmmztdbfks9zb5wcbw.png')
 cause1.photo.attach(io: file, filename: 'uskmmztdbfks9zb5wcbw.png', content_type: 'image/png')
 cause1.save!
 
@@ -39,33 +39,39 @@ cause2 = Cause.create!(
   description: "Equal pay for equal work is the concept of labour rights that individuals in the same workplace be given equal pay. It is most commonly used in the context of sexual discrimination, in relation to the gender pay gap."
 )
 require "open-uri"
-file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1622769045/otmh3woj6lgyu2sds08k.png')
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/c_scale,h_140,w_250/v1622769045/otmh3woj6lgyu2sds08k.png')
 cause2.photo.attach(io: file, filename: 'otmh3woj6lgyu2sds08k.png', content_type: 'image/png')
 cause2.save!
 
 
 cause3 = Cause.create!(
-  name: '#seaspiracy'
+  name: '#seaspiracy',
+  description: 'Learn about the human impact on marine life such as plastic marine debris, ghost nets and overfishing around the world.'
 )
 
 cause4 = Cause.create!(
-  name: '#StopKnifeCrime'
+  name: '#StopKnifeCrime',
+  description: "Help put an end to the growing knife culture sweeping some of our largest cities. Easy to conceal, hard to catch, and deadly. Let's put an end to this today"
 )
 
 cause5 = Cause.create!(
-  name: '#stopasianhate'
+  name: '#stopasianhate',
+  description: "During the pandemic, hate crimes towards East and Southeast Asians have tripled. Stand with these communities against racism in all its forms."
 )
 
 cause6 = Cause.create!(
-  name: '#KillTheBill!'
+  name: '#KillTheBill!',
+  description: "This bill will boost powers that police can use on so-called 'static protests', to bring them in line with protest marches. This will include imposing start and finish times, as well as 'maximum noise limits' and harsher sentencing"
 )
 
 cause7 = Cause.create!(
-  name: '#climatechange'
+  name: '#climatechange',
+  description: "Global climate change has already had observable effects on the environment. Glaciers have shrunk, ice on rivers and lakes is breaking up earlier, plant and animal ranges have shifted and trees are flowering sooner. Let's reverse this trend before it's too late!"
 )
 
 cause8 = Cause.create!(
-  name: '#fairpay'
+  name: '#fairpay',
+  description: "Many of those heralded as heroes and whom we clapped for are getting by on low wages and poor conditions, while holding some of the most stressful yet important roles in society. How can you put that right?"
 )
 
 task1 = Task.create!(

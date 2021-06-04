@@ -63,11 +63,14 @@
 .photo img {
   display: block;
   margin: auto;
-  height: 250px;
-  max-width: 380px;
+  padding: auto;
+  border-radius: 16px;
+  height: 19vh;
+  width: 100%;
   opacity: 0.15;
   align-items: center;
-  object-fit: contain;
+  object-fit: cover;
+  vertical-align: middle;
 }
 .submit-card {
   border: #d1dfd4 4px solid;
@@ -124,13 +127,13 @@ h3 {
 .clickable.active {
   .text-description{ opacity: 0; transition: .4s ease-out;}
   .photo img {
-    opacity: 1;
-    transition: .3s ease-in;
-    transform: scale(1.02);
+    opacity: 0.8;
+    transition: .3s ease-in-out;
+    transform: scale(1.04);
   }
 }
 .clickable.active {
   .text-description{ opacity: 0;}
-  .photo img { opacity: 1;
+  .photo img { opacity: 0.8;
   }
 }
