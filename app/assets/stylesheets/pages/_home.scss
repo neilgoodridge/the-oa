@@ -41,6 +41,14 @@
   vertical-align: middle;
 }
 
+.card:hover {
+  bottom: 10%;
+  right: 15%;
+  transition: all 0.3s 0.15s;
+  background-color: #00FA9A;
+  cursor: pointer;
+}
+
 .carousel {
   border: #d1dfd4 4px solid;
   text-align: center;
