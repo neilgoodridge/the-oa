@@ -41,6 +41,14 @@
   vertical-align: middle;
 }
 
+.card:hover {
+  bottom: 10%;
+  right: 15%;
+  transition: all 0.3s 0.15s;
+  background-color: #00FA9A;
+  cursor: pointer;
+}
+
 .carousel {
   border: #d1dfd4 4px solid;
   text-align: center;
@@ -83,6 +91,7 @@
   top: 16px;
   left: 100px;
   right: 100px;
+  text-decoration: none;
 }
 .button-li a {
   background: #d1dfd4;
@@ -97,7 +106,9 @@
   position: absolute;
   bottom: 16px;
   left: 150px;
-  right: 150px;}
+  right: 150px;
+  text-decoration: none;
+}
 button {
   background: #d1dfd4;
   border:  1px solid #cccccc;
@@ -110,7 +121,7 @@ button {
   a {color: white}
 }
 button:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   transition: .2s ease-in-out;
   a {
   color: darkgrey;

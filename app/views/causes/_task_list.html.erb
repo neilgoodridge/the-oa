@@ -1,7 +1,10 @@
- <h2>What you can do to help in X minutes</h2>
-  <h6>Try to complete as many tasks as you can! Click on the links below then mark <br>the task as complete once you’re done!</h6>
-   <ul>
-      <% @cause.tasks.each do |task| %>
-      <li>Task: <%= task.name%> Time: <%= task.time %>  Points: <%= task.points %> </li>
-    <% end %>
-   </ul>
+<h6>Click on the links below then mark <br />the task as complete once you're done!</h6>
+
+
+<%= simple_form_for :store_tasks, url: store_tasks_users_path do |f| %>
+  <%= f.input :task_ids, label: "", required: false, as: :check_boxes, collection: @tasks, label_method: lambda {|task| "<a href=\"#{task.url}\" target=\"_blank\">#{task.name}</a>".html_safe } %>
+  <%= f.submit "save" %>
+<% end %>
+
+
+
