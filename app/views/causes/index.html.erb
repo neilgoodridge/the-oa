@@ -5,7 +5,7 @@
       <h2>Choose a cause you care about</h2>
       <div class="cause-cards">
         <% @causes.each do |cause|%>
-        <%= link_to add_selected_cause_path(cause) do %>
+        <%= link_to add_selected_cause_path(cause), remote: true do %>
         <div class="cause-card">
           <h3><%= cause.name %></h3>
           <div class="clickable">
@@ -29,28 +29,28 @@
       <h2> How many minutes can you spare to <strong>ignite the fight</strong> today?</h2>
       <div class="time-cards">
         <div class="time-card">
-          <button><%= link_to "2",select_time_path(time: 2) %></button>
+          <button><%= link_to "2",select_time_path(time: 2), remote: true %></button>
         </div>
         <div class="time-card">
-          <button><%= link_to "5",select_time_path(time: 5) %></button>
+          <button><%= link_to "5",select_time_path(time: 5), remote: true %></button>
         </div>
         <div class="time-card">
-          <button><%= link_to "15",select_time_path(time: 15) %></button>
+          <button><%= link_to "15",select_time_path(time: 15), remote: true %></button>
         </div>
         <div class="time-card">
-          <button><%= link_to "30",select_time_path(time: 30) %></button>
+          <button><%= link_to "30",select_time_path(time: 30), remote: true %></button>
         </div>
         <div class="time-card">
-          <button><%= link_to "60",select_time_path(time: 60) %></button>
+          <button><%= link_to "60",select_time_path(time: 60), remote: true %></button>
         </div>
         <div class="time-card">
-          <button><%= link_to "∞",select_time_path(time: 1000) %></button>
+          <button><%= link_to "∞",select_time_path(time: 1000), remote: true %></button>
         </div>
       </div>
     </div>
     <div class="submit-container">
       <div class="submit-card">
-        <button><%= link_to "Take Action",cause_task_path(27) %></button>
+        <button><%= link_to "Take Action",cause_task_path(time: @time) %></button>
       </div>
     </div>
   </div>

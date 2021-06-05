@@ -1,36 +1,60 @@
 class CausesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:show, :index, :cause_task_show]
+  skip_before_action :authenticate_user!, only: [:show, :index, :cause_task_show, :add_selected_cause, :select_time, :next_cause, :previous_cause]
   USER_CAUSES = [] #in caps at top to be accessible in every method
 
-    def index
-      @causes = Cause.all
-      @selected_causes = []
-      USER_CAUSES.clear()
-    end
-
-    def show
-       @cause = Cause.find(params[:id])
-    end
-
-  def cause_task_show
-      @cause = Cause.find(params[:id])
-      @tasks = @cause.tasks
-      if session[:tasks].blank?
-        session[:tasks] = []
-      end
+  def index
+    @causes = Cause.all
+    @selected_causes = []
+    USER_CAUSES.clear()
+    @time = 0
   end
 
-    def add_selected_cause
-      @causes = Cause.all
-      cause = Cause.find(params[:id])
-      USER_CAUSES << cause
-      @selected_causes = USER_CAUSES.uniq()
-      render :index
-    end
+  def show
+    @cause = Cause.find(params[:id])
+  end
 
-    def select_time
-      @time = params[:time]
-      render :index
+  def cause_task_show
+    @cause = USER_CAUSES[0]
+    @tasks = @cause.tasks
+    @time = params[:time]
+    @index = 0
+    if session[:tasks].blank?
+      session[:tasks] = []
     end
+  end
 
+  def add_selected_cause
+    @causes = Cause.all
+    cause = Cause.find(params[:id])
+    USER_CAUSES << cause
+    @selected_causes = USER_CAUSES.uniq()
+    @time = 0
+    render :index
+  end
+
+  def select_time
+    @causes = Cause.all
+    @time = params[:time]
+    render :index
+  end
+
+  def previous_cause
+    @index = params[:index].to_i
+   if USER_CAUSES.length > (@index * -1)
+     @index -= 1
+   end
+    @cause = USER_CAUSES[@index]
+    @tasks = @cause.tasks
+    render :cause_task_show
+  end
+
+  def next_cause
+    @index = params[:index].to_i
+    if USER_CAUSES.length > @index + 1
+      @index += 1
+    end
+      @cause = USER_CAUSES[@index]
+      @tasks = @cause.tasks
+    render :cause_task_show
+  end
 end
