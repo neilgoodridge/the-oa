@@ -1,1 +1,27 @@
-<h1> User Dashboard </h1>
+<div class = "welcome-dashboard">
+  <div class="container">
+      <h1>Welcome to your dashboard </h1>
+      <br>
+      <h3>Checkout your progress on the change you’ve fueled below. As an Igniter, you can select as many time slots as you would like and we hope you volunteer again soon. What cause will you contribute to next?!</h3>
+      <div class="progess-bar-dashboard">
+         <h2> This is your progress bar</h2>
+      </div>
+    <div class="cause-carousel">
+      <h2> <&nbsp; Carousel &nbsp;> </h2>
+      <div class="more-info"><button>Find out more. Click here</button></div>
+    </div>
+      <div class="submit-container">
+        <div class="submit-card">
+          <button><%= link_to "Add a new cause to your dashboard",cause_task_path(1) %></button>
+        </div>
+      </div>
+      <div class = "welcome">
+        <div class = "container-home-left">
+          <%= render "create" %>
+        </div>
+        <div class = "container-home-right">
+          <%= render "show" %>
+        </div>
+      </div>
+  </div>
+</div>

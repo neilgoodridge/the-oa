@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :create, :new, :store_tasks ]
 
   def dashboard
+    @cause_selected = current_user.tasks
   end
 
   def store_tasks
