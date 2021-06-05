@@ -5,35 +5,46 @@
       <h2>Choose a cause you care about</h2>
       <div class="cause-cards">
         <% @causes.each do |cause|%>
+        <%= link_to add_selected_cause_path(cause) do %>
         <div class="cause-card">
           <h3><%= cause.name %></h3>
-          <div class="cause-card-i">
-            <h5>&nbsp;&nbsp;&nbsp;i&nbsp;&nbsp;&nbsp;</h5>
+          <div class="clickable">
+            <div class="overlay">
+              <div class="photo" >
+                <% if cause.photo.attached? %>
+                  <%= cl_image_tag (cause.photo.key)%>
+                <% else %>
+                  <img src="https://res.cloudinary.com/k2x4b-523p/image/upload/c_scale,h_140,w_250/v1622768272/lym3euydklxpwbqztkui.jpg">
+                <% end  %>
+              </div>
+              <div class="text-description"><%= cause.description %>
+              </div>
+            </div>
           </div>
         </div>
+        <% end %>
       <% end %>
       </div>
-    </div>
     <div class="time-container">
       <h2> How many minutes can you spare to <strong>ignite the fight</strong> today?</h2>
       <div class="time-cards">
         <div class="time-card">
-          <h3>2</h3>
+          <button><%= link_to "2",select_time_path(time: 2) %></button>
         </div>
         <div class="time-card">
-          <h3>5</h3>
+          <button><%= link_to "5",select_time_path(time: 5) %></button>
         </div>
         <div class="time-card">
-          <h3>15</h3>
+          <button><%= link_to "15",select_time_path(time: 15) %></button>
         </div>
         <div class="time-card">
-          <h3>30</h3>
+          <button><%= link_to "30",select_time_path(time: 30) %></button>
         </div>
         <div class="time-card">
-          <h3>60</h3>
+          <button><%= link_to "60",select_time_path(time: 60) %></button>
         </div>
         <div class="time-card">
-          <h3>∞</h3>
+          <button><%= link_to "∞",select_time_path(time: 1000) %></button>
         </div>
       </div>
     </div>
@@ -44,4 +55,3 @@
     </div>
   </div>
 </div>
-

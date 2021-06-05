@@ -1,8 +1,11 @@
 class CausesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index, :cause_task_show]
+  USER_CAUSES = [] #in caps at top to be accessible in every method
 
-   def index
-       @causes = Cause.all
+    def index
+      @causes = Cause.all
+      @selected_causes = []
+      USER_CAUSES.clear()
     end
 
     def show
@@ -14,15 +17,20 @@ class CausesController < ApplicationController
       @tasks = @cause.tasks
       if session[:tasks].blank?
         session[:tasks] = []
-
       end
+  end
 
-
-      # filter by time
-      # if params time.present?
-      #   @tasks.where(time <= params(time)
-
-      # time < params time
-      # if task already completed don't include
+    def add_selected_cause
+      @causes = Cause.all
+      cause = Cause.find(params[:id])
+      USER_CAUSES << cause
+      @selected_causes = USER_CAUSES.uniq()
+      render :index
     end
+
+    def select_time
+      @time = params[:time]
+      render :index
+    end
+
 end
