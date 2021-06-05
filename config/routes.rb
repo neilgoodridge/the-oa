@@ -9,7 +9,10 @@ Rails.application.routes.draw do
       end
     end
     # get 'cause_task_show', to: 'causes#cause_task_show'
+    get '/causes/:id/add_selected_cause_path', to: 'causes#add_selected_cause',as: 'add_selected_cause'
+    get '/causes/select_time', to: 'causes#select_time',as: 'select_time'
     get '/causes/:id/tasks', to: 'causes#cause_task_show', as: 'cause_task'
+    get '/causes/tasks', to: 'causes#cause_task_show', as: 'cause_task'
     get 'causes/tasks/time', to: 'causes#time', as: 'task_time'
     resources :causes, only: [ :index, :show ] do
       resources :tasks, only:  [ :index, :create ] do
