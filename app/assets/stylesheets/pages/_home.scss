@@ -134,3 +134,26 @@ button:hover {
   box-shadow: inset 0 0 0 20px #d1dfd4;
   transition: .2s ease-in-out;
 }
+
+.card:hover {
+  bottom: 10%;
+  transition: all 0.3s 0.15s;
+  background-color: lightgreen;
+  cursor: pointer;
+  transform: scale(1.5);
+  z-index:10000; 
+}
+
+#DivForHoverItem {
+  height: 50px;
+  width: 300px;
+}
+
+#HiddenText {
+  display: none;
+  margin-left: 150px;
+}
+
+#DivForHoverItem:hover #HiddenText {
+  display:block;
+}
