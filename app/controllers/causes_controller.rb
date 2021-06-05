@@ -12,13 +12,13 @@ class CausesController < ApplicationController
        @cause = Cause.find(params[:id])
     end
 
-    def cause_task_show
+  def cause_task_show
       @cause = Cause.find(params[:id])
       @tasks = @cause.tasks
       if session[:tasks].blank?
         session[:tasks] = []
       end
-    end
+  end
 
     def add_selected_cause
       @causes = Cause.all
