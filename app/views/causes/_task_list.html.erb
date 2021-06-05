@@ -1,14 +1,10 @@
 <h6>Click on the links below then mark <br />the task as complete once you're done!</h6>
-<ul>
-  <%= form_for(@user) do |f| %>
-      <% @tasks.each do |task| %>
-      <li>
-         <input type="checkbox" value="<%= task.id %>" name="user[task_ids][]" id="user_task_ids_<%= task.id %>">
-        <label for="user_task_ids_<%= task.id %>"><a href="<%=task.url%>" target="_blank"><%=task.name%></a></label>
-      </li>
-    <% end %>
-  <% end %>
-</ul>
+
+
+<%= simple_form_for :store_tasks, url: store_tasks_users_path do |f| %>
+  <%= f.input :task_ids, label: "", required: false, as: :check_boxes, collection: @tasks, label_method: lambda {|task| "<a href=\"#{task.url}\" target=\"_blank\">#{task.name}</a>".html_safe } %>
+  <%= f.submit "save" %>
+<% end %>
 
 
 
