@@ -1,22 +1,14 @@
 class TasksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :create, :show]
 
-  def create
-    @task = Task.new(task_param)
-    @task.user = current_user
-    if @task.save
-      redirect_to_task_path(@task)
-    else
-      render "causes/show"
-    end
-  end
-
-  # def index
-  #   @tasks = Task.all
+  # def create
+  #   @task = Task.new(task_param)
+  #   @task.user = current_user
+  #   if @task.save
+  #   else
+  #     render :cause_task_show
+  #   end
   # end
-
-  def time
-  end
 
   private
 
