@@ -15,8 +15,9 @@ class CausesController < ApplicationController
 
   def cause_task_show
     @cause = USER_CAUSES[0]
-    @tasks = @cause.tasks
     @time = params[:time]
+    return redirect_to causes_path, alert: "Please select a cause and a time" if @cause.blank? || @time.blank?
+    @tasks = @cause.tasks.where("tasks.time <= ?", @time)
     @index = 0
     if session[:tasks].blank?
       session[:tasks] = []
@@ -28,7 +29,6 @@ class CausesController < ApplicationController
     cause = Cause.find(params[:id])
     USER_CAUSES << cause
     @selected_causes = USER_CAUSES.uniq()
-    @time = 0
     render :index
   end
 
@@ -39,22 +39,24 @@ class CausesController < ApplicationController
   end
 
   def previous_cause
+    @time = params[:time]
     @index = params[:index].to_i
    if USER_CAUSES.length > (@index * -1)
      @index -= 1
    end
     @cause = USER_CAUSES[@index]
-    @tasks = @cause.tasks
+    @tasks = @cause.tasks.where("tasks.time <= ?", @time)
     render :cause_task_show
   end
 
   def next_cause
+    @time = params[:time]
     @index = params[:index].to_i
     if USER_CAUSES.length > @index + 1
       @index += 1
     end
       @cause = USER_CAUSES[@index]
-      @tasks = @cause.tasks
+      @tasks = @cause.tasks.where("tasks.time <= ?", @time)
     render :cause_task_show
   end
 end
