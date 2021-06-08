@@ -16,9 +16,6 @@ class CausesController < ApplicationController
 
   def cause_task_show
     @cause = USER_CAUSES[0]
-    if @cause.blank?
-      @tasks = @cause.tasks
-    end
     @time = params[:time]
     return redirect_to causes_path, alert: "Please select a cause and a time" if @cause.blank? || @time.blank?
     @tasks = @cause.tasks.where("tasks.time <= ?", @time)
