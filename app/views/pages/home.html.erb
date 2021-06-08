@@ -1,4 +1,4 @@
-<div class="welcome">
+<div class="cover">
   <div class="container-home-left">
     <h1>Welcome to the OA</h1>
       <br>
@@ -6,7 +6,7 @@
     <div class="container-online">
       <div class="container-online-cards">
         <div class="container-online-card-left">
-          <h4><strong>O</strong>.n l i n e  <strong>A</strong>.c t i v i s t</h4>
+          <h4><strong>O.</strong>n l i n e  <strong>A.</strong>c t i v i s t</h4>
         </div>
         <div class="container-online-card-right">
           <h4><strong>/ˈæk·tɪ·vɪst/</strong></h4>
@@ -18,35 +18,39 @@
       </div>
     </div>
     <div class="buttons">
-      <div class="button-ta"><%= link_to "Take Action", causes_path  %></div>
-      <div class="button-li"><%= link_to "Login", new_user_session_path  %></div>
+      <div><button class="button-ta"><%= link_to "Take Action", causes_path  %></button></div>
+      <div><button class="button-li"><%= link_to "Login", new_user_session_path  %></button></div>
     </div>
   </div>
   <div class="container-home-right">
+    <img src="https://res.cloudinary.com/k2x4b-523p/image/upload/o_52/v1623112549/n2omdnrbdzk3bk7w7jzf.jpg" alt="" class="homepage-image">
   </div>
 </div>
-<div class="container-about">
   <div class="title">
-    <div class="box bounce"><h3><strong>How it works</strong></h3></div>
+    <div class="box "><h3><strong>How it works</strong></h3></div> <!-- add 'bounce' to class for 'how it works' bounce effect -->
   </div>
   <div class="cards">
     <div class="card box fill">
-      <h5><strong>Select time you have to volunteer</strong></h5>
-        <br>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe officia minus reiciendis pariatur, ipsam animi repudiandae incidunt, dignissimos aperiam mollitia illum illo fugiat repellendus quibusdam! Voluptatum, et molestias accusantium magnam!</p>
-    </div>
-    <div class="card box fill">
+      <i class="fa-solid fa-ribbon"></i>
       <h5><strong>Choose causes you care about</strong></h5>
         <br>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe officia minus reiciendis pariatur, ipsam animi repudiandae incidunt, dignissimos aperiam mollitia illum illo fugiat repellendus quibusdam! Voluptatum, et molestias accusantium magnam!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe officia minus reiciendis pariatur, ipsam animi repudiandae incidunt.</p>
     </div>
     <div class="card box fill">
+      <i class="fa-solid fa-watch"></i>
+      <h5><strong>Select time you have to volunteer</strong></h5>
+        <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe officia minus reiciendis pariatur, ipsam animi repudiandae incidunt.</p>
+    </div>
+    <div class="card box fill">
+      <i class="fa-solid fa-list-check"></i>
       <h5><strong>Complete tasks online & track progress</strong></h5>
         <br>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe officia minus reiciendis pariatur, ipsam animi repudiandae incidunt, dignissimos aperiam mollitia illum illo fugiat repellendus quibusdam! Voluptatum, et molestias accusantium magnam!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe officia minus reiciendis pariatur, ipsam animi repudiandae incidunt.</p>
     </div>
   </div>
 </div>
 <div class="carousel">
   <h5>Cause carousel here</h5>
+  <div><button class="button-ta"><%= link_to "Get Involved", causes_path  %></button></div>
 </div>

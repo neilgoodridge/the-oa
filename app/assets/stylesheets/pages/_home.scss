@@ -1,125 +1,102 @@
 // Specific CSS for your home-page
-// .container {
-//   // border: #d1dfd4 4px solid;
-//   padding: 4px;
-//   margin-bottom: 8px;
-// }
 .container-home-left {
-  // border: #d1dfd4 4px solid;
-  // padding: 4px;
-  // margin: 8px;
-  flex: 3;
-  // position: relative;
+  flex: 3.5;
   background-color: white;
+  h1 {
+  text-align: center;
+  padding-top: 100px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 90px;
+  font-weight: lighter;
+  }
 }
 .container-home-right {
-  // border: #d1dfd4 4px solid;
-  // padding: 4px;
-  // margin: 8px;
   flex: 2;
   text-align: center;
-  height: 92vh;
-  background-color: #d1dfd4;
+  .homepage-image {
+  height: 93vh;
+  flex: 2;
+  img { object-fit: cover;}
+  }
 }
 .line {
   border-top: solid 1px;
   color: black;
-  width: 85%;
-  padding-bottom: 20px;
-  // padding-top: 20px;
+  width: 75%;
+  padding-bottom: 10px;
 }
-// .container-title {
-//   border: #d1dfd4 4px solid;
-//   padding: 4px;
-//   margin: 8px;
-// }
 .container-online-cards {
-  // border: #d1dfd4 4px solid;
   padding-top: 30px;
   margin-left: 150px;
-  // margin: auto;
   width: 65%;
   display: flex;
-  // align-items: center;
 }
 .container-online-card-left {
-  // border: #d1dfd4 4px solid;
   margin: auto;
   flex: 3;
-  // align-items: center;
   h4 { text-align: left;
     font-family: 'Quicksand', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 1.5px;
+    font-size: 28px;
   }
 }
 .container-online-card-right {
-  // border: #d1dfd4 4px solid;
   flex: 3;
-  text-align: left;
   font-family: 'Quicksand', sans-serif;
-}
-.container-online-card-bottom {
-  padding-top: 15px;
-  margin-left: 150px;
-  width: 45%;
-  p { font-size: 20px;
+  h4 { letter-spacing: 1.5px;
     font-weight: lighter;
-    font-family: 'Quicksand', sans-serif;
+    font-size: 28px;
+    padding-left: 30px;
   }
 }
+.container-online-card-bottom {
+  padding-top: 20px;
+  margin-left: 150px;
+  width: 55%;
+  p { font-size: 23px;
+    font-weight: lighter;
+    font-family: 'Quicksand', sans-serif;
+    }
+ }
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: space-around;
-  text-align: center;
-  margin: 8px;
+  margin: auto;
+  background-color: white;
 }
-
-// .card {
-//   border: #d1dfd4 4px solid;
-//   padding: 4px;
-//   margin: 8px;
-//   text-align: center;
-//   vertical-align: middle;
-// }
-
-// .card:hover {
-//   bottom: 10%;
-//   right: 15%;
-//   transition: all 0.3s 0.15s;
-//   background-color: #00FA9A;
-//   cursor: pointer;
-// }
-
+.card {
+  margin: auto;
+  max-width: 25vw;
+  border:1px solid white;
+}
 .carousel {
   border: #d1dfd4 4px solid;
   text-align: center;
-  margin: 8px;
-  height: 70vh;
+  // margin: 8px;
+  height: 71vh;
   position: relative;
 }
-
 .title {
-  // border: #d1dfd4 4px solid;
+  padding-top: 50px;
   text-align: center;
-  margin: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
 }
-
-.welcome {
+.cover {
   display: flex;
   height: 93vh;
+  width: 100%;
 }
-
 .buttons {
-  // border: #d1dfd4 4px solid;
   height: 250px;
-  justify-content: center;
   text-decoration: none;
   font-family: 'Quicksand', sans-serif;
-  margin-top: 100px;
+  text-align: center;
 }
-
 .button-ta {
-  background: #d1dfd4;
+  background: #D2E7D5;
   border:  1px solid #cccccc;
   border-radius: 12px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -133,7 +110,7 @@
   width: 40%;
 }
 .button-li {
-  background: #d1dfd4;
+  background: #D2E7D5;
   border:  1px solid #cccccc;
   color: white;
   border-radius: 12px;
@@ -152,12 +129,10 @@ button {
   border-radius: 8px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   padding:  16px 32px;
-  // display:  inline-block;
   font-family: 'Quicksand', sans-serif;
   font-size: 25px;
   text-align: center;
-    text-decoration: none;
-
+  text-decoration: none;
   a {color: white}
 }
 .button-li:hover {
@@ -178,19 +153,7 @@ button {
   transition: .2s ease-in-out;
   }
 }
-// #border:hover {
-//   box-shadow: inset 0 0 0 20px #d1dfd4;
-//   transition: .2s ease-in-out;
-// }
-.container-home-left h1 {
-  text-align: center;
-  padding-top: 100px;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 90px;
-  font-weight: lighter;
-}
 h1 {
-  // text-align: center;
   padding: 8px 0px 0px 8px;
   font-family: 'Quicksand', sans-serif;
   font-size: 60px;
@@ -201,96 +164,8 @@ h3 {
   font-family: 'Quicksand', sans-serif;
   font-size: 35px;
   opacity: 0.4;
-  font-weight: lighter;
 }
-
-// #################### bounce logic for 'How it works'###################
-
-.stage {
-  border-bottom: 3px solid #444;
-  display: flex;
-  height: 330px;
-  width: 100%;
+i {
+  font-size: 32px;
+  color: #D2E7D5;
 }
-.box {
-  align-self: flex-end;
-  animation-duration: 1.5s;
-  animation-iteration-count: 10;
-  height: auto;
-  margin: 0 auto 0 auto;
-  transform-origin: bottom;
-  width: 400px;
-}
-.bounce {
-  animation-name: bounce;
-  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1.5);
-}
-@keyframes bounce {
-  0%   { transform: scale(1,1)      translateY(0); }
-  10%  { transform: scale(1.1,.9)   translateY(0); }
-  30%  { transform: scale(.9,1.1)   translateY(-30px); }
-  50%  { transform: scale(1.05,.95) translateY(0); }
-  57%  { transform: scale(1,1)      translateY(-7px); }
-  64%  { transform: scale(1,1)      translateY(0); }
-  100% { transform: scale(1,1)      translateY(0); }
-}
-
-// ##################### end of logic for How it works bounce #############
-
-
-// ##################### logic for cards to 'open  colour' #############
-
-.card {
-  border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: 8px;
-  text-align: center;
-  vertical-align: middle;
-  .box {
-    align-items:center;
-    background-color:#fff;
-    box-sizing:border-box;
-    display:flex;
-    font-size:4vmin;
-    height:30vmin;
-    justify-content:center;
-    margin:1vmin;
-    padding:3vmin;
-    width:30vmin;
-    // &:nth-child(1) {
-    //   background-color:#f69;
-    // }
-    // &:nth-child(2) {
-    //   background-color:#ee0;
-    // }
-    // &:nth-child(3) {
-    //   background-color:#6c3;
-    // }
-  }
-}
-
-/* fill styles */
-
-.fill-layer {
-  animation:fill 1s ease-in-out;
-  bottom:0;
-  left:0;
-  position:absolute;
-  right:0;
-  top:0;
-  z-index:-1;
-}
-
-@keyframes fill {
-  0% {
-    border-radius:50%;
-    transform:translateY(150%) translateX(150%) scale(2);
-  }
-  100% {
-    border-radius:50%;
-    transform:scale(2);
-  }
-}
-// ##########################################################
-
-

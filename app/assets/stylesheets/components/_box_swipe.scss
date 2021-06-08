@@ -1,0 +1,56 @@
+// ##################### logic for cards to 'open  colour' #############
+
+.card {
+  // border: #d1dfd4 4px solid;
+  padding: 4px;
+  margin: 8px;
+  text-align: center;
+  vertical-align: middle;
+  .box {
+    align-items:center;
+    background-color:#fff;
+    box-sizing:border-box;
+    display:flex;
+    font-size:4vmin;
+    height:30vmin;
+    justify-content:center;
+    margin:1vmin;
+    padding:3vmin;
+    width:30vmin;
+    // &:nth-child(1) {
+    //   background-color:#f69;
+    // }
+    // &:nth-child(2) {
+    //   background-color:#ee0;
+    // }
+    // &:nth-child(3) {
+    //   background-color:#6c3;
+    // }
+  }
+}
+
+/* fill styles */
+
+.fill-layer {
+  animation:fill 1s ease-in-out;
+  bottom:0;
+  left:0;
+  position:absolute;
+  right:0;
+  top:0;
+  z-index:-1;
+}
+
+@keyframes fill {
+  0% {
+    border-radius:50%;
+    transform:translateY(150%) translateX(150%) scale(2);
+  }
+  100% {
+    border-radius:50%;
+    transform:scale(2);
+  }
+}
+// ################# end of logic for cards to 'open  colour'###################
+
+
