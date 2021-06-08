@@ -1,7 +1,7 @@
 <div class="container">
    <ul>
-      <% @cause_selected.each do |task| %>
-      <li> Task: <%= task.name%> Time: <%= task.time %>  Points: <%= task.points %> </li>
+      <% @cause_selected.tasks.each do |task| %>
+      <li>Task: <%= task.name%> Time: <%= task.time %>  Points: <%= task.points %> </li>
     <% end %>
    </ul>
 </div>
