@@ -1,113 +1,127 @@
 // Specific CSS for your home-page
-.container {
-  border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin-bottom: 8px;
-}
 .container-home-left {
-  border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: 8px;
-  flex: 3;
-  position: relative;
+  flex: 3.5;
+  background-color: white;
+  h1 {
+  text-align: center;
+  padding-top: 100px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 90px;
+  font-weight: lighter;
+  }
 }
-
 .container-home-right {
-  border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: 8px;
   flex: 2;
   text-align: center;
+  .homepage-image {
+  height: 93vh;
+  flex: 2;
+  img { object-fit: cover;}
+  }
 }
-
-.container-title {
-  border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: 8px;
+.line {
+  border-top: solid 1px;
+  color: black;
+  width: 75%;
+  padding-bottom: 10px;
 }
-
+.container-online-cards {
+  padding-top: 30px;
+  margin-left: 150px;
+  width: 65%;
+  display: flex;
+}
+.container-online-card-left {
+  margin: auto;
+  flex: 3;
+  h4 { text-align: left;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 1.5px;
+    font-size: 28px;
+  }
+}
+.container-online-card-right {
+  flex: 3;
+  font-family: 'Quicksand', sans-serif;
+  h4 { letter-spacing: 1.5px;
+    font-weight: lighter;
+    font-size: 28px;
+    padding-left: 30px;
+  }
+}
+.container-online-card-bottom {
+  padding-top: 20px;
+  margin-left: 150px;
+  width: 55%;
+  p { font-size: 23px;
+    font-weight: lighter;
+    font-family: 'Quicksand', sans-serif;
+    }
+ }
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: space-between;
-  text-align: center;
+  margin: auto;
+  background-color: white;
 }
-
 .card {
-  border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: 8px;
-  text-align: center;
-  vertical-align: middle;
+  margin: auto;
+  max-width: 25vw;
+  border:1px solid white;
 }
-
-.card:hover {
-  bottom: 10%;
-  right: 15%;
-  transition: all 0.3s 0.15s;
-  background-color: #00FA9A;
-  cursor: pointer;
-}
-
 .carousel {
   border: #d1dfd4 4px solid;
   text-align: center;
-  margin: 8px;
-  height: 40vh;
+  // margin: 8px;
+  height: 71vh;
   position: relative;
 }
-
 .title {
-  border: #d1dfd4 4px solid;
+  padding-top: 50px;
   text-align: center;
-  margin: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
 }
-
-.welcome {
+.cover {
   display: flex;
   height: 93vh;
+  width: 100%;
 }
-
 .buttons {
-  border: #d1dfd4 4px solid;
   height: 250px;
-  position: absolute;
-  bottom: 16px;
-  left: 12px;
-  right: 12px;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
 }
-
-.button-ta a {
-  background: #d1dfd4;
+.button-ta {
+  background: #D2E7D5;
   border:  1px solid #cccccc;
   border-radius: 12px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   padding:  32px 68px;
-  color:  #ffffff;
-  display:  inline-block;
-  font:  normal normal 30px/1 "Open Sans", sans-serif;
+  color:  white;
+  margin: 50px auto;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
   text-align: center;
-  position: absolute;
-  top: 16px;
-  left: 100px;
-  right: 100px;
   text-decoration: none;
+  width: 40%;
 }
-.button-li a {
-  background: #d1dfd4;
+.button-li {
+  background: #D2E7D5;
   border:  1px solid #cccccc;
+  color: white;
   border-radius: 12px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   padding:  16px 32px;
-  color:  #ffffff;
-  display:  inline-block;
-  font:  normal normal 30px/1 "Open Sans", sans-serif;
+  margin: 50px auto;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
   text-align: center;
-  position: absolute;
-  bottom: 16px;
-  left: 150px;
-  right: 150px;
   text-decoration: none;
+  width: 20%;
 }
 button {
   background: #d1dfd4;
@@ -115,12 +129,13 @@ button {
   border-radius: 8px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   padding:  16px 32px;
-  display:  inline-block;
-  font:  normal normal 30px/1 "Open Sans", sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
   text-align: center;
+  text-decoration: none;
   a {color: white}
 }
-button:hover {
+.button-li:hover {
   transform: scale(1.03);
   transition: .2s ease-in-out;
   a {
@@ -129,8 +144,28 @@ button:hover {
   transition: .2s ease-in-out;
   }
 }
-#border:hover
-{
-  box-shadow: inset 0 0 0 20px #d1dfd4;
+.button-ta:hover {
+  transform: scale(1.03);
   transition: .2s ease-in-out;
+  a {
+  color: darkgrey;
+  text-decoration: none;
+  transition: .2s ease-in-out;
+  }
+}
+h1 {
+  padding: 8px 0px 0px 8px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 60px;
+  font-weight: lighter;
+}
+h3 {
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 35px;
+  opacity: 0.4;
+}
+i {
+  font-size: 32px;
+  color: #D2E7D5;
 }
