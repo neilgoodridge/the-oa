@@ -19,11 +19,19 @@
         <div class="cause-show-cards">
           <div class="cause-show-card">
             <h2> Here's the latest news about <%= @cause.name %></h2>
-            <h1>BlackLivesMatter.org - Coming Soon</h1>
-            <% @tweets.each do |tweet| %>
-              User @<%= tweet.user.screen_name %> said: "<%= tweet.text %>" on <%= tweet.created_at.strftime('%-m/%d/%Y') %>
-              <br>
-            <% end %>
+            <br>
+            <div class="cause-news-card">
+              <h4> News article 1 </h4>
+            </div>
+            <div class="cause-news-card">
+              <h4> News article 2 </h4>
+            </div>
+            <div class="cause-news-card">
+              <h4> News article 3 </h4>
+            </div>
+            <div class="cause-news-card">
+              <h4> News article 4 </h4>
+            </div>
           </div>
           <div class="cause-show-card">
           <%= render 'task_list' %>

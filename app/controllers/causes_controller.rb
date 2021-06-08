@@ -1,7 +1,6 @@
 class CausesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index, :cause_task_show, :add_selected_cause, :select_time, :next_cause, :previous_cause]
   USER_CAUSES = [] #in caps at top to be accessible in every method
-  require 'twitter'
 
   def index
     @causes = Cause.all
@@ -23,14 +22,6 @@ class CausesController < ApplicationController
     if session[:tasks].blank?
       session[:tasks] = []
     end
-    client = Twitter::REST::Client.new do |config|
-        config.consumer_key        = "XkRaCtwdzdTIDobT1UtZ308rC"
-        config.consumer_secret     = "wW38yE7gcLzteYzYsdhdc0XCwUxqKa7IxM9cFgyj0h1vDu7UlV"
-        config.access_token        = "1401566323671453698-VQYkUvZw5eaAMRbwziPO4QfOvBjHrs"
-        config.access_token_secret = "u9vqK8FDh35YGOn3ZPHCfvJgSUMj5qI5klOqP4g7koKZt"
-      end
-      # @tweets = tweets.search('#Blacklivesmatter')
-      @tweets = client.user_timeline('rubyinside', count: 20)
   end
 
   def add_selected_cause
@@ -68,9 +59,4 @@ class CausesController < ApplicationController
       @tasks = @cause.tasks.where("tasks.time <= ?", @time)
     render :cause_task_show
   end
-
-  # def home
-  #     byebug
-
-  # end
 end
