@@ -49,6 +49,15 @@ class CausesController < ApplicationController
   end
 
   def previous_cause
+    client = Twitter::REST::Client.new do |config|
+        config.consumer_key        = "V5MpjSGOJAh6qUtezyhz6jjWT"
+        config.consumer_secret     = "OzNw4KaQFFT3Db8hw79RnBLKqFi4Jf7V6JwWiB2fhs2VQu6iWo"
+        config.access_token        = "1401566323671453698-dHfOAK048r1wvMpOeuEigMHPdIyhI7"
+        config.access_token_secret = "Ew6lLkc8hn3nXYON79qaqceQKsz8ettxUOgDnVQL8bOGE"
+      end
+      # @tweets = tweets.search('#Blacklivesmatter')
+      @tweets = client.user_timeline('EqualPay2dayOrg', count: 2)
+
     @index = params[:index].to_i
    if USER_CAUSES.length > (@index * -1)
      @index -= 1
@@ -58,13 +67,25 @@ class CausesController < ApplicationController
     render :cause_task_show
   end
 
+
   def next_cause
+    client = Twitter::REST::Client.new do |config|
+        config.consumer_key        = "V5MpjSGOJAh6qUtezyhz6jjWT"
+        config.consumer_secret     = "OzNw4KaQFFT3Db8hw79RnBLKqFi4Jf7V6JwWiB2fhs2VQu6iWo"
+        config.access_token        = "1401566323671453698-dHfOAK048r1wvMpOeuEigMHPdIyhI7"
+        config.access_token_secret = "Ew6lLkc8hn3nXYON79qaqceQKsz8ettxUOgDnVQL8bOGE"
+    end
+      # @tweets = tweets.search('#Blacklivesmatter')
+      @tweets = client.user_timeline('StopAAPIHate', count: 2)
+
     @index = params[:index].to_i
     if USER_CAUSES.length > @index + 1
       @index += 1
     end
       @cause = USER_CAUSES[@index]
       @tasks = @cause.tasks
-    render :cause_task_show
+      render :cause_task_show
+
+
   end
 end
