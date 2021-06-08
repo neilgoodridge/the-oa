@@ -260,6 +260,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   cloudinary (~> 1.16.0)
   devise
+  dotenv
   dotenv-rails
   font-awesome-sass
   jbuilder (~> 2.7)

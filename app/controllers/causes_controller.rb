@@ -1,3 +1,5 @@
+require 'twitter'
+
 class CausesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index, :cause_task_show, :add_selected_cause, :select_time, :next_cause, :previous_cause]
   USER_CAUSES = [] #in caps at top to be accessible in every method
@@ -21,6 +23,14 @@ class CausesController < ApplicationController
     if session[:tasks].blank?
       session[:tasks] = []
     end
+    client = Twitter::REST::Client.new do |config|
+        config.consumer_key        = "V5MpjSGOJAh6qUtezyhz6jjWT"
+        config.consumer_secret     = "OzNw4KaQFFT3Db8hw79RnBLKqFi4Jf7V6JwWiB2fhs2VQu6iWo"
+        config.access_token        = "1401566323671453698-dHfOAK048r1wvMpOeuEigMHPdIyhI7"
+        config.access_token_secret = "Ew6lLkc8hn3nXYON79qaqceQKsz8ettxUOgDnVQL8bOGE"
+      end
+      # @tweets = tweets.search('#Blacklivesmatter')
+      @tweets = client.user_timeline('Blklivesmatter', count: 2)
   end
 
   def add_selected_cause
