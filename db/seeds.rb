@@ -23,6 +23,14 @@ user1 = User.create!(
   points: '0'
 )
 
+user2 = User.create!(
+  email: "greta@gmail.com",
+  name: "Greta Thunberg",
+  password: "123456",
+  password_confirmation: "123456",
+  points: '0'
+)
+
 
 cause1 = Cause.create!(
   name: '#blacklivesmatter',
