@@ -17,8 +17,7 @@
                   <img src="https://res.cloudinary.com/k2x4b-523p/image/upload/c_scale,h_140,w_250/v1622768272/lym3euydklxpwbqztkui.jpg">
                 <% end  %>
               </div>
-              <div class="text-description"><%= cause.description %>
-              </div>
+              <div class="text-description"><%= cause.description %></div>
             </div>
           </div>
         </div>
@@ -49,9 +48,7 @@
         </div>
       </div>
       <div class="submit-container">
-        <div class="submit-card">
-          <button><%= link_to "Take Action",cause_task_path(time: @time), class: "take-action-btn" %></button>
-        </div>
+        <div class="submit-card"><button><%= link_to "Take Action",cause_task_path(time: @time), class: "take-action-btn" %></button></div>
       </div>
     </div>
   </div>
