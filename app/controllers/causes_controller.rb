@@ -1,11 +1,11 @@
 class CausesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index, :cause_task_show, :add_selected_cause, :select_time, :next_cause, :previous_cause]
-  USER_CAUSES = [] #in caps at top to be accessible in every method
+  USER_CAUSES = [] # in caps at top to be accessible in every method
 
   def index
     @causes = Cause.all
     @selected_causes = []
-    USER_CAUSES.clear()
+    USER_CAUSES.clear
     @time = 0
   end
 
