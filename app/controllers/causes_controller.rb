@@ -2,12 +2,12 @@ require 'twitter'
 
 class CausesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index, :cause_task_show, :add_selected_cause, :select_time, :next_cause, :previous_cause]
-  USER_CAUSES = [] #in caps at top to be accessible in every method
+  USER_CAUSES = [] # in caps at top to be accessible in every method
 
   def index
     @causes = Cause.all
     @selected_causes = []
-    USER_CAUSES.clear()
+    USER_CAUSES.clear
     @time = 0
   end
 
@@ -17,8 +17,9 @@ class CausesController < ApplicationController
 
   def cause_task_show
     @cause = USER_CAUSES[0]
-    @tasks = @cause.tasks
     @time = params[:time]
+    return redirect_to causes_path, alert: "Please select a cause and a time" if @cause.blank? || @time.blank?
+    @tasks = @cause.tasks.where("tasks.time <= ?", @time)
     @index = 0
     if session[:tasks].blank?
       session[:tasks] = []
@@ -38,7 +39,6 @@ class CausesController < ApplicationController
     cause = Cause.find(params[:id])
     USER_CAUSES << cause
     @selected_causes = USER_CAUSES.uniq()
-    @time = 0
     render :index
   end
 
@@ -57,16 +57,15 @@ class CausesController < ApplicationController
       end
       # @tweets = tweets.search('#Blacklivesmatter')
       @tweets = client.user_timeline('EqualPay2dayOrg', count: 2)
-
+    @time = params[:time]
     @index = params[:index].to_i
    if USER_CAUSES.length > (@index * -1)
      @index -= 1
    end
     @cause = USER_CAUSES[@index]
-    @tasks = @cause.tasks
+    @tasks = @cause.tasks.where("tasks.time <= ?", @time)
     render :cause_task_show
   end
-
 
   def next_cause
     client = Twitter::REST::Client.new do |config|
@@ -77,15 +76,13 @@ class CausesController < ApplicationController
     end
       # @tweets = tweets.search('#Blacklivesmatter')
       @tweets = client.user_timeline('StopAAPIHate', count: 2)
-
+    @time = params[:time]
     @index = params[:index].to_i
     if USER_CAUSES.length > @index + 1
       @index += 1
     end
       @cause = USER_CAUSES[@index]
-      @tasks = @cause.tasks
+      @tasks = @cause.tasks.where("tasks.time <= ?", @time)
       render :cause_task_show
-
-
   end
 end
