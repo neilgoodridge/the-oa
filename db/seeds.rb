@@ -145,7 +145,23 @@ task2 = Task.create!(
   url: 'https://action.greenpeace.org.uk/l/854853/2021-04-23/qwm74?source=UN&subsource=OCMRGLPEUN02GK&utm_source=bsd&utm_medium=redirect&utm_campaign=post%20pardot%20launch%20redirect'
 )
 
+task1 = Task.create!(
+  name: 'Share on social media',
+  points: '5',
+  content: "Share content on social media to spread the word and raise awareness",
+  cause_id: cause5.id,
+  time: 5,
+  url: 'https://stopasianhate.carrd.co/#videos'
+)
 
+task2 = Task.create!(
+  name: 'Get involved with the Southeast and East Asian centre',
+  points: '30',
+  content: 'Research the SEEAC, find out what they do and how you can get involved',
+  cause_id: cause5.id,
+  time: 40,
+  url: 'https://www.seeac.org.uk/'
+)
 
 action1 = Action.create!(
   completed: false,
