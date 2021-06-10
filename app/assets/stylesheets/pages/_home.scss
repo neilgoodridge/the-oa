@@ -72,7 +72,7 @@
 }
 .carousel {
   text-align: center;
-  height: 80vh;
+  height: 73vh;
   position: relative;
   img {
     height: 100%;
@@ -132,18 +132,24 @@
   text-decoration: none;
   width: 20%;
 }
-.button-gi {
+
+.title-button {
+  background-color: white;
+  margin: auto;
+  .button-gi {
   background: #D2E7D5;
   border:  1px solid #cccccc;
   color: white;
   border-radius: 12px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   padding:  16px 32px;
-  margin: auto;
   font-family: 'Quicksand', sans-serif;
   font-size: 25px;
   text-align: center;
   text-decoration: none;
+  margin: 0px 40% 20px 40%;
+  width: 20%;
+  }
 }
 button {
   background: #d1dfd4;
