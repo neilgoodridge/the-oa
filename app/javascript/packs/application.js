@@ -27,7 +27,6 @@ require("carousel")
 
 // External imports
 import "bootstrap";
-import "@fortawesome/fontawesome-free/css/all"
 import { loadDynamicBannerText } from '../components/banner';
 
 
