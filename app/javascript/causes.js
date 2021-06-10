@@ -1,5 +1,3 @@
-const causes = document.querySelectorAll('.clickable');
-
 const toggleActiveClass = (event) => {
   event.currentTarget.classList.toggle('active');
 };
@@ -8,10 +6,8 @@ const toggleActiveOnClick = (cause) => {
   cause.addEventListener('click', toggleActiveClass);
 };
 
-causes.forEach(toggleActiveOnClick);
-
-const takeActionBtn = document.querySelector('.take-action-btn');
 const updateTimeValue = (time) => {
+  const takeActionBtn = document.querySelector('.take-action-btn');
   time.addEventListener('click', (event) => {
     let selectedTime = event.currentTarget.innerHTML
     if (!parseInt(selectedTime)) {
@@ -24,7 +20,9 @@ const updateTimeValue = (time) => {
   });
 };
 
-const times = document.querySelectorAll('.select-time');
-times.forEach(updateTimeValue);
-
-
+$(document).on('ready turbolinks:load', function() {
+  const causes = document.querySelectorAll('.clickable');
+  causes.forEach(toggleActiveOnClick);
+  const times = document.querySelectorAll('.select-time');
+  times.forEach(updateTimeValue);
+});
