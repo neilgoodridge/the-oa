@@ -15,7 +15,7 @@ User.destroy_all
 puts 'Seed: Seeding...'
 
 
-user1 = User.create!(
+user2 = User.create!(
   email: "malcolm@gmail.com",
   name: "Malcolm",
   password: "123456",
@@ -23,7 +23,7 @@ user1 = User.create!(
   points: '0'
 )
 
-user2 = User.create!(
+user1 = User.create!(
   email: "greta@gmail.com",
   name: "Greta Thunberg",
   password: "123456",
@@ -88,7 +88,7 @@ task1 = Task.create!(
   content: 'Make a difference by signing the petition on Change.org.',
   cause_id: cause1.id,
   time: 10,
-  url: 'https://www.google.co.uk/'
+  url: 'https://www.change.org/t/black-lives-matter-en-us'
 )
 
 task2 = Task.create!(
@@ -97,7 +97,7 @@ task2 = Task.create!(
   content: 'This service will assist you by matching your ZIP code to your congressional district, with links to your members website and contact page.',
   cause_id: cause1.id,
   time: 20,
-  url: 'https://www.google.co.uk/'
+  url: 'https://ag.ny.gov/contact-attorney-general-letitia-james'
 )
 
   task3 = Task.create!(
@@ -109,7 +109,7 @@ task2 = Task.create!(
   url: 'https://blamuk.org/'
 )
 
-task1 = Task.create!(
+task4 = Task.create!(
   name: 'Contact Unison and raise awareness of unions',
   points: '10',
   content: 'Contact Unison for material and information about trade unions, and begin spreading the word to raise awareness.',
@@ -118,16 +118,16 @@ task1 = Task.create!(
   url: 'https://www.unison.org.uk/get-involved/grow-the-movement/#heading-1'
 )
 
-task2 = Task.create!(
+task5 = Task.create!(
   name: 'Volunteer with the Equality Trust in your local area',
   points: '40',
   content: "Contact your local Equality Trust movement and volunteer your time! This is an ongoing task and you can choose a level of commitment that suits you.",
   cause_id: cause2.id,
-  time: 60, 
+  time: 60,
   url: 'https://www.equalitytrust.org.uk/local-groups'
 )
 
-task1 = Task.create!(
+task6 = Task.create!(
   name: 'Share the trailer',
   points: '5',
   content: "Share the trailer for Seaspiracy to social media to raise awareness of the film and its message",
@@ -136,11 +136,11 @@ task1 = Task.create!(
   url: 'https://www.youtube.com/watch?v=1Q5CXN7soQg'
 )
 
-task2 = Task.create!(
+task7 = Task.create!(
   name: 'Sign this petition for protection of the ocean',
   points: '10',
   content: "Sign this petition to call on the government to make a real difference to our oceans.",
-  cause_id: cause3.id, 
+  cause_id: cause3.id,
   time: 5,
   url: 'https://action.greenpeace.org.uk/l/854853/2021-04-23/qwm74?source=UN&subsource=OCMRGLPEUN02GK&utm_source=bsd&utm_medium=redirect&utm_campaign=post%20pardot%20launch%20redirect'
 )
