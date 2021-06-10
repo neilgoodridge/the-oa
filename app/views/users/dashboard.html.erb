@@ -1,27 +1,39 @@
 <div class = "welcome-dashboard">
   <div class="container">
-      <h1>Welcome to your dashboard </h1>
+      <h1>Welcome to your dashboard <%=current_user.name%></h1>
       <br>
-      <h3>Checkout your progress on the change you’ve fueled below. As an Igniter, you can select as many time slots as you would like and we hope you volunteer again soon. What cause will you contribute to next?!</h3>
-      <div class="progess-bar-dashboard">
+      <h3>Checkout your progress on the change you’ve fueled below. <br>What cause will you contribute to next?</h3>
+      <!-- <div class="progess-bar-dashboard">
          <h2> This is your progress bar</h2>
+      </div> -->
+    <div class="carousel-container">
+      <div class="cause-carousel">
+        <h2> Causes </h2>
+          <%= link_to previous_cause_path(index: @index) do  %>
+          <button><</button>
+          <% end  %>
+          <%= link_to next_cause_path(index: @index) do  %>
+          <button>></button>
+          <% end  %>
+          <!-- <div class="more-info"><button>Find out more. Click here</button></div> -->
       </div>
-    <div class="cause-carousel">
-      <h2> <&nbsp; Carousel &nbsp;> </h2>
-      <div class="more-info"><button>Find out more. Click here</button></div>
     </div>
       <div class="submit-container">
         <div class="submit-card">
-          <button><%= link_to "Add a new cause to your dashboard",cause_task_path(1) %></button>
+          <button><%= link_to "Add a new cause to your dashboard +",causes_path %></button>
         </div>
       </div>
       <div class = "welcome">
         <div class = "container-home-left">
-          <%= render "create" %>
         </div>
         <div class = "container-home-right">
           <%= render "show" %>
         </div>
+        <div class="submit-container">
+        <div class="submit-card">
+          <button><%= link_to "Complete more tasks for this cause ->",cause_task_path %></button>
+        </div>
+      </div>
       </div>
   </div>
 </div>
