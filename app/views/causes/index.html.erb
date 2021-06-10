@@ -25,35 +25,34 @@
         <% end %>
       <% end %>
       </div>
-    <div class="time-container">
-      <h2> How many minutes can you spare to <strong>ignite the fight</strong> today?</h2>
-      <div class="time-cards">
-        <div class="time-card">
-
-          <button class="select-time">2</button>
-        </div>
-        <div class="time-card">
-         <button class="select-time">5</button>
-        </div>
-        <div class="time-card">
-         <button class="select-time">15</button>
-        </div>
-        <div class="time-card">
-          <button class="select-time">30</button>
-        </div>
-        <div class="time-card">
-         <button class="select-time">60</button>
-        </div>
-        <div class="time-card">
-          <button class="select-time">∞</button>
+      <div class="time-container">
+        <h2> How many minutes can you spare to <strong>ignite the fight</strong> today?</h2>
+        <div class="time-cards">
+          <div class="time-card">
+            <button class="select-time">2</button>
+          </div>
+          <div class="time-card">
+           <button class="select-time">5</button>
+          </div>
+          <div class="time-card">
+           <button class="select-time">15</button>
+          </div>
+          <div class="time-card">
+            <button class="select-time">30</button>
+          </div>
+          <div class="time-card">
+           <button class="select-time">60</button>
+          </div>
+          <div class="time-card">
+            <button class="select-time">∞</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="submit-container">
-      <div class="submit-card">
-        <button><%= link_to "Take Action",cause_task_path(time: @time), class: "take-action-btn" %></button>
+      <div class="submit-container">
+        <div class="submit-card">
+          <button><%= link_to "Take Action",cause_task_path(time: @time), class: "take-action-btn" %></button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>

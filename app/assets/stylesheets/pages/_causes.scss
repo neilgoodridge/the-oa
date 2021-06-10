@@ -46,14 +46,6 @@
   text-center: center;
 }
 
-.cause-card:hover {
-  transform: scale(0.90);
-  cursor: pointer;
-  color: #FFF;
-  text-decoration: underline;
-  text-decoration-color: black;
-}
-
 .cause-card-i {
   border: #d1dfd4 4px solid;
   padding: 4px;
@@ -150,11 +142,9 @@
 }
 
 .time-card:hover {
-  transform: scale(0.90);
-  cursor: pointer;
-  color: #FFF;
-  text-decoration: underline;
-  text-decoration-color: black;
+  transform: scale(1.02);
+  transition: .2s ease-in-out;
+  h3 { opacity: 0;}
 }
 
 h2 {
