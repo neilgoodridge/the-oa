@@ -37,8 +37,8 @@ cause1 = Cause.create!(
   description: "Black Lives Matter (BLM) is a decentralized political and social movement protesting against incidents of police brutality and all racially motivated violence against black people."
 )
 require "open-uri"
-file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/c_scale,h_140,w_250/v1622721860/uskmmztdbfks9zb5wcbw.png')
-cause1.photo.attach(io: file, filename: 'uskmmztdbfks9zb5wcbw.png', content_type: 'image/png')
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623344444/ndovtj0kxvy5ys9edyyw.png')
+cause1.photo.attach(io: file, filename: 'ndovtj0kxvy5ys9edyyw.png', content_type: 'image/png')
 cause1.save!
 
 
@@ -47,8 +47,8 @@ cause2 = Cause.create!(
   description: "Equal pay for equal work is the concept of labour rights that individuals in the same workplace be given equal pay. It is most commonly used in the context of sexual discrimination, in relation to the gender pay gap."
 )
 require "open-uri"
-file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/c_scale,h_140,w_250/v1622769045/otmh3woj6lgyu2sds08k.png')
-cause2.photo.attach(io: file, filename: 'otmh3woj6lgyu2sds08k.png', content_type: 'image/png')
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623342770/cwvquebn5k8i42xozadr.webp')
+cause2.photo.attach(io: file, filename: 'cwvquebn5k8i42xozadr.webp', content_type: 'image/webp')
 cause2.save!
 
 
@@ -56,31 +56,55 @@ cause3 = Cause.create!(
   name: '#seaspiracy',
   description: 'Learn about the human impact on marine life such as plastic marine debris, ghost nets and overfishing around the world.'
 )
+require "open-uri"
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1623363808/zhjqxcjubfcp4oecbtqt.jpg')
+cause3.photo.attach(io: file, filename: 'zhjqxcjubfcp4oecbtqt.jpg', content_type: 'image/jpg')
+cause3.save!
 
 cause4 = Cause.create!(
   name: '#StopKnifeCrime',
   description: "Help put an end to the growing knife culture sweeping some of our largest cities. Easy to conceal, hard to catch, and deadly. Let's put an end to this today"
 )
+require "open-uri"
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623352054/t0w7q0odh6wa8rdgeubj.jpg')
+cause4.photo.attach(io: file, filename: 't0w7q0odh6wa8rdgeubj.jpg', content_type: 'image/jpg')
+cause4.save!
 
 cause5 = Cause.create!(
   name: '#stopasianhate',
   description: "During the pandemic, hate crimes towards East and Southeast Asians have tripled. Stand with these communities against racism in all its forms."
 )
+require "open-uri"
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623342677/hnto9udb6eaxknq1tffq.png')
+cause5.photo.attach(io: file, filename: 'hnto9udb6eaxknq1tffq.png', content_type: 'image/png')
+cause5.save!
 
 cause6 = Cause.create!(
-  name: '#KillTheBill!',
-  description: "This bill will boost powers that police can use on so-called 'static protests', to bring them in line with protest marches. This will include imposing start and finish times, as well as 'maximum noise limits' and harsher sentencing"
+  name: '#GetHomeSafe!',
+  description: "There is clearly a vital conversation to be had around the behaviour of men, and the safety of women within society. Let's look at how we can help women get home safely."
 )
+require "open-uri"
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623367385/o0a1wqjjj9jsadyxs2xc.png')
+cause6.photo.attach(io: file, filename: 'o0a1wqjjj9jsadyxs2xc.png', content_type: 'image/png')
+cause6.save!
 
 cause7 = Cause.create!(
   name: '#climatechange',
   description: "Global climate change has already had observable effects on the environment. Glaciers have shrunk, ice on rivers and lakes is breaking up earlier, plant and animal ranges have shifted and trees are flowering sooner. Let's reverse this trend before it's too late!"
 )
+require "open-uri"
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623364001/vrwpfclkitjkj5bvxb8a.jpg')
+cause7.photo.attach(io: file, filename: 'vrwpfclkitjkj5bvxb8a.jpg', content_type: 'image/jpg')
+cause7.save!
 
 cause8 = Cause.create!(
   name: '#fairpay',
   description: "Many of those heralded as heroes and whom we clapped for are getting by on low wages and poor conditions, while holding some of the most stressful yet important roles in society. How can you put that right?"
 )
+require "open-uri"
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623364777/azqmvuifblz86ogjs12o.png')
+cause8.photo.attach(io: file, filename: 'azqmvuifblz86ogjs12o.png', content_type: 'image/png')
+cause8.save!
 
 task1 = Task.create!(
   name: 'Sign this petition',
@@ -145,7 +169,7 @@ task7 = Task.create!(
   url: 'https://action.greenpeace.org.uk/l/854853/2021-04-23/qwm74?source=UN&subsource=OCMRGLPEUN02GK&utm_source=bsd&utm_medium=redirect&utm_campaign=post%20pardot%20launch%20redirect'
 )
 
-task1 = Task.create!(
+task8 = Task.create!(
   name: 'Share on social media',
   points: '5',
   content: "Share content on social media to spread the word and raise awareness",
@@ -154,13 +178,21 @@ task1 = Task.create!(
   url: 'https://stopasianhate.carrd.co/#videos'
 )
 
-task2 = Task.create!(
+task9 = Task.create!(
   name: 'Get involved with the Southeast and East Asian centre',
   points: '30',
   content: 'Research the SEEAC, find out what they do and how you can get involved',
   cause_id: cause5.id,
   time: 40,
   url: 'https://www.seeac.org.uk/'
+)
+task10 = Task.create!(
+  name: 'Visit http://www.flock525.club/ now!',
+  points: '50',
+  content: 'Tell every woman in your life to visit this site and help to get home safely',
+  cause_id: cause6.id,
+  time: 5,
+  url: 'http://www.flock525.club/'
 )
 
 action1 = Action.create!(
