@@ -64,11 +64,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   margin: auto;
   background-color: white;
+  height: 18vh;
 }
 .card {
   margin: auto;
-  max-width: 25vw;
-  border:1px solid white;
+  max-width: 18vw;
+  border: 1px solid white;
 }
 .carousel {
   text-align: center;
@@ -87,10 +88,10 @@
   height: 100%;
 }
 .title {
-  padding-top: 50px;
+  padding-top: 20px;
   text-align: center;
   width: 100%;
-  height: 100%;
+  height: 5vh;
   background-color: white;
 }
 .cover {
@@ -103,6 +104,7 @@
   text-decoration: none;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
+  position: relative;
 }
 .button-ta {
   background: #D2E7D5;
@@ -117,6 +119,10 @@
   text-align: center;
   text-decoration: none;
   width: 40%;
+  position: absolute;
+  bottom: 0px;
+  right: 25%;
+  left: 25%;
 }
 .button-li {
   background: #D2E7D5;
@@ -136,6 +142,7 @@
 .title-button {
   background-color: white;
   margin: auto;
+  height: 5vh;
   .button-gi {
   background: #D2E7D5;
   border:  1px solid #cccccc;
@@ -147,7 +154,7 @@
   font-size: 25px;
   text-align: center;
   text-decoration: none;
-  margin: 0px 40% 20px 40%;
+  margin: 0px 40% 0px 40%;
   width: 20%;
   }
 }
