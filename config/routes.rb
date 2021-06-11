@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'pages#home'
 
+  namespace :user do
+    root to: "users#dashboard"
+  end
 
     resources :users do
       collection do

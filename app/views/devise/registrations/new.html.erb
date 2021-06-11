@@ -1,9 +1,14 @@
-<h2>Sign up</h2>
+<h2> Looks like you've completed some tasks! Way to go! </h2>
+<h4>Sign up to save your progress and track results of your efforts. </h4>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Your name" } %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
