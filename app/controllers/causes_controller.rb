@@ -31,7 +31,7 @@ class CausesController < ApplicationController
         config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
       end
       # @tweets = tweets.search('#Blacklivesmatter')
-      @tweets = client.user_timeline('Blklivesmatter', count: 2)
+      @tweets = client.user_timeline(@cause.twitter, count: 2)
   end
 
   def add_selected_cause
@@ -56,7 +56,7 @@ class CausesController < ApplicationController
         config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
       end
       # @tweets = tweets.search('#Blacklivesmatter')
-      @tweets = client.user_timeline('EqualPay2dayOrg', count: 2)
+      @tweets = client.user_timeline(@cause.twitter, count: 2)
     @time = params[:time]
     @index = params[:index].to_i
    if USER_CAUSES.length > (@index * -1)
@@ -75,7 +75,7 @@ class CausesController < ApplicationController
         config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
     end
       # @tweets = tweets.search('#Blacklivesmatter')
-      @tweets = client.user_timeline('StopAAPIHate', count: 2)
+      @tweets = client.user_timeline(@cause.twitter, count: 2)
     @time = params[:time]
     @index = params[:index].to_i
     if USER_CAUSES.length > @index + 1
