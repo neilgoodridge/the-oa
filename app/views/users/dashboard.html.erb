@@ -9,10 +9,10 @@
     <div class="carousel-container">
       <div class="cause-carousel">
         <h2><%= @cause.name %></h2>
-          <%= link_to previous_cause_path(index: @index) do  %>
+          <%= link_to dashboard_previous_cause_path(index: @index) do  %>
           <button><</button>
           <% end  %>
-          <%= link_to next_cause_path(index: @index) do  %>
+          <%= link_to dashboard_next_cause_path(index: @index) do  %>
           <button>></button>
           <% end  %>
           <!-- <div class="more-info"><button>Find out more. Click here</button></div> -->

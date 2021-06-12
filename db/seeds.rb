@@ -195,6 +195,69 @@ task10 = Task.create!(
   url: 'http://www.flock525.club/'
 )
 
+task11 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause1.id,
+  time: 2
+)
+
+task12 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause2.id,
+  time: 2
+)
+
+task13 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause3.id,
+  time: 2
+)
+
+task14 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause4.id,
+  time: 2
+)
+
+task15 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause5.id,
+  time: 2
+)
+
+task16 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause6.id,
+  time: 2
+)
+
+task17 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause7.id,
+  time: 2
+)
+task18 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause8.id,
+  time: 2
+)
+
 action1 = Action.create!(
   completed: true,
   user_id: user1.id,
@@ -205,6 +268,12 @@ action2 = Action.create!(
   completed: true,
   user_id: user1.id,
   task_id: task2.id,
+  )
+
+action3 = Action.create!(
+  completed: true,
+  user_id: user1.id,
+  task_id: task11.id,
   )
 
 puts 'Seed: Finished seeding!'
