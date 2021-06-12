@@ -22,13 +22,17 @@
         <div class="cause-show-cards">
           <div class="cause-show-card">
             <div>
-            <h2> Here's the latest news about <%= @cause.name %></h2>
+            <h2> Here's the latest news about <b> <%= @cause.name %></h2> </b>
             </div>
-              <div class="cause-twitter-card">
+              <div class="cause-show-card">
+                  <img src="https://pbs.twimg.com/profile_images/1402645735326113795/kqBVkKdx_400x400.jpg" class="top-container-image-style" style="height: 48px;width: 48px;" alt="">
+                  <span>Jun 7, 2021 </span>
+                  <img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg" style="height: 48px;width: 48px;" alt="">
                 <br>
+                <ul style="text-align: -webkit-left">
                  <% @tweets.each do |tweet| %>
-                 User @<%= tweet.user.screen_name %> said: "<%= tweet.text %>" on <%= tweet.created_at.strftime('%-m/%d/%Y') %>
-                <br>
+                 User <b> @<%= tweet.user.screen_name %> </b> said: "<%= tweet.text %>" on <b> <%= tweet.created_at.strftime('%-m/%d/%Y') %> </b>
+                </ul>
                 <% end %>
               </div>
             </div>
