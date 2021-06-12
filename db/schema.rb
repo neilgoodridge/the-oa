@@ -55,6 +55,15 @@ ActiveRecord::Schema.define(version: 2021_06_12_152445) do
     t.string "photo_url"
   end
 
+  create_table "organisations", force: :cascade do |t|
+    t.string "name"
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "cause_id", null: false
+    t.index ["cause_id"], name: "index_organisations_on_cause_id"
+  end
+
   create_table "tasks", force: :cascade do |t|
     t.string "name"
     t.integer "points"
@@ -84,5 +93,6 @@ ActiveRecord::Schema.define(version: 2021_06_12_152445) do
   add_foreign_key "actions", "tasks"
   add_foreign_key "actions", "users"
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "organisations", "causes"
   add_foreign_key "tasks", "causes"
 end

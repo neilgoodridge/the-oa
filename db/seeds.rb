@@ -9,6 +9,7 @@ puts 'Seed: Deleting existing records...'
 
 Action.destroy_all
 Task.destroy_all
+Organisation.destroy_all
 Cause.destroy_all
 User.destroy_all
 
@@ -78,7 +79,7 @@ cause4.save!
 
 cause5 = Cause.create!(
   name: '#stopasianhate',
-  description: "During the pandemic, hate crimes towards East and Southeast Asians have tripled. Stand with these communities against racism in all its forms."
+  description: "During the pandemic, hate crimes towards East and Southeast Asians have tripled. Stand with these communities against racism in all its forms.",
 )
 require "open-uri"
 file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623342677/hnto9udb6eaxknq1tffq.png')
@@ -201,6 +202,54 @@ task10 = Task.create!(
   url: 'http://www.flock525.club/'
 )
 
+organisation1 = Organisation.create!(
+  name: 'Black Lives Matter',
+  url: 'https://www.blacklivesmatter.uk/',
+  cause_id: cause1.id,
+)
+
+organisation2 = Organisation.create!(
+  name: 'The Reach Out Project',
+  url: 'https://www.reachoutproject.co.uk/',
+  cause_id: cause1.id,
+)
+
+organisation3 = Organisation.create!(
+  name: 'ACAS: Equal Pay',
+  url: 'https://www.acas.org.uk/equal-pay',
+  cause_id: cause2.id,
+)
+
+organisation4 = Organisation.create!(
+  name: 'Equality and Human Rights Commission',
+  url: 'https://www.equalityhumanrights.com/en/our-work/equal-pay',
+  cause_id: cause2.id,
+)
+
+organisation5 = Organisation.create!(
+  name: 'Seaspiracy',
+  url: 'https://www.seaspiracy.org/',
+  cause_id: cause3.id,
+)
+
+organisation6 = Organisation.create!(
+  name: 'How to support Stop Asian Hate in the UK',
+  url: 'https://www.bustle.com/life/how-to-support-the-stopasianhate-campaign-in-the-uk',
+  cause_id: cause5.id,
+)
+
+organisation7 = Organisation.create!(
+  name: 'Stop Hate UK',
+  url: 'https://www.stophateuk.org/',
+  cause_id: cause5.id, 
+)
+
+organisation8 = Organisation.create!(
+  name: "Flock",
+  url: 'http://www.flock525.club/',
+  cause_id: cause6.id, 
+)
+
 action1 = Action.create!(
   completed: true,
   user_id: user1.id,
@@ -212,5 +261,7 @@ action2 = Action.create!(
   user_id: user1.id,
   task_id: task2.id,
   )
+
+    
 
 puts 'Seed: Finished seeding!'
