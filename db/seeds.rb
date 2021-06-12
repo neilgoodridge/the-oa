@@ -59,7 +59,7 @@ cause2.save!
 
 cause3 = Cause.create!(
   name: '#seaspiracy',
-  description: 'Learn about the human impact on marine life such as plastic marine debris, ghost nets and overfishing around the world.'
+  description: 'Learn about the human impact on marine life such as plastic marine debris, ghost nets and overfishing around the world.',
   twitter:'seaspiracy',
   photo_url:"https://pbs.twimg.com/profile_images/1360528702841495557/d_e1htpc_400x400.jpg",
 )
@@ -241,13 +241,13 @@ organisation6 = Organisation.create!(
 organisation7 = Organisation.create!(
   name: 'Stop Hate UK',
   url: 'https://www.stophateuk.org/',
-  cause_id: cause5.id, 
+  cause_id: cause5.id,
 )
 
 organisation8 = Organisation.create!(
   name: "Flock",
   url: 'http://www.flock525.club/',
-  cause_id: cause6.id, 
+  cause_id: cause6.id,
 )
 
 action1 = Action.create!(
@@ -262,6 +262,6 @@ action2 = Action.create!(
   task_id: task2.id,
   )
 
-    
+
 
 puts 'Seed: Finished seeding!'
