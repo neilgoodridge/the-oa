@@ -34,7 +34,9 @@ user1 = User.create!(
 
 cause1 = Cause.create!(
   name: '#blacklivesmatter',
-  description: "Black Lives Matter (BLM) is a decentralized political and social movement protesting against incidents of police brutality and all racially motivated violence against black people."
+  description: "Black Lives Matter (BLM) is a decentralized political and social movement protesting against incidents of police brutality and all racially motivated violence against black people.",
+  twitter:'Blklivesmatter',
+  photo_url:"https://pbs.twimg.com/profile_images/1402645735326113795/kqBVkKdx_400x400.jp",
 )
 require "open-uri"
 file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623344444/ndovtj0kxvy5ys9edyyw.png')
@@ -44,7 +46,9 @@ cause1.save!
 
 cause2 = Cause.create!(
   name: '#equalpay',
-  description: "Equal pay for equal work is the concept of labour rights that individuals in the same workplace be given equal pay. It is most commonly used in the context of sexual discrimination, in relation to the gender pay gap."
+  description: "Equal pay for equal work is the concept of labour rights that individuals in the same workplace be given equal pay. It is most commonly used in the context of sexual discrimination, in relation to the gender pay gap.",
+  twitter:'EqualPay2dayOrg',
+  photo_url:"https://pbs.twimg.com/profile_images/1399774074830606338/G40HK4bO_400x400.jpg",
 )
 require "open-uri"
 file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623342770/cwvquebn5k8i42xozadr.webp')
@@ -55,6 +59,8 @@ cause2.save!
 cause3 = Cause.create!(
   name: '#seaspiracy',
   description: 'Learn about the human impact on marine life such as plastic marine debris, ghost nets and overfishing around the world.'
+  twitter:'seaspiracy',
+  photo_url:"https://pbs.twimg.com/profile_images/1360528702841495557/d_e1htpc_400x400.jpg",
 )
 require "open-uri"
 file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1623363808/zhjqxcjubfcp4oecbtqt.jpg')
