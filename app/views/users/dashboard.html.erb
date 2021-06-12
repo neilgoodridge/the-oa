@@ -1,6 +1,6 @@
 <div class = "welcome-dashboard">
   <div class="container">
-      <h1>Welcome to your dashboard <%=current_user.name%></h1>
+      <h1>Welcome to your dashboard <%= @name %></h1>
       <br>
       <h3>Checkout your progress on the change you’ve fueled below. <br>What cause will you contribute to next?</h3>
       <!-- <div class="progess-bar-dashboard">
@@ -8,7 +8,7 @@
       </div> -->
     <div class="carousel-container">
       <div class="cause-carousel">
-        <h2> Causes </h2>
+        <h2><%= @cause.name %></h2>
           <%= link_to previous_cause_path(index: @index) do  %>
           <button><</button>
           <% end  %>
