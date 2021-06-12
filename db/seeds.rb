@@ -196,7 +196,7 @@ task10 = Task.create!(
 )
 
 action1 = Action.create!(
-  completed: false,
+  completed: true,
   user_id: user1.id,
   task_id: task1.id,
   )
