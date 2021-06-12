@@ -72,7 +72,8 @@ cause4.save!
 
 cause5 = Cause.create!(
   name: '#stopasianhate',
-  description: "During the pandemic, hate crimes towards East and Southeast Asians have tripled. Stand with these communities against racism in all its forms."
+  description: "During the pandemic, hate crimes towards East and Southeast Asians have tripled. Stand with these communities against racism in all its forms.",
+  organisation: 'Stop Asian Hate'
 )
 require "open-uri"
 file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623342677/hnto9udb6eaxknq1tffq.png')
