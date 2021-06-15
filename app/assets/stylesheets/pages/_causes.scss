@@ -1,17 +1,17 @@
 // Specific CSS for your home-page
 .container {
-  border: #d1dfd4 4px solid;
+  // border: #d1dfd4 4px solid;
   padding: 4px;
 }
 
 .welcome {
-  border: #d1dfd4 4px solid;
+  // border: #d1dfd4 4px solid;
   margin: 8px;
   height: 100%;
 }
 
 .welcome-dashboard {
-  border: #d1dfd4 4px solid;
+  // border: #d1dfd4 4px solid;
   margin: 8px;
   height: 100%;
   display: flex;
@@ -20,13 +20,13 @@
 
 
 .choose {
-  border: #d1dfd4 4px solid;
+  // border: #d1dfd4 4px solid;
   margin: 8px;
   width: 100%;
 }
 
 .cause-cards {
-  border: #d1dfd4 4px solid;
+  // border: #d1dfd4 4px solid;
   padding: 4px;
   margin: 8px;
   display: grid;
@@ -35,39 +35,17 @@
   text-align: center;
 }
 .cause-card {
-  border: #d1dfd4 4px solid;
   padding: 4px;
   margin: 8px;
   height: 20vh;
   border-radius: 16px;
   position: relative;
-  background-color: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  // background-color: white;
+  // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   text-center: center;
-}
-
-.cause-card:hover {
-  transform: scale(0.90);
-  cursor: pointer;
-  color: #FFF;
-  text-decoration: underline;
-  text-decoration-color: black;
-}
-
-.cause-card-i {
-  border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: 8px;
-  border-radius: 8px;
-  font-size: italic;
-  position: absolute;
-  top: 50%;
-  transform: translate(50%, -50%);
-}
-.cause-card:hover {
-  transform: scale(1.02);
-  transition: .2s ease-in-out;
-  h3 { opacity: 0;}
+  .text-description {
+    opacity: 0;
+  }
 }
 .overlay {
   position: absolute;
@@ -77,12 +55,10 @@
   right: 0;
   height: 100%;
   width: 100%;
-  opacity: 0;
-  transition: .4s ease-in-out;
-  // background-color: #d1dfd4;
-}
-.cause-card:hover .overlay {
   opacity: 1;
+  transition: .4s ease-in-out;
+  // border: #D2E7D5 2px solid;
+  // background-color: #d1dfd4;
 }
 .text-description {
   color: black;
@@ -107,29 +83,35 @@
   align-items: center;
   object-fit: cover;
   vertical-align: middle;
+  filter: grayscale(100%);
 }
 .submit-card {
-  border: #d1dfd4 4px solid;
+  // border: #d1dfd4 4px solid;
   padding: 4px;
   margin: 8px;
   text-align: center;
 }
 .time-container {
-  border: #d1dfd4 4px solid;
+  // border: #d1dfd4 4px solid;
   padding: 4px;
   margin: 8px;
 }
-.time-card{
-  border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: 8px;
-  text-align: center;
-  border-radius: 16px;
-  background-color: white;
+.button-card{
+  background: #D2E7D5;
+  border:  1px solid #cccccc;
+  border-radius: 12px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding:  32px 68px;
+  color:  white;
+  margin: 50px auto;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  width: 40%;
 }
 .time-cards {
-  border: #d1dfd4 4px solid;
+  // border: #d1dfd4 4px solid;
   padding: 4px;
   margin: 8px;
   display: grid;
@@ -137,87 +119,79 @@
   grid-gap: space-between;
   text-align: center;
 }
-
-.welcome {
-  border: #d1dfd4 4px solid;
-  margin: 8px;
-  height: 100%;
+body {
+  background-color: white;
 }
-.choose {
-  border: #d1dfd4 4px solid;
-  margin: 8px;
-  width: 100%;
-}
-
 .time-card:hover {
-  transform: scale(0.90);
-  cursor: pointer;
-  color: #FFF;
-  text-decoration: underline;
-  text-decoration-color: black;
+  transform: scale(1.03);
+  transition: .2s ease-in-out;
+  h3 { opacity: 0;}
 }
 
 h2 {
   text-align: center;
 }
+.clickable {
+  padding: 4px;
+  margin: 8px;
+  height: 20vh;
+  border-radius: 16px;
+  position: relative;
+  transition: 0.4s ease-out;
+  img { border: solid 2px black;}
+}
 h3 {
   color: black;
+  padding: 20%;
 }
-.clickable {
-  height: 100%;
-  border-radius: 8px;
-  background-color: #white;
-  cursor: pointer;
-  // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+a:hover {
+  text-decoration: none;
+}
+.clickable:hover {
+  h3 { opacity: 0;
+  transition: 0.4s ease-out;
+  text-decoration: none;
+}
+  .text-description {
+    opacity: 1;
+    transition: .4s ease-in-out;
+  }
+}
+.overlay:hover {
+  transform: scale(1.02);
+  transition: .2s ease-in-out;
 }
 .clickable.active {
   .text-description{ opacity: 0; transition: .4s ease-out;}
+  h3 { opacity: 0 }
   .photo img {
     opacity: 0.8;
     transition: .3s ease-in-out;
     transform: scale(1.04);
+    filter: grayscale(50%);
   }
 }
-.clickable.active {
-  .text-description{ opacity: 0;}
-  .photo img { opacity: 0.8;
+.select-time {
+  background: #D2E7D5;
+  border:  1px solid #cccccc;
+  border-radius: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding:  32px 68px;
+  color:  white;
+  margin: 50px auto;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  width: 40%;
+}
+.select-time:hover {
+   transform: scale(1.03);
+   transition: .2s ease-in-out;
+  a {
+  color: darkgrey;
+  text-decoration: none;
+  transition: .2s ease-in-out;
   }
 }
-
-// h1 {
-//   font-weight: 700;
-//   color: black;
-//   text-shadow: 1px 1px 1px #919191,
-//         1px 2px 1px #919191,
-//         1px 3px 1px #919191,
-//         1px 4px 1px #919191,
-//         1px 5px 1px #919191,
-//         1px 6px 1px #919191,
-//         1px 7px 1px #919191,
-//         1px 8px 1px #919191,
-//         1px 9px 1px #919191,
-//         1px 10px 1px #919191,
-//     1px 18px 6px rgba(16,16,16,0.4),
-//     1px 22px 10px rgba(16,16,16,0.2),
-//     1px 25px 35px rgba(16,16,16,0.2),
-//     1px 30px 60px rgba(16,16,16,0.4);
-// }
-
-// h1 {
-//   font-weight: 700;
-//   color: black;
-//   text-shadow: 1px 1px 1px #919191,
-//         1px 2px 1px #919191,
-//         1px 3px 1px #919191,
-//         1px 4px 1px #919191,
-//         1px 5px 1px #919191,
-//         1px 6px 1px #919191,
-//         1px 7px 1px #919191,
-//         1px 8px 1px #919191,
-//         1px 9px 1px #919191,
-//         1px 10px 1px #919191,
-//     1px 18px 6px rgba(16,16,16,0.4),
-//     1px 22px 10px rgba(16,16,16,0.2),
-//     1px 25px 35px rgba(16,16,16,0.2),
-//     1px 30px 60px rgba(16,16,16,0.4);
-// }
