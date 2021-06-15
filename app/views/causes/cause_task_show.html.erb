@@ -1,6 +1,4 @@
 <div class="page-container">
-  <div class="title">
-    <!-- <h2><%= @cause.name %></h2> -->
     <div class="carousel-container">
       <div class="cause-carousel">
         <div class="previous-button">
@@ -23,8 +21,6 @@
       </div>
     </div>
     <div class="more-info"><button>Find out more. Click here</button></div>
-      <div class="progess-bar">
-      </div>
   </div>
 
       <div class="cause-container">
@@ -38,7 +34,11 @@
                   <span>Jun 7, 2021 </span>
                   <img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg" style="height: 48px;width: 48px;" alt="">
                 <br>
-               <!-- tweets logic here removed -->
+                <ul style="text-align: -webkit-left">
+                  <% @tweets.each do |tweet| %>
+                  User <b> @<%= tweet.user.screen_name %> </b> said: "<%= tweet.text %>" on <b> <%= tweet.created_at.strftime('%-m/%d/%Y') %> </b>
+                 </ul>
+                 <% end %>
               </div>
             </div>
           <div class="cause-show-card">
