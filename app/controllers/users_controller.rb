@@ -41,7 +41,7 @@ class UsersController < ApplicationController
   def next_cause
     @causes = current_user.causes.order(:name).distinct
     @index = params[:index].to_i + 1
-    if @index > @causes.length
+    if @index >= @causes.length
       @cause = @causes.first
       @index = 0
     else
