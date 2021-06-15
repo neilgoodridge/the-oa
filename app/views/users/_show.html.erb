@@ -2,7 +2,7 @@
   <h2>Tasks you've completed</h2>
    <ul class="list-unstyled">
       <% @tasks.each do |task| %>
-      <li><%= task.name%> <br> Time: <%= task.time %> <br>  Points: <%= task.points %> </li>
+      <li><i class="fa fas fa-check-square"></i> <%= task.name%> <br> Time: <%= task.time %> <br>  Points: <%= task.points %> </li>
       <br>
     <% end %>
    </ul>

@@ -10,7 +10,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  def create
+  def create(user_params)
     super
     if resource.persisted?
       session[:tasks].each do |id|
