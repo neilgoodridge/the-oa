@@ -1,20 +1,29 @@
-<h2>Log in</h2>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <h2 class="active"> Log In </h2>
+      <h2 class="inactive underlineHover"><%= link_to "Sign up", new_registration_path(resource_name) %> </h2>
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-inputs">
+          <div class="fadeIn second">
+            <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+          </div>
+          <div class="fadeIn third">
+            <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+          </div>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
+        </div>
+  <div class="form-actions fadeIn fourth">
     <%= f.button :submit, "Log in" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <% end %>
+  <%= render "devise/shared/links" %>
+  <div id="formFooter">
+    <a class="underlineHover" href="#">Forgot Password?</a>
+  </div>
+</div>
