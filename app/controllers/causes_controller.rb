@@ -40,6 +40,7 @@ class CausesController < ApplicationController
     USER_CAUSES << cause
     @selected_causes = USER_CAUSES.uniq
     @task = Task.where(cause_id: cause.id, name: "registered")
+    Action.create()
     raise
     unless session[:tasks].include?(@task.ids)
       session[:tasks] << @task.ids
