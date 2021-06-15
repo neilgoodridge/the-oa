@@ -19,6 +19,8 @@ Rails.application.routes.draw do
     get '/causes/previous_cause', to: 'causes#previous_cause',as: 'previous_cause'
     get '/causes/tasks', to: 'causes#cause_task_show', as: 'cause_task'
     get 'causes/tasks/time', to: 'causes#time', as: 'task_time'
+    get '/users/dashboard/next_cause', to: 'users#next_cause',as: 'dashboard_next_cause'
+    get '/users/dashboard/previous_cause', to: 'users#previous_cause',as: 'dashboard_previous_cause'
     resources :causes, only: [ :index, :show ] do
       resources :tasks, only:  [ :index, :create ] do
     end
