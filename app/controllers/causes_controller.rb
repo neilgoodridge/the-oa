@@ -25,13 +25,13 @@ class CausesController < ApplicationController
       session[:tasks] = []
     end
     client = Twitter::REST::Client.new do |config|
-        config.consumer_key        = "V5MpjSGOJAh6qUtezyhz6jjWT"
-        config.consumer_secret     = "OzNw4KaQFFT3Db8hw79RnBLKqFi4Jf7V6JwWiB2fhs2VQu6iWo"
-        config.access_token        = "1401566323671453698-dHfOAK048r1wvMpOeuEigMHPdIyhI7"
-        config.access_token_secret = "Ew6lLkc8hn3nXYON79qaqceQKsz8ettxUOgDnVQL8bOGE"
+        config.consumer_key        = ENV["API_KEY"]
+        config.consumer_secret     = ENV["API_SECRET_KEY"]
+        config.access_token        = ENV["ACCESS_TOKEN"]
+        config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
       end
       # @tweets = tweets.search('#Blacklivesmatter')
-      @tweets = client.user_timeline('Blklivesmatter', count: 2)
+      @tweets = client.user_timeline(@cause.twitter, count: 2)
   end
 
   def add_selected_cause
@@ -54,13 +54,13 @@ class CausesController < ApplicationController
 
   def previous_cause
     client = Twitter::REST::Client.new do |config|
-        config.consumer_key        = "V5MpjSGOJAh6qUtezyhz6jjWT"
-        config.consumer_secret     = "OzNw4KaQFFT3Db8hw79RnBLKqFi4Jf7V6JwWiB2fhs2VQu6iWo"
-        config.access_token        = "1401566323671453698-dHfOAK048r1wvMpOeuEigMHPdIyhI7"
-        config.access_token_secret = "Ew6lLkc8hn3nXYON79qaqceQKsz8ettxUOgDnVQL8bOGE"
+        config.consumer_key        = ENV["API_KEY"]
+        config.consumer_secret     = ENV["API_SECRET_KEY"]
+        config.access_token        = ENV["ACCESS_TOKEN"]
+        config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
       end
       # @tweets = tweets.search('#Blacklivesmatter')
-      @tweets = client.user_timeline('EqualPay2dayOrg', count: 2)
+      @tweets = client.user_timeline(@cause.twitter, count: 2)
     @time = params[:time]
     @index = params[:index].to_i
    if USER_CAUSES.length > (@index * -1)
@@ -73,13 +73,13 @@ class CausesController < ApplicationController
 
   def next_cause
     client = Twitter::REST::Client.new do |config|
-        config.consumer_key        = "V5MpjSGOJAh6qUtezyhz6jjWT"
-        config.consumer_secret     = "OzNw4KaQFFT3Db8hw79RnBLKqFi4Jf7V6JwWiB2fhs2VQu6iWo"
-        config.access_token        = "1401566323671453698-dHfOAK048r1wvMpOeuEigMHPdIyhI7"
-        config.access_token_secret = "Ew6lLkc8hn3nXYON79qaqceQKsz8ettxUOgDnVQL8bOGE"
+        config.consumer_key        = ENV["API_KEY"]
+        config.consumer_secret     = ENV["API_SECRET_KEY"]
+        config.access_token        = ENV["ACCESS_TOKEN"]
+        config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
     end
       # @tweets = tweets.search('#Blacklivesmatter')
-      @tweets = client.user_timeline('StopAAPIHate', count: 2)
+      @tweets = client.user_timeline(@cause.twitter, count: 2)
     @time = params[:time]
     @index = params[:index].to_i
     if USER_CAUSES.length > @index + 1
