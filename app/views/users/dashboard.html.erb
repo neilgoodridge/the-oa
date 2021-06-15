@@ -8,7 +8,7 @@
         <div class="previous-button">
           <%= link_to dashboard_previous_cause_path(index: @index) do  %>
           <button><</button>
-          <% end  %>
+          <% end %>
         </div>
         <div class="carousel-image">
           <% if @cause.photo.attached? %>
@@ -20,12 +20,11 @@
         <div class="next-button">
           <%= link_to dashboard_next_cause_path(index: @index) do  %>
           <button>></button>
-          <% end  %>
+          <% end %>
         </div>
           <!-- <div class="more-info"><button>Find out more. Click here</button></div> -->
       </div>
     </div>
-
       <div class="submit-container">
         <div class="submit-card">
           <button><%= link_to "Add a new cause to your dashboard +",causes_path %></button>
@@ -47,7 +46,6 @@
                     <li>Highest scoring O.nline A.ctivist: <%= winner.name %> </li>
                     <br>
                     <li>Points: 560 </li>
-
                 </ul>
             </div>
           </div>
@@ -56,7 +54,7 @@
               <%= render "show" %>
               <div class="submit-container">
                 <div class="submit-card">
-                  <button><%= link_to "Complete more tasks for this cause ->",cause_task_path %></button>
+                  <button><%= link_to "Complete more tasks for this cause >",cause_task_path %></button>
                 </div>
               </div>
             </div>
