@@ -38,11 +38,7 @@
                   <span>Jun 7, 2021 </span>
                   <img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg" style="height: 48px;width: 48px;" alt="">
                 <br>
-                <ul style="text-align: -webkit-left">
-                 <% @tweets.each do |tweet| %>
-                 User <b> @<%= tweet.user.screen_name %> </b> said: "<%= tweet.text %>" on <b> <%= tweet.created_at.strftime('%-m/%d/%Y') %> </b>
-                </ul>
-                <% end %>
+               <!-- tweets logic here removed -->
               </div>
             </div>
           <div class="cause-show-card">

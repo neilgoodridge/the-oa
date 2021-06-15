@@ -1,9 +1,20 @@
 <div class="container">
-  <h2><%= @name %>'s completed tasks</h2>
+  <h2>Tasks you've completed</h2>
    <ul class="list-unstyled">
       <% @tasks.each do |task| %>
       <li><%= task.name%> <br> Time: <%= task.time %> <br>  Points: <%= task.points %> </li>
       <br>
     <% end %>
    </ul>
+  <h4>Your progress</h4>
+   <ul class="list-unstyled">
+    <% tasksall = Task.all %>
+      <li><%=current_user.tasks.count %> / <%= tasksall.count%> tasks</li>
+      <br>
+      <p> Keep up the great work! </p>
+    </ul>
 </div>
+
+
+
+
