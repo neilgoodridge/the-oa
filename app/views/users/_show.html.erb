@@ -1,5 +1,5 @@
 <div class="container">
-  <h2><%= @name %>'s completed tasks</h2>
+  <h2>Tasks you've completed</h2>
    <ul class="list-unstyled">
       <% @tasks.each do |task| %>
       <li><%= task.name%> <br> Time: <%= task.time %> <br>  Points: <%= task.points %> </li>
