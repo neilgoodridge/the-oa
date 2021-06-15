@@ -70,7 +70,9 @@ cause3.save!
 
 cause4 = Cause.create!(
   name: '#StopKnifeCrime',
-  description: "Help put an end to the growing knife culture sweeping some of our largest cities. Easy to conceal, hard to catch, and deadly. Let's put an end to this today"
+  description: "Help put an end to the growing knife culture sweeping some of our largest cities. Easy to conceal, hard to catch, and deadly. Let's put an end to this today",
+  twitter:'kcvs_updates',
+  photo_url:"https://pbs.twimg.com/profile_images/1218898896887406592/anxvcDfT_400x400.jpg",
 )
 require "open-uri"
 file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623628212/a9fwicfvuspdy5rhksju.jpg')
@@ -80,6 +82,8 @@ cause4.save!
 cause5 = Cause.create!(
   name: '#stopasianhate',
   description: "During the pandemic, hate crimes towards East and Southeast Asians have tripled. Stand with these communities against racism in all its forms.",
+  twitter:'AAFederation',
+  photo_url:"https://pbs.twimg.com/profile_images/1261350526903615488/F-ofI_Ce_400x400.jpg",
 )
 require "open-uri"
 file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623342677/hnto9udb6eaxknq1tffq.png')
@@ -88,7 +92,9 @@ cause5.save!
 
 cause6 = Cause.create!(
   name: '#GetHomeSafe!',
-  description: "There is clearly a vital conversation to be had around the behaviour of men, and the safety of women within society. Let's look at how we can help women get home safely."
+  description: "There is clearly a vital conversation to be had around the behaviour of men, and the safety of women within society. Let's look at how we can help women get home safely.",
+  twitter:'GetHomeSafeUK',
+  photo_url:"https://pbs.twimg.com/profile_images/1041023109300715520/iYwmtUmD_400x400.jpg",
 )
 require "open-uri"
 file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623367385/o0a1wqjjj9jsadyxs2xc.png')
@@ -97,7 +103,9 @@ cause6.save!
 
 cause7 = Cause.create!(
   name: '#climatechange',
-  description: "Global climate change has already had observable effects on the environment. Glaciers have shrunk, ice on rivers and lakes is breaking up earlier, plant and animal ranges have shifted and trees are flowering sooner. Let's reverse this trend before it's too late!"
+  description: "Global climate change has already had observable effects on the environment. Glaciers have shrunk, ice on rivers and lakes is breaking up earlier, plant and animal ranges have shifted and trees are flowering sooner. Let's reverse this trend before it's too late!",
+  twitter:'UNFCCC',
+  photo_url:"https://pbs.twimg.com/profile_images/558658454030540802/CGw9qhaD_400x400.jpeg",
 )
 require "open-uri"
 file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623364001/vrwpfclkitjkj5bvxb8a.jpg')
@@ -106,7 +114,9 @@ cause7.save!
 
 cause8 = Cause.create!(
   name: '#fairpay',
-  description: "Many of those heralded as heroes and whom we clapped for are getting by on low wages and poor conditions, while holding some of the most stressful yet important roles in society. How can you put that right?"
+  description: "Many of those heralded as heroes and whom we clapped for are getting by on low wages and poor conditions, while holding some of the most stressful yet important roles in society. How can you put that right?",
+  twitter:'fairpayworks',
+  photo_url:"https://pbs.twimg.com/profile_images/1371615489105883136/VNb4YkXz_400x400.jpg",
 )
 require "open-uri"
 file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623627466/skkozi07aqorndshxqxx.jpg')
