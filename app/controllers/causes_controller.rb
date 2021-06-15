@@ -24,21 +24,26 @@ class CausesController < ApplicationController
     if session[:tasks].blank?
       session[:tasks] = []
     end
-    client = Twitter::REST::Client.new do |config|
-        config.consumer_key        = ENV["API_KEY"]
-        config.consumer_secret     = ENV["API_SECRET_KEY"]
-        config.access_token        = ENV["ACCESS_TOKEN"]
-        config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
-      end
-      # @tweets = tweets.search('#Blacklivesmatter')
-      @tweets = client.user_timeline(@cause.twitter, count: 2)
+    # client = Twitter::REST::Client.new do |config|
+    #     config.consumer_key        = ENV["API_KEY"]
+    #     config.consumer_secret     = ENV["API_SECRET_KEY"]
+    #     config.access_token        = ENV["ACCESS_TOKEN"]
+    #     config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
+    #   end
+    #   # @tweets = tweets.search('#Blacklivesmatter')
+    #   @tweets = client.user_timeline(@cause.twitter, count: 2)
   end
 
   def add_selected_cause
     @causes = Cause.all
     cause = Cause.find(params[:id])
     USER_CAUSES << cause
-    @selected_causes = USER_CAUSES.uniq()
+    @selected_causes = USER_CAUSES.uniq
+    @task = Task.where(cause_id: cause.id, name: "registered")
+    raise
+    unless session[:tasks].include?(@task.ids)
+      session[:tasks] << @task.ids
+    end
     render :index
   end
 
@@ -79,7 +84,7 @@ class CausesController < ApplicationController
         config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
     end
       # @tweets = tweets.search('#Blacklivesmatter')
-      @tweets = client.user_timeline(@cause.twitter, count: 2)
+      # @tweets = client.user_timeline(@cause.twitter, count: 2)
     @time = params[:time]
 
     if USER_CAUSES.length > @index + 1

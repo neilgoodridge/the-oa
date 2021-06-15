@@ -1,4 +1,3 @@
-<div class="welcome">
   <div class="choose">
     <h1>Welcome O.nline A.ctivist</h1>
     <div class="cause-container">
@@ -7,8 +6,8 @@
         <% @causes.each do |cause|%>
         <%= link_to add_selected_cause_path(cause), remote: true do %>
         <div class="cause-card">
-          <h3><%= cause.name %></h3>
           <div class="clickable">
+            <h3><%= cause.name %></h3>
             <div class="overlay">
               <div class="photo" >
                 <% if cause.photo.attached? %>
@@ -55,5 +54,4 @@
       </div>
     </div>
   </div>
-</div>
 </div>

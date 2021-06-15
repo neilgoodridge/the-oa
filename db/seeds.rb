@@ -52,8 +52,8 @@ cause2 = Cause.create!(
   photo_url:"https://pbs.twimg.com/profile_images/1399774074830606338/G40HK4bO_400x400.jpg",
 )
 require "open-uri"
-file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623342770/cwvquebn5k8i42xozadr.webp')
-cause2.photo.attach(io: file, filename: 'cwvquebn5k8i42xozadr.webp', content_type: 'image/webp')
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623627342/xznfnckvhaczzdh0bizh.png')
+cause2.photo.attach(io: file, filename: 'cwvquebn5k8i42xozadr.png', content_type: 'image/png')
 cause2.save!
 
 
@@ -73,7 +73,7 @@ cause4 = Cause.create!(
   description: "Help put an end to the growing knife culture sweeping some of our largest cities. Easy to conceal, hard to catch, and deadly. Let's put an end to this today"
 )
 require "open-uri"
-file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623352054/t0w7q0odh6wa8rdgeubj.jpg')
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623628212/a9fwicfvuspdy5rhksju.jpg')
 cause4.photo.attach(io: file, filename: 't0w7q0odh6wa8rdgeubj.jpg', content_type: 'image/jpg')
 cause4.save!
 
@@ -109,8 +109,8 @@ cause8 = Cause.create!(
   description: "Many of those heralded as heroes and whom we clapped for are getting by on low wages and poor conditions, while holding some of the most stressful yet important roles in society. How can you put that right?"
 )
 require "open-uri"
-file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623364777/azqmvuifblz86ogjs12o.png')
-cause8.photo.attach(io: file, filename: 'azqmvuifblz86ogjs12o.png', content_type: 'image/png')
+file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623627466/skkozi07aqorndshxqxx.jpg')
+cause8.photo.attach(io: file, filename: 'azqmvuifblz86ogjs12o.jpg', content_type: 'image/jpg')
 cause8.save!
 
 task1 = Task.create!(
@@ -202,6 +202,68 @@ task10 = Task.create!(
   url: 'http://www.flock525.club/'
 )
 
+task11 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause1.id,
+  time: 2
+)
+
+task12 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause2.id,
+  time: 2
+)
+
+task13 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause3.id,
+  time: 2
+)
+
+task14 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause4.id,
+  time: 2
+)
+
+task15 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause5.id,
+  time: 2
+)
+
+task16 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause6.id,
+  time: 2
+)
+
+task17 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause7.id,
+  time: 2
+)
+task18 = Task.create!(
+  name: 'registered',
+  points: '5',
+  content: 'Thanks for making a difference and joining the OA',
+  cause_id: cause8.id,
+  time: 2
+)
 organisation1 = Organisation.create!(
   name: 'Black Lives Matter',
   url: 'https://www.blacklivesmatter.uk/',
@@ -262,6 +324,10 @@ action2 = Action.create!(
   task_id: task2.id,
   )
 
-
+action3 = Action.create!(
+  completed: true,
+  user_id: user1.id,
+  task_id: task11.id,
+  )
 
 puts 'Seed: Finished seeding!'
