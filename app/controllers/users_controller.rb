@@ -51,17 +51,6 @@ class UsersController < ApplicationController
     render :dashboard
   end
 
-  # def next_cause
-  #   @time = params[:time]
-  #   @index = params[:index].to_i
-  #   if USER_CAUSES.length > @index + 1
-  #     @index += 1
-  #   end
-  #     @cause = USER_CAUSES[@index]
-  #     @tasks = @cause.tasks.where("tasks.time <= ?", @time)
-  #     render :cause_task_show
-  # end
-
   private
   def user_params
     params.require(:user).permit(:name, task_ids: [])
