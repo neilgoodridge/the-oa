@@ -10,7 +10,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  def create(user_params)
+  def create
+    # resource = build_resource(devise_parameter_sanitizer.sanitize(:sign_up))
+    # resource.save
     super
     if resource.persisted?
       session[:tasks].each do |id|
