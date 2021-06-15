@@ -63,12 +63,21 @@
   grid-template-columns: 1fr 1fr 1fr;
   margin: auto;
   background-color: white;
+  position: relative;
+  height: 17vh;
 }
 .card {
+  border: 2px solid black;
   margin: auto;
-  max-width: 25vw;
-   border:1px solid white;
- }
+  width: 25vw;
+  height: 17vh;
+  border:1px solid white;
+  text-align: center;
+  p { font-size: 18px;
+    margin: 10px auto;
+    width: 70%;
+  }
+}
  .carousel {
    text-align: center;
    height: 70vh;
@@ -85,10 +94,10 @@
    height: 100%;
  }
  .title {
-  padding-top: 50px;
+  padding-top: 40px;
   text-align: center;
   width: 100%;
-  height: 100%;
+  height: 8vh;
   background-color: white;
 }
 .cover {
@@ -133,7 +142,8 @@
 
  .title-button {
    background-color: white;
-   margin: auto;
+   // margin: auto;
+   height: 8vh;
    .button-gi {
    background: #D2E7D5;
    border:  1px solid #cccccc;
@@ -201,7 +211,10 @@ h3 {
    font-size: 35px;
    opacity: 0.6;
  }
-.card i {
-   font-size: 32px;
+.fa {
+   font-size: 50px;
+   text-align: center;
    color: #D2E7D5;
+   font-weight: bolder;
+   padding-bottom: 20px;
  }
