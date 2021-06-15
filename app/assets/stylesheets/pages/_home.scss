@@ -1,6 +1,5 @@
-// Specific CSS for your home-page
 .container-home-left {
-  flex: 3.5;
+  flex: 3;
   background-color: white;
   h1 {
   text-align: center;
@@ -11,26 +10,26 @@
   }
 }
 .container-home-right {
-  flex: 2;
-  text-align: center;
-  .homepage-image {
-  height: 93vh;
-  flex: 2;
-  img { object-fit: cover;}
-  }
+   flex: 2;
+   text-align: center;
+   .homepage-image {
+   height: 94vh;
+   flex: 2;
+   img { object-fit: cover;}
+   }
 }
 .line {
   border-top: solid 1px;
   color: black;
   width: 75%;
   padding-bottom: 10px;
-}
-.container-online-cards {
-  padding-top: 30px;
-  margin-left: 150px;
-  width: 65%;
-  display: flex;
-}
+ }
+ .container-online-cards {
+   padding-top: 30px;
+   margin: auto;
+   width: 65%;
+   display: flex;
+ }
 .container-online-card-left {
   margin: auto;
   flex: 3;
@@ -49,14 +48,14 @@
     font-size: 28px;
     padding-left: 30px;
   }
-}
-.container-online-card-bottom {
-  padding-top: 20px;
-  margin-left: 150px;
-  width: 55%;
-  p { font-size: 23px;
-    font-weight: lighter;
-    font-family: 'Quicksand', sans-serif;
+ }
+ .container-online-card-bottom {
+   padding-top: 20px;
+   margin: auto;
+   width: 65%;
+   p { font-size: 23px;
+     font-weight: lighter;
+     font-family: 'Quicksand', sans-serif;
     }
  }
 .cards {
@@ -68,16 +67,24 @@
 .card {
   margin: auto;
   max-width: 25vw;
-  border:1px solid white;
-}
-.carousel {
-  border: #d1dfd4 4px solid;
-  text-align: center;
-  // margin: 8px;
-  height: 71vh;
-  position: relative;
-}
-.title {
+   border:1px solid white;
+ }
+ .carousel {
+   text-align: center;
+   height: 70vh;
+   position: relative;
+   img {
+     height: 100%;
+     width: auto;
+   }
+ }
+ .slideshowContainer {
+   position: relative;
+   overflow: hidden;
+   width: 100%;
+   height: 100%;
+ }
+ .title {
   padding-top: 50px;
   text-align: center;
   width: 100%;
@@ -120,33 +127,62 @@
   font-family: 'Quicksand', sans-serif;
   font-size: 25px;
   text-align: center;
-  text-decoration: none;
-  width: 20%;
-}
-button {
-  background: #d1dfd4;
-  border:  1px solid #cccccc;
+   text-decoration: none;
+   width: 20%;
+ }
+
+ .title-button {
+   background-color: white;
+   margin: auto;
+   .button-gi {
+   background: #D2E7D5;
+   border:  1px solid #cccccc;
+   color: white;
+   border-radius: 12px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+   padding:  16px 32px;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 25px;
+   text-align: center;
+   text-decoration: none;
+   margin: 0px 40% 20px 40%;
+   width: 20%;
+   }
+ }
+ button {
+   background: #d1dfd4;
+   border:  1px solid #cccccc;
   border-radius: 8px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   padding:  16px 32px;
   font-family: 'Quicksand', sans-serif;
-  font-size: 25px;
-  text-align: center;
-  text-decoration: none;
-  a {color: white}
-}
-.button-li:hover {
+   font-size: 25px;
+   text-align: center;
+   text-decoration: none;
+   color: darkgrey;
+   a {color: white}
+ }
+ .button-li:hover {
   transform: scale(1.03);
   transition: .2s ease-in-out;
   a {
   color: darkgrey;
   text-decoration: none;
-  transition: .2s ease-in-out;
-  }
-}
-.button-ta:hover {
-  transform: scale(1.03);
-  transition: .2s ease-in-out;
+   transition: .2s ease-in-out;
+   }
+ }
+ .button-gi:hover {
+   transform: scale(1.03);
+   transition: .2s ease-in-out;
+   a {
+   color: darkgrey;
+   text-decoration: none;
+   transition: .2s ease-in-out;
+   }
+ }
+ .button-ta:hover {
+   transform: scale(1.03);
+   transition: .2s ease-in-out;
   a {
   color: darkgrey;
   text-decoration: none;
@@ -160,12 +196,12 @@ h1 {
   font-weight: lighter;
 }
 h3 {
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 35px;
-  opacity: 0.4;
-}
-i {
-  font-size: 32px;
-  color: #D2E7D5;
-}
+   text-align: center;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 35px;
+   opacity: 0.6;
+ }
+.card i {
+   font-size: 32px;
+   color: #D2E7D5;
+ }

@@ -1,0 +1,120 @@
+_
+
+.bottom-container {
+    -webkit-box-align: stretch;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    align-items: stretch;
+    border: 0px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin: 0px;
+    min-height: 0px;
+    min-width: 0px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 4px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 0;
+}
+
+.top-container-image{
+    -webkit-box-align: stretch;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    align-items: stretch;
+    border: 0px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: row;
+    flex-shrink: 0;
+    margin: 0px;
+    min-height: 0px;
+    min-width: 0px;
+    padding: 0px;
+    position: relative;
+    z-index: 0;
+}
+
+.top-container-image-right{
+  margin-left: 4px;
+  margin-bottom: 12px;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-flex: 7;
+  flex-grow: 7;
+
+}
+
+.top-container-image-right-title{
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+}
+
+.top-container-image-bottom{
+  width: 2px;
+  min-height: 10px;
+  margin-top: 4px;
+  background-color: rgb(196, 207, 214);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-container-image-style{
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.top-container{
+    -webkit-box-align: stretch;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    align-items: stretch;
+    border: 0px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-shrink: 0;
+    margin: 0px;
+    min-height: 0px;
+    min-width: 0px;
+    padding: 0px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 0;
+}
+
+
+.top-container-image-right-title-top-div{
+    -webkit-box-pack: center;
+    justify-content: center;
+    max-width: calc(100% - 25px);
+}
+
+.top-container-image-right-title-top-div2{
+  -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+}
+
+.top-container-image-right-title-top-date{
+  font-family: inherit;
+  overflow-wrap: break-word;
+  min-width: 0px;
+}
+
+.top-container-image-right-title-twitter-logo{
+    margin-left: auto;
+    width: 25px;
+    height: 25px;
+}

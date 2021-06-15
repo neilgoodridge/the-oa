@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:show, :create, :new, :store_tasks ]
+  skip_before_action :authenticate_user!, only: [:store_tasks, :dashboard]
 
   def dashboard
-    @cause_selected = current_user.tasks
+    @causes = current_user.causes
+    @cause = @causes.first
+    @index = 0
+    @tasks = current_user.tasks.where(cause_id: @cause.id)
+    @name = current_user.name
   end
 
   def store_tasks

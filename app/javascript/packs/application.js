@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("causes")
 require("home")
+require("carousel")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -26,6 +27,8 @@ require("home")
 
 // External imports
 import "bootstrap";
+import { loadDynamicBannerText } from '../components/banner';
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -33,4 +36,6 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  loadDynamicBannerText();
 });
+
