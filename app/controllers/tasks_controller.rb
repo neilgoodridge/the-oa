@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :create, :show]
+  skip_before_action :authenticate_user!, only: [:create]
 
   # def create
   #   @task = Task.new(task_param)
@@ -10,9 +10,9 @@ class TasksController < ApplicationController
   #   end
   # end
 
-  private
+  # private
 
-  def task_param
-    params.require(:task).permit(:name, :content, :time)
-  end
+  # def task_param
+  #   params.require(:task).permit(:name, :content, :time)
+  # end
 end
