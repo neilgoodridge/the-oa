@@ -275,7 +275,7 @@ action2 = Action.create!(
 action3 = Action.create!(
   completed: true,
   user_id: user1.id,
-  task_id: task11.id,
+  task_id: task10.id,
   )
 
 puts 'Seed: Finished seeding!'
