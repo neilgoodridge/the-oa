@@ -41,7 +41,7 @@ class UsersController < ApplicationController
   def next_cause
     @causes = current_user.causes.order(:name).distinct
     @index = params[:index].to_i + 1
-    if @index > @causes.length
+    if @index >= @causes.length
       @cause = @causes.first
       @index = 0
     else
@@ -50,17 +50,6 @@ class UsersController < ApplicationController
     @tasks = current_user.tasks.where(cause_id: @cause.id)
     render :dashboard
   end
-
-  # def next_cause
-  #   @time = params[:time]
-  #   @index = params[:index].to_i
-  #   if USER_CAUSES.length > @index + 1
-  #     @index += 1
-  #   end
-  #     @cause = USER_CAUSES[@index]
-  #     @tasks = @cause.tasks.where("tasks.time <= ?", @time)
-  #     render :cause_task_show
-  # end
 
   private
   def user_params
