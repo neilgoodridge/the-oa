@@ -81,7 +81,7 @@
   width: 100%;
   opacity: 0.15;
   align-items: center;
-  object-fit: cover;
+  object-fit: fill;
   vertical-align: middle;
   filter: grayscale(100%);
 }
@@ -140,9 +140,11 @@ h2 {
   transition: 0.4s ease-out;
   img { border: solid 2px black;}
 }
-h3 {
+.cause-card {
+  h3 {
   color: black;
   padding: 20%;
+  }
 }
 
 a:hover {
