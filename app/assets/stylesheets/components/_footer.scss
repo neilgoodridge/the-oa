@@ -1,0 +1,25 @@
+.footer {
+  background-color: #C7E2D3;;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 60px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-section {
+  max-width: 300px;
+  margin: 0px;
+}
+
+.brand-name-footer {
+  position:relative;
+  box-sizing: border-box;
+  font-family: quicksand;
+  color: white;
+  vertical-align: middle;
+  display: inline-block;
+  top: 2px;
+}
