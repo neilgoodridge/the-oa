@@ -1,0 +1,133 @@
+.cause-cards {
+  padding: 4px;
+  margin: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: space-between;
+  text-align: center;
+}
+.cause-card {
+  padding: 4px;
+  margin: 8px;
+  height: 20vh;
+  border-radius: 16px;
+  position: relative;
+  text-center: center;
+  h3 {
+  padding: 20%;
+  color: black; }
+  .text-description { opacity: 0;
+  }
+}
+
+.text-description {
+  color: black;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 98%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.photo img {
+  display: block;
+  margin: auto;
+  padding: auto;
+  border-radius: 16px;
+  height: 19vh;
+  width: 100%;
+  opacity: 0.15;
+  align-items: center;
+  object-fit: cover;
+  vertical-align: middle;
+  filter: grayscale(100%);
+}
+.submit-card {
+  padding: 4px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.time-container {
+  height: 25vh;
+  padding: 4px;
+  margin: auto;
+  text-align: center;
+
+}
+.button-card{
+  background: #D2E7D5;
+  border:  1px solid #cccccc;
+  border-radius: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding:  32px 68px;
+  color:  white;
+  margin: 50px auto;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  width: 40%;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  color: black;
+  padding: 20%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+.clickable {
+  padding: 4px;
+  margin: 8px;
+  height: 20vh;
+  border-radius: 16px;
+  position: relative;
+  transition: 0.4s ease-out;
+  img { border: solid 2px black;}
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: .4s ease-in-out;
+}
+
+.clickable:hover {
+  h3 { opacity: 0;
+  transition: 0.4s ease-out;
+  text-decoration: none;
+}
+  .text-description {
+    opacity: 1;
+    transition: .4s ease-in-out;
+  }
+}
+.overlay:hover {
+  transform: scale(1.02);
+  transition: .2s ease-in-out;
+}
+.clickable.active {
+  .text-description{ opacity: 0; transition: .4s ease-out;}
+  h3 { opacity: 0 }
+  .photo img {
+    opacity: 0.8;
+    transition: .3s ease-in-out;
+    transform: scale(1.04);
+    filter: grayscale(50%);
+    }
+  }
+
