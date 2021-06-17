@@ -48,7 +48,13 @@
   </div>
 </div>
 <div class="more-info-show">
-  <h1>More info about this cause<h1>
-  <h3> Notable organizations </h3>
+  <h4>More info about this cause:<h4>
+  <%= @cause.description %>
+  <div class="organisations-info">
+    <h4>Notable organisations:</h4>
+    <% @organisations.each do |organisation| %>
+    <p><%= organisation.name %>:&emsp;<%= organisation.url %></p>
+    <% end %>
+  </div>
 </div>
 
