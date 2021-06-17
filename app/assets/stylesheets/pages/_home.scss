@@ -79,12 +79,15 @@
   }
 }
  .carousel {
-   text-align: center;
-   height: 70vh;
-   position: relative;
-   img {
-     height: 100%;
-     width: auto;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  height: 65vh;
+  position: relative;
+  img {
+    // height: auto;
+    width: 100%;
+    object-fit: fill;
    }
  }
  .slideshowContainer {
