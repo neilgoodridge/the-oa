@@ -34,8 +34,8 @@ class CausesController < ApplicationController
     cause = Cause.find(params[:id])
     USER_CAUSES << cause
     @selected_causes = USER_CAUSES.uniq
-    unless session[:tasks].include?(@task.ids)
-      session[:tasks] << @task.ids
+    unless session[:tasks].include?(@task.id)
+      session[:tasks] << @task.id
     end
     @selected_causes = USER_CAUSES.uniq()
     render :index
