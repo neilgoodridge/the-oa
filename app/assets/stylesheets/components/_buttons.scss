@@ -1,0 +1,94 @@
+.buttons {
+  height: 250px;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+.button-ta {
+  background: #D2E7D5;
+  border:  1px solid #cccccc;
+  border-radius: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding:  32px 68px;
+  color:  white;
+  margin: 50px auto;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  width: 40%;
+}
+.button-li {
+  background: #D2E7D5;
+  border:  1px solid #cccccc;
+  color: white;
+  border-radius: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding:  16px 32px;
+  margin: 50px auto;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  text-align: center;
+   text-decoration: none;
+   width: 20%;
+ }
+
+ .title-button {
+   background-color: white;
+   // margin: auto;
+   height: 8vh;
+   .button-gi {
+   background: #D2E7D5;
+   border:  1px solid #cccccc;
+   color: white;
+   border-radius: 12px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+   padding:  16px 32px;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 25px;
+   text-align: center;
+   text-decoration: none;
+   margin: 0px 40% 20px 40%;
+   width: 20%;
+   }
+ }
+ button {
+   background: #d1dfd4;
+   border:  1px solid #cccccc;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding:  16px 32px;
+  font-family: 'Quicksand', sans-serif;
+   font-size: 25px;
+   text-align: center;
+   text-decoration: none;
+   color: darkgrey;
+   a {color: white}
+ }
+ .button-li:hover {
+  transform: scale(1.03);
+  transition: .2s ease-in-out;
+  a {
+  color: darkgrey;
+  text-decoration: none;
+   transition: .2s ease-in-out;
+   }
+ }
+ .button-gi:hover {
+   transform: scale(1.03);
+   transition: .2s ease-in-out;
+   a {
+   color: darkgrey;
+   text-decoration: none;
+   transition: .2s ease-in-out;
+   }
+ }
+ .button-ta:hover {
+   transform: scale(1.03);
+   transition: .2s ease-in-out;
+  a {
+  color: darkgrey;
+  text-decoration: none;
+  transition: .2s ease-in-out;
+  }
+}
