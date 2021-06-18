@@ -92,3 +92,18 @@
   transition: .2s ease-in-out;
   }
 }
+
+.button-time {
+  background: #D2E7D5;
+  border:  1px solid #cccccc;
+  border-radius: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding:  32px;
+  color:  white;
+  margin: 50px auto;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  width: 10%;
+}
