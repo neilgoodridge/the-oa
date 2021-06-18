@@ -1,0 +1,39 @@
+.box {
+  width: 100%;
+  height: 200px;
+  margin: 10px;
+  position: relative;
+  border-radius: 16px;
+  img {
+  width: 100%;
+  height: 200px;
+  opacity: 0.5;
+  object-fit: cover;
+  border-radius: 16px;
+}
+}
+
+/* Fit our square image to its parent */
+/* Style our text overlay, center the text, and position it on top of our shade */
+p {
+  color: white;
+  font-size: 32px;
+  margin: 0;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  position: absolute;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  top: 50%;
+  left: 50%;
+}
+
+.shade {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+}
+
