@@ -13,6 +13,7 @@ class CausesController < ApplicationController
   end
   def cause_task_show
     @cause = USER_CAUSES[0]
+    @organisations = @cause.organisations
     @time = params[:time]
     return redirect_to causes_path, alert: "Please select a cause and a time" if @cause.blank? || @time.blank?
     @tasks = @cause.tasks.where("tasks.time <= ?", @time)
@@ -48,6 +49,7 @@ class CausesController < ApplicationController
   def previous_cause
     @index = params[:index].to_i
     @cause = USER_CAUSES[@index]
+    @organisations = @cause.organisations
     if USER_CAUSES.length > (@index * -1)
      @index -= 1
     end
@@ -66,6 +68,7 @@ class CausesController < ApplicationController
   def next_cause
     @index = params[:index].to_i
     @cause = USER_CAUSES[@index]
+    @organisations = @cause.organisations
     client = Twitter::REST::Client.new do |config|
         config.consumer_key        = ENV["API_KEY"]
         config.consumer_secret     = ENV["API_SECRET_KEY"]
