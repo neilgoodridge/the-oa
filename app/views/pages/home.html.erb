@@ -30,51 +30,58 @@
     <img src="https://res.cloudinary.com/k2x4b-523p/image/upload/o_52/v1623112549/n2omdnrbdzk3bk7w7jzf.jpg" alt="" class="homepage-image">
   </div>
 </div>
-<div class="title">
-  <div class="box "><h3><strong>How it works</strong></h3></div> <!-- add 'bounce' to class for 'how it works' bounce effect -->
-</div>
-<div class="cards">
-  <div class="card box fill">
-    <i class="fa fa-solid fa-ribbon"></i>
-    <h5><strong>Choose causes you care about</strong></h5>
-    <p>Select from one to eight causes to get behind such as Equal Pay, Climate Change, Black Lives Matter and more. </p>
+<div class="bottom-half">
+  <div class="carousel">
+    <div class="slideshowContainer">
+      <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1623344444/ndovtj0kxvy5ys9edyyw.png">
+      <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1623627342/xznfnckvhaczzdh0bizh.png">
+      <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1623628212/a9fwicfvuspdy5rhksju.jpg">
+      <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1623364001/vrwpfclkitjkj5bvxb8a.jpg">
+      <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1623342677/hnto9udb6eaxknq1tffq.png">
+      <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1623627466/skkozi07aqorndshxqxx.jpg">
+      <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1622768272/lym3euydklxpwbqztkui.jpg">
+      <!-- Replace 'span' elements with 'img' files for the arrows then can style accordingly. -->
+      <span id ="leftArrow" class="slideshowArrow">&#8249;</span>
+      <span id ="rightArrow" class="slideshowArrow">&#8250;</span>
+      <div class="slideshowCircles">
+        <span class="circle dot"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+      </div>
+    </div>
   </div>
-  <div class="card box fill">
-    <i class="fa far fa-clock"></i>
-      <h5><strong>Select time you have to volunteer</strong></h5>
-    <p>Whether you have 5 minutes or all the time in the world, we can get you involved!</p>
-  </div>
-  <div class="card box fill">
-    <i class="fa fas fa-list-alt"></i>
-      <h5><strong>Complete tasks online & track progress</strong></h5>
-    <p>Track and record your amazing acheivements via your personalised dashboard.</p>
-  </div>
-</div>
-<div class="title-button">
-  <button class="button-gi"><%= link_to "Get Involved", causes_path  %></button>
-</div>
-<div class="carousel">
-  <div class="slideshowContainer">
-    <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1623344444/ndovtj0kxvy5ys9edyyw.png">
-    <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1623627342/xznfnckvhaczzdh0bizh.png">
-    <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1623628212/a9fwicfvuspdy5rhksju.jpg">
-    <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1623364001/vrwpfclkitjkj5bvxb8a.jpg">
-    <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1623342677/hnto9udb6eaxknq1tffq.png">
-    <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1623627466/skkozi07aqorndshxqxx.jpg">
-    <img class="imageSlides" src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1622768272/lym3euydklxpwbqztkui.jpg">
-    <!-- Replace 'span' elements with 'img' files for the arrows then can style accordingly. -->
-    <span id ="leftArrow" class="slideshowArrow">&#8249;</span>
-    <span id ="rightArrow" class="slideshowArrow">&#8250;</span>
-    <div class="slideshowCircles">
-      <span class="circle dot"></span>
-      <span class="circle"></span>
-      <span class="circle"></span>
-      <span class="circle"></span>
-      <span class="circle"></span>
-      <span class="circle"></span>
-      <span class="circle"></span>
-      <span class="circle"></span>
+  <div class="carousel-right">
+
+    <div class="title">
+      <div class="box "><h3><strong>How it works</strong></h3></div> <!-- add 'bounce' to class for 'how it works' bounce effect -->
+    </div>
+    <div class="cards">
+      <div class="card">
+        <i class="fa fa-solid fa-ribbon"></i>
+        <h5><strong>Choose causes you care about</strong></h5>
+        <p>Select from one to eight causes to get behind such as Equal Pay, Climate Change, Black Lives Matter and more. </p>
+      </div>
+      <div class="card">
+        <i class="fa far fa-clock"></i>
+          <h5><strong>Select time you have to volunteer</strong></h5>
+        <p>Whether you have 5 minutes or all the time in the world, we can get you involved!</p>
+      </div>
+      <div class="card">
+        <i class="fa fas fa-list-alt"></i>
+          <h5><strong>Complete tasks online & track progress</strong></h5>
+        <p>Track and record your amazing acheivements via your personalised dashboard.</p>
+      </div>
+    </div>
+    <div class="title-button">
+      <button class="button-gi"><%= link_to "Get Involved", causes_path  %></button>
     </div>
   </div>
 </div>
+
+
 

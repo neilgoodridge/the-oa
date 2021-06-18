@@ -58,21 +58,31 @@
      font-family: 'Quicksand', sans-serif;
     }
  }
+ .bottom-half {
+  display: flex;
+  height: 85vh;
+ }
+ .carousel-right {
+  flex: 2;
+ }
+
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   margin: auto;
   background-color: white;
   position: relative;
   height: 17vh;
+  margin-top: 100px;
 }
 .card {
   border: 2px solid black;
-  margin: auto;
+  margin: auto 10px auto;
   width: 25vw;
   height: 17vh;
   border:1px solid white;
   text-align: center;
+  margin-top: 20px;
   p { font-size: 18px;
     margin: 10px auto;
     width: 70%; }
@@ -85,11 +95,13 @@
    }
 }
  .carousel {
+  flex: 3;
   width: 80%;
   margin: auto;
   text-align: center;
   height: 65vh;
   position: relative;
+  margin-top: 0px;
   img {
     // height: auto;
     width: 100%;
@@ -103,9 +115,9 @@
    height: 100%;
  }
  .title {
-  padding-top: 40px;
-  text-align: center;
-  width: 100%;
+  padding-top: 110px;
+  text-align: left;
+  flex: 2;
   height: 8vh;
   background-color: white;
 }
@@ -152,7 +164,7 @@
  .title-button {
    background-color: white;
    // margin: auto;
-   height: 8vh;
+   height: 8vh;}
    .button-gi {
    background: #D2E7D5;
    border:  1px solid #cccccc;
@@ -164,10 +176,10 @@
    font-size: 25px;
    text-align: center;
    text-decoration: none;
-   margin: 0px 40% 20px 40%;
-   width: 20%;
+   margin: 15% 20% 50% 70%;
+   width: 30%;
    }
- }
+
  button {
    background: #d1dfd4;
    border:  1px solid #cccccc;
@@ -214,8 +226,10 @@ h1 {
   font-size: 60px;
   font-weight: lighter;
 }
+.box { flex: 2;
 h3 {
    text-align: center;
+   // margin-left: 10px;
    font-family: 'Quicksand', sans-serif;
    font-size: 35px;
    opacity: 0.6;
@@ -223,4 +237,4 @@ h3 {
 
 .footer-section.fa {
   color: white;
-}
+}}
