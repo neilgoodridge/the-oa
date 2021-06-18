@@ -68,10 +68,11 @@
 }
 .more-info-show {
   border: #d1dfd4 4px solid;
-  padding: 4px;
+  padding: 25px 50px 75px 100px;
   margin: 8px;
-  height: 100vh;
+  height: 40vh;
   background-color: white;
+  line-height: 2.5;
 }
 .progess-bar {
   border: #d1dfd4 4px solid;
@@ -121,3 +122,17 @@ button {
   width: 100%;
   height: 50vh;
 }
+
+h3 {
+  margin: .5em 0;
+  color: black;
+}
+
+.organisations-info {
+  text-align: left;
+  color: black;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  margin: 0;
+}
+
