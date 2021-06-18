@@ -3,6 +3,7 @@
   padding: 4px;
   margin: 8px;
   width: auto;
+  background-color: #fff;
 }
 .welcome {
   border: #d1dfd4 4px solid;
@@ -42,20 +43,39 @@
   font-weight: lighter;
 }
 
+.lock-h3 {
+  height: 39vh;
+  overflow: auto;
+}
 .cause-show-card {
-  border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: 8px;
   height: 100%;
+  margin: 10px;
+  border-radius: 16px;
   flex: 2;
-  background-color: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: #fff;
+  border: solid 1px #f6f6f6;
+  box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
+  h3 {
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    padding:15px;
+    border-radius: 16px;
+  }
+  h6 {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 100%;
+    box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
+    border-bottom: solid 8px #d1dfd4;
+  }
 }
 .cause-show-cards {
-  border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: 8px;
+  margin: 16px;
   display: flex;
+  height: 57vh;
 }
 
 .carousel-container h6 {
@@ -83,7 +103,11 @@
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-
+.check-boxes {
+  position: absolute;
+  left: 20px;
+  top: -50px;
+}
 .progess-bar-dashboard {
   border: #d1dfd4 4px solid;
   padding: 8px;
@@ -95,9 +119,32 @@
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
+.form-check-label {
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 0px 16px 16px 0px;
+  box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
+  border: 1px solid #F3F3F3;
+  a { color: black;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+}
+.form-check-label:hover {
+  background-color: #d1dfd4;
+  transition: .2s ease-in-out;
+  a {color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+}
 
 .timeform {
   display: block;
+  padding: 20px;
 }
 .cause-carousel {
   display: flex;
@@ -113,11 +160,13 @@
     object-fit: contain;
   }
 }
-button {
-  margin: auto;
-  // agn: middle;
-}
 .cause-container {
   width: 100%;
   height: 50vh;
+}
+.save{
+  width: 100%;
+.save-button{
+  width: 80%;
+  margin-left: 10%;}
 }
