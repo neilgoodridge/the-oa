@@ -15,7 +15,7 @@
 
 /* Fit our square image to its parent */
 /* Style our text overlay, center the text, and position it on top of our shade */
-p {
+.ignite {
   color: white;
   font-size: 32px;
   margin: 0;
@@ -25,6 +25,7 @@ p {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   top: 50%;
   left: 50%;
+  width: 80%;
 }
 
 .shade {

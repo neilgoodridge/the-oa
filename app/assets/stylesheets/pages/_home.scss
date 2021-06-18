@@ -75,8 +75,14 @@
   text-align: center;
   p { font-size: 18px;
     margin: 10px auto;
-    width: 70%;
-  }
+    width: 70%; }
+  .fa {
+     font-size: 50px;
+     text-align: center;
+     color: #D2E7D5;
+     font-weight: bolder;
+     padding-bottom: 20px;
+   }
 }
  .carousel {
   width: 80%;
@@ -214,10 +220,7 @@ h3 {
    font-size: 35px;
    opacity: 0.6;
  }
-.fa {
-   font-size: 50px;
-   text-align: center;
-   color: #D2E7D5;
-   font-weight: bolder;
-   padding-bottom: 20px;
- }
+
+.footer-section.fa {
+  color: white;
+}

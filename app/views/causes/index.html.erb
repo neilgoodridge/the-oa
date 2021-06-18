@@ -1,40 +1,35 @@
-<!--   <div class="box">
-  <img src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1623767179/n4zxcy9rwqcqqefb3ogj.png">
-  <div class="shade"></div>
-  <p>Text Overlay</p>
-</div> -->
-  <div class="choose">
-    <h1 class="cause-container-title">Welcome Online Activist</h1>
-    <div class="cause-container">
-      <h2>Choose a cause you care about</h2>
-      <div class="cause-cards">
-        <% @causes.each do |cause|%>
-        <%= link_to add_selected_cause_path(cause), remote: true do %>
-        <div class="cause-card">
-          <div class="clickable">
-            <h3><%= cause.name %></h3>
-            <div class="overlay">
-              <div class="photo" >
-                <% if cause.photo.attached? %>
-                  <%= cl_image_tag (cause.photo.key)%>
-                <% else %>
-                  <img src="https://res.cloudinary.com/k2x4b-523p/image/upload/c_scale,h_140,w_250/v1622768272/lym3euydklxpwbqztkui.jpg">
-                <% end %>
-              </div>
-              <div class="text-description">
-                <%= cause.description %>
-              </div>
+<div class="choose">
+  <h1 class="cause-container-title">Welcome Online Activist</h1>
+  <div class="cause-container">
+    <h2>Choose a cause you care about</h2>
+    <div class="cause-cards">
+      <% @causes.each do |cause|%>
+      <%= link_to add_selected_cause_path(cause), remote: true do %>
+      <div class="cause-card">
+        <div class="clickable">
+          <h3><%= cause.name %></h3>
+          <div class="overlay">
+            <div class="photo" >
+              <% if cause.photo.attached? %>
+                <%= cl_image_tag (cause.photo.key)%>
+              <% else %>
+                <img src="https://res.cloudinary.com/k2x4b-523p/image/upload/c_scale,h_140,w_250/v1622768272/lym3euydklxpwbqztkui.jpg">
+              <% end %>
+            </div>
+            <div class="text-description">
+              <%= cause.description %>
             </div>
           </div>
         </div>
-        <% end %>
-      <% end %>
       </div>
+      <% end %>
+    <% end %>
+    </div>
     <div class="time-container">
         <div class="box" style="width: 80%;">
-          <img src="https://www.metiseurope.eu/wp-content/uploads/2021/02/united-nations-covid-19-response-sCY7W_uE8uE-unsplash-scaled-e1612610623999-1024x647.jpg">
+          <img src="https://www.metiseurope.eu/wp-content/uploads/2021/02/united-nations-covid-19-response-sCY7W_uE8uE-unsplash-scaled-e1612610623999-1024x647.jpg" class="background-image">
           <div class="shade" ></div>
-          <p>How many minutes can you spare to <strong>ignite the fight</strong> today?</p>
+          <p class="ignite">How many minutes can you spare to <strong>ignite the fight</strong> today?</p>
         </div>
       <div class="time-cards">
         <div class="time-card">
