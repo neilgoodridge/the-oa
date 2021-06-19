@@ -1,8 +1,7 @@
-body {
-  background-color: #f6f6f6;
-  background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url("https://res.cloudinary.com/k2x4b-523p/image/upload/v1623112549/n2omdnrbdzk3bk7w7jzf.jpg");
-  opacity: 0.9;
-}
+// body {
+//   background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url("https://res.cloudinary.com/k2x4b-523p/image/upload/v1623112549/n2omdnrbdzk3bk7w7jzf.jpg");
+//   opacity: 0.9;
+// }
 
 .container {
   border: #d1dfd4 4px solid;
@@ -77,18 +76,6 @@ border-bottom: solid 8px #6ec5ee;
   text-align: center;
   margin-right: 8px;
 }
-.more-info {
-  margin: auto;
-  width: 30%;
-}
-.more-info-show {
-  border: #d1dfd4 4px solid;
-  padding: 25px 50px 75px 100px;
-  margin: 8px;
-  height: 40vh;
-  background-color: white;
-  line-height: 2.5;
-}
 .progess-bar {
   border: #d1dfd4 4px solid;
   padding: 8px;
@@ -151,11 +138,13 @@ border-bottom: solid 8px #6ec5ee;
   height: 40vh;
   width: 80%;
   margin: auto;
+  border-radius: 16px;
   img {
     width: 40vw;
     height: 40vh;
     margin: auto;
     object-fit: contain;
+    border-radius: 16px;
   }
 }
 .cause-container {
@@ -190,6 +179,7 @@ h3 {
 .more-info-show {
   padding: 25px 50px 75px 100px;
   margin: auto;
+  margin-bottom: 20px;
   display: flex;
   height: 40vh;
   width: 75%;
