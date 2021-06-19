@@ -1,36 +1,37 @@
-<div class="container">
+<div class="background" style="background-image: url('https://res.cloudinary.com/k2x4b-523p/image/upload/o_52/v1623112549/n2omdnrbdzk3bk7w7jzf.jpg')">
+  <div class="container-form">
     <h2> Looks like you've completed some tasks! Way to go! </h2>
-  <h4>Sign up to save your progress and track results of your efforts. </h4>
-
-  <div class="wrapper fadeInDown">
-    <div id="formContent">
-      <h2 class="inactive underlineHover"> Sign Up </h2>
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
-
-    <div class="form-inputs">
-      <%= f.input :name,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "Your name" } %>
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
+    <h4>Sign up to save your progress and track results of your efforts. </h4>
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <h3 class="inactive underlineHover"> Sign Up </h3>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+        <div class="form-inputs">
+        <%= f.input :name, class: "name fadeIn first", type: "text",
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "Your name" } %>
+        <%= f.input :email, class: "email fadeIn second", type: "text",
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" }%>
+        <%= f.input :password, class: "password fadeIn third", type: "text",
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation, class: "password_confirm fadeIn fourth", type: "text",
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Sign up" %>
+        </div>
+        <% end %>
+        <div id="formFooter">
+          <a class="underlineHover" href="#"> <%= render "devise/shared/links" %></a>
+        </div>
+      </div>
     </div>
-
-    <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
-    </div>
-  <% end %>
-  <div id="formFooter">
-    <a class="underlineHover" href="#"> <%= render "devise/shared/links" %></a>
   </div>
 </div>
