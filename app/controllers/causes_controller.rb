@@ -28,7 +28,7 @@ class CausesController < ApplicationController
         config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
       end
       # @tweets = tweets.search('#Blacklivesmatter')
-      @tweets = client.user_timeline(@cause.twitter, count: 2)
+      @tweets = client.user_timeline(@cause.twitter, count: 20)
   end
   def add_selected_cause
     @causes = Cause.all
