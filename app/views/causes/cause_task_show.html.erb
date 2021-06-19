@@ -20,21 +20,23 @@
       </div>
     </div>
   </div>
-  <div class="cause-container">
-    <div class="cause-show-cards">
-      <div class="cause-show-card cause-show-card-left">
-        <div class="card-topper card-topper-left">
-          <h3> Here is the latest news about <br> <%= @cause.name %></h3>
-          <h6> &nbsp;<br>&nbsp; </h6>
-        </div>
-        <div class="timeform">
-          <img src="<%= @cause.photo_url %>" class="top-container-image-style" style="height: 48px;width: 48px;" alt="">
-          <span>Jun 7, 2021 </span>
-          <img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg" style="height: 48px;width: 48px;" alt="">
-          <br>
-            <% @tweets.each do |tweet| %>
-            <div class="checkboxes">
-              User <b> @<%= tweet.user.screen_name %> </b> said: "<%= tweet.text %>" on <b> <%= tweet.created_at.strftime('%-m/%d/%Y') %> </b>
+      <div class="cause-container">
+        <div class="cause-show-cards">
+          <div class="cause-show-card">
+            <div>
+            <h2> Here's the latest news about <b> <%= @cause.name %></h2> </b>
+            </div>
+              <div class="cause-show-card">
+                  <img src="<%= @cause.photo_url %>" class="top-container-image-style" style="height: 48px;width: 48px;" alt="">
+                  <span>Jun 19, 2021 </span>
+                  <img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg" style="height: 48px;width: 48px;" alt="">
+                <br>
+                <ul style="text-align: -webkit-left">
+                  <% @tweets.each do |tweet| %>
+                  User <b> @<%= tweet.user.screen_name %> </b> said: "<%= tweet.text %>" on <b> <%= tweet.created_at.strftime('%-m/%d/%Y') %> </b>
+                 </ul>
+                 <% end %>
+              </div>
             </div>
            <% end %>
         </div>
