@@ -17,6 +17,7 @@ const updateTimeValue = (time) => {
     const urlArray = url.split("=")
     urlArray[1] = selectedTime
     takeActionBtn.href = urlArray.join("=")
+    event.currentTarget.lastElementChild.classList.toggle('time-selected');
   });
 };
 
@@ -26,3 +27,4 @@ $(document).on('ready turbolinks:load', function() {
   const times = document.querySelectorAll('.select-time');
   times.forEach(updateTimeValue);
 });
+
