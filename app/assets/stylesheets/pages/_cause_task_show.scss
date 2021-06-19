@@ -1,8 +1,12 @@
+body {
+  background-color: #f6f6f6;
+}
 .container {
   border: #d1dfd4 4px solid;
   padding: 4px;
   margin: 8px;
   width: auto;
+  background-color: #fff;
 }
 .welcome {
   border: #d1dfd4 4px solid;
@@ -11,51 +15,59 @@
 }
 .title h2 {
   text-align: center;
-  // padding: 4px;
-  // margin: 8px;
 }
-.cause-twitter-card {
-    -webkit-box-align: stretch;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    align-items: stretch;
-    border: 0px solid black;
-    box-sizing: border-box;
-    display: flex;
-    flex-basis: auto;
-    flex-direction: column;
-    flex-shrink: 0;
-    margin: 0px;
-    min-height: 0px;
-    min-width: 0px;
-    padding-top: 12px;
-    padding-right: 16px;
-    padding-left: 16px;
-    padding-bottom: 4px;
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    z-index: 0;
-}
-
 .cause-container-title{
   text-align: center;
   font-weight: lighter;
 }
 
+.lock-h3 {
+  height: 40vh;
+}
+.card-topper {
+  height: 15vh;
+  border-bottom: solid 8px #d1dfd4;
+}
+.card-topper-left {
+border-bottom: solid 8px #6ec5ee;
+}
+.cause-show-card-right {
+  box-shadow: 0 10px 30px 0 rgba(#D2E7D5, .7);
+}
 .cause-show-card {
-  border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: 8px;
-  height: 100%;
+  height: 60vh;
+  margin: 30px;
+  border-radius: 16px;
   flex: 2;
-  background-color: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: #f6f6f6;
+  border: solid 1px #lightgrey;
+  h3 {
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    padding:15px;
+    border-radius: 16px;
+  }
+  h2 {
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    padding:15px;
+    border-radius: 16px;
+  }
+  h6 {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 100%;
+    box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
+  }
 }
 .cause-show-cards {
-  border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: 8px;
+  margin: 16px;
   display: flex;
+  height: 40vh;
 }
 
 .carousel-container h6 {
@@ -84,7 +96,11 @@
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-
+.check-boxes {
+  position: absolute;
+  left: 20px;
+  top: -50px;
+}
 .progess-bar-dashboard {
   border: #d1dfd4 4px solid;
   padding: 8px;
@@ -96,9 +112,34 @@
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
+.form-check-label {
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 0px 16px 16px 0px;
+  box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
+  border: 1px solid lightgrey;
+  a { color: black;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+}
+.form-check-label:hover {
+  background-color: #d1dfd4;
+  transition: .2s ease-in-out;
+  a {color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+}
 
 .timeform {
   display: block;
+  padding: 20px;
+  height: 44vh;
+  overflow: scroll;
 }
 .cause-carousel {
   display: flex;
@@ -114,13 +155,43 @@
     object-fit: contain;
   }
 }
-button {
-  margin: auto;
-  // agn: middle;
-}
 .cause-container {
+  width: 80%;
+  height: 67vh;
+  margin: auto;
+}
+.save{
   width: 100%;
-  height: 50vh;
+.save-button{
+  width: 80%;
+  margin-left: 10%;
+  }
+}
+
+h3 {
+  margin: .5em 0;
+  color: black;
+}
+
+.organisations-info {
+  text-align: left;
+  color: black;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  margin: 0;
+}
+.more-info {
+  margin: auto;
+  width: 30%;
+}
+.more-info-show {
+  padding: 25px 50px 75px 100px;
+  margin: auto;
+  display: flex;
+  height: 40vh;
+  width: 75%;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px 0 rgba(#D2E7D5, .9);
 }
 
 h3 {

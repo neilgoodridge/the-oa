@@ -21,8 +21,8 @@
 
 .choose {
   // border: #d1dfd4 4px solid;
-  margin: 8px;
-  width: 100%;
+  margin: auto;
+  width: 80%;
   height: 120vh;
 }
 
@@ -37,7 +37,7 @@
 }
 .cause-card {
   padding: 4px;
-  margin: 8px;
+  margin: 4px;
   height: 20vh;
   border-radius: 16px;
   position: relative;
@@ -45,6 +45,7 @@
   // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   text-center: center;
   .text-description {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     opacity: 0;
   }
 }
@@ -92,11 +93,7 @@
   margin: 8px;
   text-align: center;
 }
-.time-container {
-  // border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: 8px;
-}
+
 .button-card{
   background: #D2E7D5;
   border:  1px solid #cccccc;
@@ -113,15 +110,16 @@
 }
 .time-cards {
   // border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: 8px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: space-between;
   text-align: center;
+  width: 65%;
+  margin: auto;
+  button { text-align: center }
 }
 body {
-  background-color: white;
+  background-color: #fff;
 }
 .time-card:hover {
   transform: scale(1.03);
@@ -144,7 +142,9 @@ h2 {
 .cause-card {
   h3 {
   color: black;
-  padding: 20%;
+  margin: auto;
+  padding-top: 25%;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
 }
 
@@ -159,6 +159,7 @@ a:hover {
   .text-description {
     opacity: 1;
     transition: .4s ease-in-out;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
 }
 .overlay:hover {
@@ -166,7 +167,9 @@ a:hover {
   transition: .2s ease-in-out;
 }
 .clickable.active {
-  .text-description{ opacity: 0; transition: .4s ease-out;}
+  .text-description{ opacity: 0;
+  transition: .4s ease-out;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);}
   h3 { opacity: 0 }
   .photo img {
     opacity: 0.8;
@@ -198,3 +201,19 @@ a:hover {
   transition: .2s ease-in-out;
   }
 }
+
+.button-time {
+  background: #D2E7D5;
+  border:  1px solid #cccccc;
+  border-radius: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding:  32px;
+  color:  white;
+  margin: 50px auto;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  width: 10%;
+}
+

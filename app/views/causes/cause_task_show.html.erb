@@ -1,50 +1,58 @@
 <div class="page-container">
-    <div class="carousel-container">
-      <div class="cause-carousel">
-        <div class="previous-button">
-          <%= link_to previous_cause_path(index: @index, time: @time) do  %>
-          <button><</button>
-          <% end  %>
-        </div>
-        <div class="carousel-image">
-          <% if @cause.photo.attached? %>
-            <%= cl_image_tag (@cause.photo.key)%>
-          <% else %>
-            <img src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1622768272/lym3euydklxpwbqztkui.jpg">
-          <% end %>
-        </div>
-        <div class="next-button">
-          <%= link_to next_cause_path(index: @index, time: @time) do  %>
-          <button>></button>
-          <% end  %>
-        </div>
+  <div class="carousel-container">
+    <div class="cause-carousel">
+      <div class="previous-button">
+        <%= link_to previous_cause_path(index: @index, time: @time) do  %>
+        <button><</button>
+        <% end  %>
+      </div>
+      <div class="carousel-image">
+        <% if @cause.photo.attached? %>
+          <%= cl_image_tag (@cause.photo.key)%>
+        <% else %>
+          <img src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1622768272/lym3euydklxpwbqztkui.jpg">
+        <% end %>
+      </div>
+      <div class="next-button">
+        <%= link_to next_cause_path(index: @index, time: @time) do  %>
+        <button>></button>
+        <% end  %>
       </div>
     </div>
-    <div class="more-info"><button>Find out more. Click here</button></div>
   </div>
-      <div class="cause-container">
-        <div class="cause-show-cards">
-          <div class="cause-show-card">
-            <div>
-            <h2> Here's the latest news about <b> <%= @cause.name %></h2> </b>
+  <div class="cause-container">
+    <div class="cause-show-cards">
+      <div class="cause-show-card cause-show-card-left">
+        <div class="card-topper card-topper-left">
+          <h3> Here is the latest news about <br> <%= @cause.name %></h3>
+          <h6> &nbsp;<br>&nbsp; </h6>
+        </div>
+        <div class="timeform">
+          <img src="<%= @cause.photo_url %>" class="top-container-image-style" style="height: 48px;width: 48px;" alt="">
+          <span>Jun 7, 2021 </span>
+          <img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg" style="height: 48px;width: 48px;" alt="">
+          <br>
+            <% @tweets.each do |tweet| %>
+            <div class="checkboxes">
+              User <b> @<%= tweet.user.screen_name %> </b> said: "<%= tweet.text %>" on <b> <%= tweet.created_at.strftime('%-m/%d/%Y') %> </b>
             </div>
-              <div class="cause-show-card">
-                  <img src="<%= @cause.photo_url %>" class="top-container-image-style" style="height: 48px;width: 48px;" alt="">
-                  <span>Jun 7, 2021 </span>
-                  <img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg" style="height: 48px;width: 48px;" alt="">
-                <br>
-                <ul style="text-align: -webkit-left">
-                  <% @tweets.each do |tweet| %>
-                  User <b> @<%= tweet.user.screen_name %> </b> said: "<%= tweet.text %>" on <b> <%= tweet.created_at.strftime('%-m/%d/%Y') %> </b>
-                 </ul>
-                 <% end %>
-              </div>
-            </div>
-          <div class="cause-show-card">
-          <%= render 'task_list' %>
-          </div>
+           <% end %>
         </div>
       </div>
+      <div class="cause-show-card cause-show-card-right">
+      <%= render 'task_list' %>
+      </div>
+    </div>
+  </div>
+  <div class="more-info-show">
+    <h4>More info about this cause:<h4>
+    <%= @cause.description %>
+    <div class="organisations-info">
+      <h4>Notable organisations:</h4>
+      <% @organisations.each do |organisation| %>
+      <p><%= organisation.name %>:&emsp;<%= organisation.url %></p>
+      <% end %>
+    </div>
   </div>
 </div>
 <div class="more-info-show">
@@ -57,4 +65,3 @@
     <% end %>
   </div>
 </div>
-
