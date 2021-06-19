@@ -143,7 +143,7 @@ task2 = Task.create!(
 
   task3 = Task.create!(
   name: 'Research and contact the BLAM movement',
-  points: '20',
+  points: '30',
   content: 'Research the BLAM movement, a community outreach programme based around education, and find out what they can provide to your local area.',
   cause_id: cause1.id,
   time: 30,
@@ -151,6 +151,42 @@ task2 = Task.create!(
 )
 
 task4 = Task.create!(
+  name: 'Anti racism resources',
+  points: '30',
+  content: 'A wide range of anti racism resources to research and get involved with',
+  cause_id: cause1.id, 
+  time: 30,
+  url: 'https://survivorsnetwork.org.uk/anti-racism-resources/'
+)
+
+task5 = Task.create!(
+  name: 'Red Cross guide to teaching children about racism',
+  points: '30',
+  content: 'Raise awareness with children and young people about racism with this guide',
+  cause_id: cause1.id, 
+  time: 30,
+  url: 'https://www.redcross.org.uk/get-involved/teaching-resources/talking-with-children-and-young-people-about-race-and-racism'
+)
+
+task6 = Task.create!(
+  name: 'Donate to legal aid',
+  points: '10',
+  content: 'Make a difference by donating to legal aid for cause related cases',
+  cause_id: cause1.id,
+  time: 10,
+  url: 'https://www.change.org/t/black-lives-matter-en-us'
+)
+
+task7 = Task.create!(
+  name: 'Education petition',
+  points: '10',
+  content: 'Sign this petition to push for equality education',
+  cause_id: cause1.id,
+  time: 10,
+  url: 'https://www.change.org/t/black-lives-matter-en-us'
+)
+
+task8 = Task.create!(
   name: 'Contact Unison and raise awareness of unions',
   points: '10',
   content: 'Contact Unison for material and information about trade unions, and begin spreading the word to raise awareness.',
@@ -159,7 +195,7 @@ task4 = Task.create!(
   url: 'https://www.unison.org.uk/get-involved/grow-the-movement/#heading-1'
 )
 
-task5 = Task.create!(
+task9 = Task.create!(
   name: 'Volunteer with the Equality Trust in your local area',
   points: '40',
   content: "Contact your local Equality Trust movement and volunteer your time! This is an ongoing task and you can choose a level of commitment that suits you.",
@@ -168,7 +204,16 @@ task5 = Task.create!(
   url: 'https://www.equalitytrust.org.uk/local-groups'
 )
 
-task6 = Task.create!(
+task10 = Task.create!(
+  name: 'Fund raise for Equality Trust',
+  points: '30',
+  content: "Fund raise for the Equality Trust",
+  cause_id: cause2.id,
+  time: 30,
+  url: 'https://www.equalitytrust.org.uk/fundraise-equality-trust'
+)
+
+task11 = Task.create!(
   name: 'Share the trailer',
   points: '5',
   content: "Share the trailer for Seaspiracy to social media to raise awareness of the film and its message",
@@ -177,7 +222,7 @@ task6 = Task.create!(
   url: 'https://www.youtube.com/watch?v=1Q5CXN7soQg'
 )
 
-task7 = Task.create!(
+task12 = Task.create!(
   name: 'Sign this petition for protection of the ocean',
   points: '10',
   content: "Sign this petition to call on the government to make a real difference to our oceans.",
@@ -186,7 +231,43 @@ task7 = Task.create!(
   url: 'https://action.greenpeace.org.uk/l/854853/2021-04-23/qwm74?source=UN&subsource=OCMRGLPEUN02GK&utm_source=bsd&utm_medium=redirect&utm_campaign=post%20pardot%20launch%20redirect'
 )
 
-task8 = Task.create!(
+task13 = Task.create!(
+  name: 'Review resources to become an ocean activist',
+  points: '15',
+  content: 'Inspired by Seaspiracy? Review resources to become an ocean activist',
+  cause_id: cause3.id,
+  time: 15,
+  url: 'https://www.bigblueoceancleanup.org/become-an-ocean-activist'
+)
+
+task14 = Task.create!(
+  name: 'Check out Sea7; a live streamed ocean activist training camp',
+  points: '60',
+  content: 'A wide range of resources to review following the G7 summit',
+  cause_id: cause3.id,
+  time: 60,
+  url: 'https://sea7.finisterre.com/'
+)
+
+task15 = Task.create!(
+  name: 'Research local activism',
+  points: '10',
+  content: 'Research ocean related activism close to you',
+  cause_id: cause3.id,
+  time: 10,
+  url: 'https://www.bigblueoceancleanup.org/become-an-ocean-activist'
+)
+
+task16 = Task.create!(
+  name: 'Education petition',
+  points: '10',
+  content: 'Sign this petition to push for education on ocean issues',
+  cause_id: cause3.id,
+  time: 10,
+  url: 'https://www.bigblueoceancleanup.org/become-an-ocean-activist'
+)
+
+task17 = Task.create!(
   name: 'Share on social media',
   points: '5',
   content: "Share content on social media to spread the word and raise awareness",
@@ -195,15 +276,52 @@ task8 = Task.create!(
   url: 'https://stopasianhate.carrd.co/#videos'
 )
 
-task9 = Task.create!(
+task18 = Task.create!(
   name: 'Get involved with the Southeast and East Asian centre',
   points: '30',
   content: 'Research the SEEAC, find out what they do and how you can get involved',
   cause_id: cause5.id,
-  time: 40,
+  time: 30,
   url: 'https://www.seeac.org.uk/'
 )
-task10 = Task.create!(
+
+task19 = Task.create!(
+  name: 'Learn what you can do to stop hate crime',
+  points: '15',
+  content: 'Check out these resources to find out how you can help with hate crime',
+  cause_id: cause5.id,
+  time: 15, 
+  url: 'https://www.stophateuk.org/resources/'
+)
+
+task20 = Task.create!(
+  name: '7 practical ways to assist the cause',
+  points: '30',
+  content: 'Read this list and choose the practical actions to take to support the cause',
+  cause_id: cause5.id,
+  time: 30,
+  url: 'https://www.stylist.co.uk/life/how-to-support-stop-asian-hate/530984'
+)
+
+task21 = Task.create!(
+  name: 'Education petition',
+  points: '10',
+  content: 'Sign this petition to push for education on equality issues',
+  cause_id: cause5.id,
+  time: 10,
+  url: 'https://www.stylist.co.uk/life/how-to-support-stop-asian-hate/530984'
+)
+
+task22 = Task.create!(
+  name: 'Support local Asian businesses',
+  points: '10',
+  content: 'Resource for supporting affected Asian business in your community',
+  cause_id: cause5.id,
+  time: 10,
+  url: 'https://www.stylist.co.uk/life/how-to-support-stop-asian-hate/530984'
+)
+
+task23 = Task.create!(
   name: 'Visit http://www.flock525.club/ now!',
   points: '50',
   content: 'Tell every woman in your life to visit this site and help to get home safely',
