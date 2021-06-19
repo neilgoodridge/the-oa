@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @index = 0
     @tasks = current_user.tasks.where(cause_id: @cause.id)
     @name = current_user.name
+    @completed_task_count = Action.joins(:task).where("tasks.cause_id = ? and actions.user_id = ? and actions.completed = ?", @cause.id, current_user.id, true).count
   end
 
   def store_tasks
@@ -35,6 +36,7 @@ class UsersController < ApplicationController
       @cause = @causes[@index]
     end
     @tasks = current_user.tasks.where(cause_id: @cause.id)
+    @completed_task_count = Action.joins(:task).where("tasks.cause_id = ? and actions.user_id = ? and actions.completed = ?", @cause.id, current_user.id, true).count
     render :dashboard
   end
 
@@ -48,6 +50,7 @@ class UsersController < ApplicationController
       @cause = @causes[@index]
     end
     @tasks = current_user.tasks.where(cause_id: @cause.id)
+    @completed_task_count = Action.joins(:task).where("tasks.cause_id = ? and actions.user_id = ? and actions.completed = ?", @cause.id, current_user.id, true).count
     render :dashboard
   end
 
