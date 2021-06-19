@@ -74,6 +74,18 @@ border-bottom: solid 8px #6ec5ee;
   text-align: center;
   margin-right: 8px;
 }
+.more-info {
+  margin: auto;
+  width: 30%;
+}
+.more-info-show {
+  border: #d1dfd4 4px solid;
+  padding: 25px 50px 75px 100px;
+  margin: 8px;
+  height: 40vh;
+  background-color: white;
+  line-height: 2.5;
+}
 .progess-bar {
   border: #d1dfd4 4px solid;
   padding: 8px;
@@ -181,3 +193,17 @@ h3 {
   border-radius: 16px;
   box-shadow: 0 10px 30px 0 rgba(#D2E7D5, .9);
 }
+
+h3 {
+  margin: .5em 0;
+  color: black;
+}
+
+.organisations-info {
+  text-align: left;
+  color: black;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  margin: 0;
+}
+
