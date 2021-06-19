@@ -47,12 +47,12 @@
   <div class="more-info-show">
     <h4>More info about this cause:<h4>
     <%= @cause.description %>
-    <div class="organisations-info">
-      <h4>Notable organisations:</h4>
-      <% @organisations.each do |organisation| %>
-      <p><%= organisation.name %>:&emsp;<%= organisation.url %></p>
-      <% end %>
-    </div>
   </div>
+  <div class="organisations-info">
+    <h4>Notable organisations:</h4>
+    <% @organisations.each do |organisation| %>
+    <p><%= organisation.name %></p><a href="<%= organisation.url %>">Click here</a>
+    <%end%>
+</div>
 </div>
 
