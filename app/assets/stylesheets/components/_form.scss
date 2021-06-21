@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-/* BASIC */
 .background {
   height: 97vh;
   margin-top: -6vh;
@@ -14,7 +13,6 @@ a {
   font-weight: 400;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
-
 .form h2 {
   text-align: center;
   font-size: 32px;
@@ -43,9 +41,6 @@ a {
 .password_confirm {
   padding: 0px 20px;
 }
-
-/* STRUCTURE */
-
 .wrapper {
   display: flex;
   align-items: center;
@@ -54,11 +49,7 @@ a {
   width: 100%;
   min-height: 100%;
   padding: 20px;
-  .footer {
-    // display: none;
-  }
 }
-
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
@@ -72,7 +63,6 @@ a {
   box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   text-align: center;
 }
-
 #formFooter {
   background-color: #f6f6f6;
   border-top: 1px solid #dce8f1;
@@ -81,29 +71,18 @@ a {
   -webkit-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
 }
-
-
-
-/* TABS */
-
 h3.inactive {
   color: black;
   font-size: 26px;
   font-weight: 550;
   display:inline-block;
 }
-
 h3.active {
   color: black;
   font-size: 26px;
   font-weight: 550;
   display:inline-block;
 }
-
-
-
-/* FORM TYPOGRAPHY*/
-
 input[type=button], input[type=submit], input[type=reset]  {
   background-color: #56baed;
   border: none;
@@ -124,10 +103,8 @@ input[type=button], input[type=submit], input[type=reset]  {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
 }
-
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
   -moz-transform: scale(0.95);
   -webkit-transform: scale(0.95);
@@ -135,10 +112,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   -ms-transform: scale(0.95);
   transform: scale(0.95);
 }
-
 input[type=text] {
-  // background-color: #f6f6f6;
-  border: none;
   color: #0d0d0d;
   padding: 15px 32px;
   text-align: center;
@@ -156,15 +130,6 @@ input[type=text] {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-
-// input[type=text]:focus {
-//   background-color: #fff;
-// }
-
-// input[type=text]:placeholder {
-//   color: #cccccc;
-// }
-
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
@@ -173,7 +138,6 @@ input[type=text] {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -186,7 +150,6 @@ input[type=text] {
     transform: none;
   }
 }
-
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -199,83 +162,3 @@ input[type=text] {
     transform: none;
   }
 }
-
-/* Simple CSS3 Fade-in Animation */
-// @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-// @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-// @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-// .fadeIn {
-//   opacity:0;
-//   -webkit-animation:fadeIn ease-in 1;
-//   -moz-animation:fadeIn ease-in 1;
-//   animation:fadeIn ease-in 1;
-
-//   -webkit-animation-fill-mode:forwards;
-//   -moz-animation-fill-mode:forwards;
-//   animation-fill-mode:forwards;
-
-//   -webkit-animation-duration:1s;
-//   -moz-animation-duration:1s;
-//   animation-duration:1s;
-// }
-
-// .fadeIn.first.name {
-//   -webkit-animation-delay: 0.4s;
-//   -moz-animation-delay: 0.4s;
-//   animation-delay: 0.4s;
-// }
-
-// .fadeIn.second, .email {
-//   -webkit-animation-delay: 0.6s;
-//   -moz-animation-delay: 0.6s;
-//   animation-delay: 0.6s;
-// }
-
-// .fadeIn.third, .password {
-//   -webkit-animation-delay: 0.8s;
-//   -moz-animation-delay: 0.8s;
-//   animation-delay: 0.8s;
-// }
-
-// .fadeIn.fourth, .password_confirm {
-//   -webkit-animation-delay: 1s;
-//   -moz-animation-delay: 1s;
-//   animation-delay: 1s;
-// }
-
-// /* Simple CSS3 Fade-in Animation */
-// .underlineHover:after {
-//   display: block;
-//   left: 0;
-//   bottom: -10px;
-//   width: 0;
-//   content: "";
-//   transition: width 0.2s;
-// }
-
-// .underlineHover:hover {
-//   color: #0d0d0d;
-// }
-
-// .underlineHover:hover:after{
-//   width: 100%;
-// }
-
-
-// .email {
-
-// }
-// /* OTHERS */
-
-// *:focus {
-//     outline: none;
-// }
-
-// #icon {
-//   width:60%;
-// }
-
-// * {
-//   box-sizing: border-box;
-// }
