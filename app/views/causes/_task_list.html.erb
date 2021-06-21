@@ -1,22 +1,18 @@
-<h3> Here is a list of tasks that you can achieve in <%= @time %> minutes on this cause</h3>
-<h6>Click on the links below then mark <br/>
-the task as complete once you're done!</h6>
-  <div class="timeform" >
+<div class="card-topper">
+  <h3> Here is a list of tasks that you can achieve in <%= @time %> minutes on this cause</h3>
+  <h6>Click on the links below then mark <br/>
+  the task as complete once you're done!</h6>
+</div>
+  <main>
+  <div class="timeform">
     <%= simple_form_for :store_tasks, url: store_tasks_users_path do |f| %>
-      <%= f.input :task_ids, label: "", required: false, as: :check_boxes, collection: @tasks, label_method: lambda {|task| "<a href=\"#{task.url}\" target=\"_blank\">#{task.name}:&nbsp;#{task.content}</a>".html_safe } %>
-    <%= f.submit "save" %>
-  <div>
+      <%= f.input :task_ids, label: "",
+      required: false, as: :check_boxes, class: "checkboxes",
+      collection: @tasks,
+      label_method: lambda {|task| "<a href=\"#{task.url}\" target=\"_blank\">#{task.name}:&nbsp;#{task.content}</a>".html_safe } %>
+  <div class="save">
+    <%= f.submit "save", class: "save-button"%>
+  </div>
 <% end %>
-
-
-
-<!-- if current_user.actions.task_id !== f.id
-
-if the current user has an action with a completed task that
-matches the collection of tasks we display, do not display that task -->
-
-
-
-
-
-
+</div>
+</main>

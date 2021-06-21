@@ -7,7 +7,7 @@
       <div class="cause-carousel">
         <div class="previous-button">
           <%= link_to dashboard_previous_cause_path(index: @index) do  %>
-          <button><</button>
+          <button>&#8249;</button>
           <% end %>
         </div>
         <div class="carousel-image">
@@ -19,7 +19,7 @@
         </div>
         <div class="next-button">
           <%= link_to dashboard_next_cause_path(index: @index) do  %>
-          <button>></button>
+          <button>&#8250;</button>
           <% end %>
         </div>
           <!-- <div class="more-info"><button>Find out more. Click here</button></div> -->
@@ -37,12 +37,12 @@
                 <h4>Community efforts for <%= @cause.name %></h4>
                  <ul class="list-unstyled">
                   <% users= User.all %>
-                    <li>Community members: <%= users.count%> </li>
+                    <li>O.A. Community members: <%= users.count%> </li>
                     <br>
                   <% actions = Action.all %>
                     <li>Total tasks completed by the community: <%= actions.count%> </li>
                     <br>
-
+                    <li>Highest scoring online activist: <%= users.first.name %> </li>
                     <br>
                     <li>Points: 560 </li>
                 </ul>
@@ -53,7 +53,8 @@
               <%= render "show" %>
               <div class="submit-container">
                 <div class="submit-card">
-                  <button><%= link_to "Complete more tasks for this cause >",cause_task_path %></button>
+                  <button>
+                    <a href="/causes/tasks?time=60">Complete more tasks for this cause</a></button>
                 </div>
               </div>
             </div>

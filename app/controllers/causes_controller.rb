@@ -13,6 +13,7 @@ class CausesController < ApplicationController
   end
   def cause_task_show
     @cause = USER_CAUSES[0]
+    @organisations = @cause.organisations
     @time = params[:time]
     return redirect_to causes_path, alert: "Please select a cause and a time" if @cause.blank? || @time.blank?
     @tasks = @cause.tasks.where("tasks.time <= ?", @time)
@@ -27,7 +28,7 @@ class CausesController < ApplicationController
         config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
       end
       # @tweets = tweets.search('#Blacklivesmatter')
-      @tweets = client.user_timeline(@cause.twitter, count: 2)
+      @tweets = client.user_timeline(@cause.twitter, count: 30)
   end
   def add_selected_cause
     @causes = Cause.all
@@ -48,6 +49,7 @@ class CausesController < ApplicationController
   def previous_cause
     @index = params[:index].to_i
     @cause = USER_CAUSES[@index]
+    @organisations = @cause.organisations
     if USER_CAUSES.length > (@index * -1)
      @index -= 1
     end
@@ -60,12 +62,13 @@ class CausesController < ApplicationController
         config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
       end
       # @tweets = tweets.search('#Blacklivesmatter')
-      @tweets = client.user_timeline(@cause.twitter, count: 2)
+      @tweets = client.user_timeline(@cause.twitter, count: 30)
     render :cause_task_show
   end
   def next_cause
     @index = params[:index].to_i
     @cause = USER_CAUSES[@index]
+    @organisations = @cause.organisations
     client = Twitter::REST::Client.new do |config|
         config.consumer_key        = ENV["API_KEY"]
         config.consumer_secret     = ENV["API_SECRET_KEY"]
@@ -73,7 +76,7 @@ class CausesController < ApplicationController
         config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
     end
       # @tweets = tweets.search('#Blacklivesmatter')
-      @tweets = client.user_timeline(@cause.twitter, count: 2)
+      @tweets = client.user_timeline(@cause.twitter, count: 30)
     @time = params[:time]
     if USER_CAUSES.length > @index + 1
       @index += 1

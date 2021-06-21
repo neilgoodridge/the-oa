@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 /* BASIC */
-
-body {
-  font-family: "Poppins", sans-serif;
-  height: 100vh;
+.background {
+  height: 97vh;
+  margin-top: -6vh;
+  object-fit: fill;
+  padding-top: 8vh;
 }
-
 a {
   color: #92badd;
   display:inline-block;
@@ -14,17 +14,33 @@ a {
   font-weight: 400;
 }
 
-h2 {
+.form h2 {
   text-align: center;
-  font-size: 16px;
+  font-size: 32px;
   font-weight: 600;
-  text-transform: uppercase;
   display:inline-block;
-  margin: 40px 8px 10px 8px;
-  color: #cccccc;
+  margin: -30px 20px 20px 8px;
+  color: black;
 }
+.container-form {
+  width: 75%;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+}
+.name {
+  padding: 0px 20px;
+}
+.password {
+  padding: 0px 20px;
+}
+.email {
+  padding: 0px 20px;
 
-
+}
+.password_confirm {
+  padding: 0px 20px;
+}
 
 /* STRUCTURE */
 
@@ -37,14 +53,14 @@ h2 {
   min-height: 100%;
   padding: 20px;
   .footer {
-    display: none;
+    // display: none;
   }
 }
 
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: #fff;
+  background: white;
   padding: 30px;
   width: 90%;
   max-width: 450px;
@@ -68,13 +84,18 @@ h2 {
 
 /* TABS */
 
-h2.inactive {
-  color: #cccccc;
+h3.inactive {
+  color: black;
+  font-size: 32px;
+  font-weight: 600;
+  display:inline-block;
 }
 
-h2.active {
-  color: #0d0d0d;
-  border-bottom: 2px solid #5fbae9;
+h3.active {
+  color: black;
+  font-size: 32px;
+  font-weight: 600;
+  display:inline-block;
 }
 
 
@@ -89,7 +110,6 @@ input[type=button], input[type=submit], input[type=reset]  {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  text-transform: uppercase;
   font-size: 13px;
   -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
@@ -104,7 +124,6 @@ input[type=button], input[type=submit], input[type=reset]  {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
@@ -138,7 +157,6 @@ input[type=text] {
 
 input[type=text]:focus {
   background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
 }
 
 input[type=text]:placeholder {
@@ -235,8 +253,6 @@ input[type=text]:placeholder {
   left: 0;
   bottom: -10px;
   width: 0;
-  height: 2px;
-  background-color: #56baed;
   content: "";
   transition: width 0.2s;
 }
@@ -250,7 +266,9 @@ input[type=text]:placeholder {
 }
 
 
+.email {
 
+}
 /* OTHERS */
 
 *:focus {
