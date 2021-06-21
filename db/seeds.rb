@@ -37,7 +37,7 @@ cause1 = Cause.create!(
   name: '#blacklivesmatter',
   description: "Black Lives Matter (BLM) is a decentralized political and social movement protesting against incidents of police brutality and all racially motivated violence against black people.",
   twitter:'Blklivesmatter',
-  photo_url:"https://pbs.twimg.com/profile_images/1402645735326113795/kqBVkKdx_400x400.jp",
+  photo_url:"https://pbs.twimg.com/profile_images/1402645735326113795/kqBVkKdx_400x400.jpg",
 )
 require "open-uri"
 file = URI.open('https://res.cloudinary.com/k2x4b-523p/image/upload/v1623344444/ndovtj0kxvy5ys9edyyw.png')

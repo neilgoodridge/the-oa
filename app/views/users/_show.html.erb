@@ -1,19 +1,49 @@
-<div class="container">
+<div class="dashboard-topper-right">
   <h2>Tasks you've completed</h2>
-   <ul class="list-unstyled">
-      <% @tasks.each do |task| %>
-      <li><i class="fa fas fa-check-square"></i> <%= task.name%> <br> Time: <%= task.time %> <br>  Points: <%= task.points %> </li>
-      <br>
-    <% end %>
-   </ul>
-  <h4>Your progress</h4>
-   <ul class="list-unstyled">
-      <li><%=@completed_task_count %> / <%= @cause.tasks.count%> tasks</li>
-      <br>
-      <p> Keep up the great work! </p>
-    </ul>
 </div>
-
-
-
-
+<div class="timeform-tasks scroll-tasks">
+   <div class="task-cards">
+      <% @tasks.each do |task| %>
+      <div class="completed-task">
+        <div class="completed-task-header">
+          <%= task.name%>
+        </div>
+        <div class="completed-task-body">
+          <i class="fa fas fa-check check"></i>
+          <div class="time-points">
+            <div class="time">
+            Time: <%= task.time %> minutes
+            </div>
+            <div class="points">
+              Points: <%= task.points %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="progress">
+  <h4>Your progress</h4>
+</div>
+<div class="progress-info">
+  <div class="progress-tasks">
+    <div class="task-count-header">
+      <h4>Tasks completed</h4>
+    </div>
+    <div class="user-tasks">
+      <p><%=@completed_task_count %> / <%= @cause.tasks.count%> tasks</p>
+    </div>
+  </div>
+  <div class="progress-points">
+    <div class="task-count-header">
+      <h4>Points earned</h4>
+    </div>
+    <div class="logic">
+      <p>Logic needed</p>
+    </div>
+  </div>
+</div>
+<div class="keepup">
+  <p> Keep up the great work! </p>
+</div>
