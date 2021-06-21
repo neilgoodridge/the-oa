@@ -1,22 +1,22 @@
 <div class="page-container">
   <div class="carousel-container">
     <div class="cause-carousel">
-      <div class="previous-button">
-        <%= link_to previous_cause_path(index: @index, time: @time) do  %>
-        <button><</button>
-        <% end  %>
-      </div>
       <div class="carousel-image">
-        <% if @cause.photo.attached? %>
-          <%= cl_image_tag (@cause.photo.key)%>
-        <% else %>
-          <img src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1622768272/lym3euydklxpwbqztkui.jpg">
-        <% end %>
-      </div>
-      <div class="next-button">
-        <%= link_to next_cause_path(index: @index, time: @time) do  %>
-        <button>></button>
-        <% end  %>
+        <div class="previous-button">
+          <%= link_to previous_cause_path(index: @index, time: @time) do  %>
+          <i class="fa fas fa-chevron-left arrow arrow-left"></i>
+          <% end  %>
+        </div>
+          <% if @cause.photo.attached? %>
+            <%= cl_image_tag (@cause.photo.key)%>
+          <% else %>
+            <img src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1622768272/lym3euydklxpwbqztkui.jpg">
+          <% end %>
+        <div class="next-button">
+          <%= link_to next_cause_path(index: @index, time: @time) do  %>
+          <i class="fa fas fa-chevron-right arrow arrow-right"></i>
+          <% end  %>
+       </div>
       </div>
     </div>
   </div>
