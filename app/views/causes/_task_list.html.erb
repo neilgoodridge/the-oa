@@ -9,7 +9,7 @@
       <%= f.input :task_ids, label: "",
       required: false, as: :check_boxes, class: "checkboxes",
       collection: @tasks,
-      label_method: lambda {|task| "<a href=\"#{task.url}\" target=\"_blank\">#{task.name}:&nbsp;#{task.content}</a>".html_safe } %>
+      label_method: lambda {|task| "<a href=\"#{task.url}\" target=\"_blank\">#{task.name}:&nbsp;#{task.content} <b><br> #{task.points} points</b></a>".html_safe } %>
   <div class="save">
     <%= f.submit "save", class: "save-button"%>
   </div>
