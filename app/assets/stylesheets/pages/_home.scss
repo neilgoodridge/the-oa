@@ -300,10 +300,28 @@ h3 {
   }
 }
 .letsgo {
+  background: #D2E7D5;
+  border:  1px solid #cccccc;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+  color:  white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
   position: absolute;
   margin: auto;
   height: 60px;
   right: 15%;
   top: 50%;
   bottom: 50%;
+}
+.letsgo:hover {
+  transform: scale(1.03);
+   transition: .2s ease-in-out;
+  a {
+  color: darkgrey;
+  text-decoration: none;
+  transition: .2s ease-in-out;
+  }
 }
