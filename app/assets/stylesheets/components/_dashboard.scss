@@ -1,0 +1,188 @@
+.header {
+  margin: auto;
+  text-align: center;
+}
+
+.community-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin: 30px;
+  height: 18vh;
+}
+.top-users {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin: 30px;
+  height: 18vh;
+}
+.card-header {
+  height: 30%;
+  background-color: #ffefd8;
+  border-radius: 16px;
+  h4 { text-align: center;
+  padding-top: 10px;
+  font-size: 18px;
+  }
+}
+.user-cards p {
+  padding-top: 10px;
+  font-size: 70px;
+  opacity: 0.8;
+  text-align: center;
+  margin: auto;
+  height: 100%
+}
+.user-cards h4 {
+  margin: auto;
+}
+.dashboard-card-left {
+  box-shadow: 0 10px 30px 0 rgba(grey, .5);
+  height: 54vh;
+  margin: 30px;
+  border-radius: 16px;
+  flex: 2;
+  background-color: #f6f6f6;
+}
+.dashboard-card-right {
+  box-shadow: 0 10px 30px 0 rgba(grey, .5);
+  height: 54vh;
+  margin: 30px;
+  border-radius: 16px;
+  flex: 2;
+  background-color: #f6f6f6;
+}
+.dashboard-topper-left {
+  height: 8vh;
+  border-bottom: solid 8px #ffefd8;
+}
+.dashboard-topper-right {
+  height: 8vh;
+  border-bottom: solid 8px #D2E7D5;
+}
+.banner {
+  background-size: cover;
+  background-position: center;
+}
+.dashboard-card {
+  height: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px 0 rgba(grey, .5);
+}
+.submit-container {
+  margin: auto;
+  position: relative;
+}
+
+.task-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin: 30px;
+}
+.completed-task {
+  border-radius: 16px;
+  box-shadow: 0 10px 30px 0 rgba(grey, .5);
+  // padding: 10px;
+  text-align: center;
+}
+.completed-task-body {
+  display: flex;
+  align-items: center;
+}
+.check {
+  width: 40px;
+  font-size: 50px;
+  font-weight: bold;
+  color: #D2E7D5;
+  padding-left: 15px;
+
+}
+.completed-task-header {
+  background-color: #D2E7D5;
+  padding: 5px;
+}
+.scroll-tasks {
+  display: block;
+  height: 45%;
+  overflow: scroll;
+}
+.progress-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin: 0px 30px;
+  text-align: center;
+  height: 20%;
+}
+
+.progress-tasks {
+  font-size: 30px;
+  box-shadow: 0 10px 30px 0 rgba(grey, .5);
+  border-radius: 16px;
+}
+.progress-points {
+  box-shadow: 0 10px 30px 0 rgba(grey, .5);
+  font-size: 30px;
+  border-radius: 16px;
+}
+.task-count-header {
+  background-color: #6ec5ee,;
+  h4 { text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  }
+}
+.time-points {
+  margin: auto;
+  padding: 10px;
+}
+.progress {
+  background-color: #f6f6f6;
+  height: auto;
+  padding-top: 10px;
+  h4 { width: 100%;
+  text-align: center;
+  padding: 5px;
+  }
+}
+.carousel-image {
+  position: relative;
+}
+.arrow-left {
+  font-size: 50px;
+  color: lightgrey;
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+}
+.arrow-right {
+  font-size: 50px;
+  color: lightgrey;
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  opacity: 0.7;
+}
+.arrow:hover {
+  opacity: 1;
+  text-transform: scale(1.03)
+}
+.keepup {
+  text-align: center;
+  font-size: 24px;
+  padding-top: 5px;
+}
+.fa-plus {
+  font-size: 80px;
+  color: #D2E7D5;
+  font-weight: bold;
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+  position: absolute;
+  right: -35px;
+  top: -20px;
+}
