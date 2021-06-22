@@ -9,7 +9,7 @@ const toggleActiveOnClick = (cause) => {
 const updateTimeValue = (time) => {
   const takeActionBtn = document.querySelector('.take-action-btn');
   time.addEventListener('click', (event) => {
-    let selectedTime = event.currentTarget.innerHTML
+    let selectedTime = event.currentTarget.innerText
     if (!parseInt(selectedTime)) {
       selectedTime = 1000
     };
@@ -26,3 +26,4 @@ $(document).on('ready turbolinks:load', function() {
   const times = document.querySelectorAll('.select-time');
   times.forEach(updateTimeValue);
 });
+
