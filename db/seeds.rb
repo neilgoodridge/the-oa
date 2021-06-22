@@ -330,6 +330,51 @@ task23 = Task.create!(
   url: 'http://www.flock525.club/'
 )
 
+task24 = Task.create!(
+  name: 'Save water in your own home',
+  points: '5',
+  content: 'Save water in your own home with these practicak tips',
+  cause_id: cause3.id,
+  time: 5,
+  url: 'https://watersworthsaving.org.uk/top-tips/?utm_source=bing&utm_campaign=mt-wws21-how-save&utm_medium=cpc&utm_content=bing-how-save-1'
+)
+ 
+task25 = Task.create!(
+  name: 'Promote veganism',
+  points: '15',
+  content: 'Promote a diet and lifestyle consistent with Seaspiracy',
+  cause_id: cause3.id,
+  time: 15,
+  url: 'https://www.peta.org.uk/'
+)
+ 
+task26 = Task.create!(
+  name: 'Protest fisheries',
+  points: '30',
+  content: 'Get involved with protests against fisheries',
+  cause_id: cause3.id,
+  time: 30, 
+  url: 'https://action.greenpeace.org.uk/l/854853/2021-04-23/qwlqv?source=UN&subsource=NBRENAPEUN03GG&utm_source=bsd&utm_medium=redirect&utm_campaign=post+pardot+launch+redirect'
+)
+
+task27 = Task.create!(
+  name: 'Hand out leaflets and flyers in your local area',
+  points: '10',
+  content: 'Get involved practically and place our leaflets and posters around your area', 
+  cause_id: cause1.id,
+  time: 15,
+  url: 'https://blacklivesmatter.com/'
+)
+
+task28 = Task.create!(
+  name: 'Hand out leaflets and flyers in your local area',
+  points: '10',
+  content: 'Get involved practically and place our leaflets and posters around your area', 
+  cause_id: cause5.id,
+  time: 15, 
+  url: 'https://www.stophateuk.org/resources/'
+)
+
 organisation1 = Organisation.create!(
   name: 'Black Lives Matter',
   url: 'https://www.blacklivesmatter.uk/',
