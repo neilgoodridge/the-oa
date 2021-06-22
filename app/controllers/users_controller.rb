@@ -8,6 +8,11 @@ class UsersController < ApplicationController
     @tasks = current_user.tasks.where(cause_id: @cause.id)
     @name = current_user.name
     @completed_task_count = Action.joins(:task).where("tasks.cause_id = ? and actions.user_id = ? and actions.completed = ?", @cause.id, current_user.id, true).count
+    user_points = 0
+    @points = @tasks.each do |task|
+      user_points += task.points
+    end
+    @points = user_points
   end
 
   def store_tasks
@@ -37,6 +42,11 @@ class UsersController < ApplicationController
     end
     @tasks = current_user.tasks.where(cause_id: @cause.id)
     @completed_task_count = Action.joins(:task).where("tasks.cause_id = ? and actions.user_id = ? and actions.completed = ?", @cause.id, current_user.id, true).count
+    user_points = 0
+    @points = @tasks.each do |task|
+      user_points += task.points
+    end
+    @points = user_points
     render :dashboard
   end
 
@@ -51,6 +61,11 @@ class UsersController < ApplicationController
     end
     @tasks = current_user.tasks.where(cause_id: @cause.id)
     @completed_task_count = Action.joins(:task).where("tasks.cause_id = ? and actions.user_id = ? and actions.completed = ?", @cause.id, current_user.id, true).count
+    user_points = 0
+    @points = @tasks.each do |task|
+      user_points += task.points
+    end
+    @points = user_points
     render :dashboard
   end
 
