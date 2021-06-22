@@ -59,18 +59,23 @@ function arrowClick(e) {
 
             }
  }
+const bottomHalf = document.querySelector(".bottom-half")
+if (bottomHalf){
+  leftArrow.addEventListener('click', arrowClick);
+  rightArrow.addEventListener('click', arrowClick);
+}
 
- leftArrow.addEventListener('click', arrowClick);
- rightArrow.addEventListener('click', arrowClick);
 
  function slideshow() {
-   if (counter < imageSlides.length) {
+    const bottomHalf = document.querySelector(".bottom-half")
+    if (!bottomHalf) return
+    if (counter < imageSlides.length) {
      imageLoop();
-   } else {
-     counter = 0;
-     hideImages();
-     imageLoop();
-   }
+    } else {
+      counter = 0;
+      hideImages();
+      imageLoop();
+    }
  }
  // SHOW FIRST IMAGE, & THEN SET & CALL SLIDE INTERVAL
   setTimeout(slideshow, 1000);

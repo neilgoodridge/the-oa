@@ -5,7 +5,7 @@
       <div class="carousel-image">
         <div class="previous-button">
           <%= link_to previous_cause_path(index: @index, time: @time) do  %>
-          <i class="fa fas fa-chevron-left arrow arrow-left"></i>
+          <i class="fa fas fa-chevron-left arrow arrow-left" id="leftArrow"></i>
           <% end  %>
         </div>
           <% if @cause.photo.attached? %>
@@ -15,7 +15,7 @@
           <% end %>
         <div class="next-button">
           <%= link_to next_cause_path(index: @index, time: @time) do  %>
-          <i class="fa fas fa-chevron-right arrow arrow-right"></i>
+          <i class="fa fas fa-chevron-right arrow arrow-right" id="rightArrow"></i>
           <% end  %>
        </div>
       </div>
