@@ -1,4 +1,5 @@
-<div class="page-container">
+<div class="page-container-background">
+  <div class="page-container">
   <div class="carousel-container">
     <div class="cause-carousel">
       <div class="carousel-image">
@@ -44,15 +45,15 @@
       </div>
     </div>
   </div>
-  <div class="more-info-show">
+  <div class="more-info-show cause-show-cards">
     <h4>More info about this cause:<h4>
     <%= @cause.description %>
   </div>
-  <div class="organisations-info">
+  <div class="organisations-info cause-show-cards">
     <h4>Notable organisations:</h4>
     <% @organisations.each do |organisation| %>
     <p><%= organisation.name %></p><a href="<%= organisation.url %>">Click here</a>
     <%end%>
   </div>
 </div>
-
+</div>

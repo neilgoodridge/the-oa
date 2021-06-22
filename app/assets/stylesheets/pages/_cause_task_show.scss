@@ -23,6 +23,12 @@ body {
 .lock-h3 {
   height: 40vh;
 }
+
+.page-container-background{
+  background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url("https://res.cloudinary.com/k2x4b-523p/image/upload/v1623112549/n2omdnrbdzk3bk7w7jzf.jpg");
+  opacity: 0.9;
+}
+
 .card-topper {
   height: 15vh;
   border-bottom: solid 8px #d1dfd4;
@@ -180,6 +186,7 @@ h3 {
   width: 75%;
   border-radius: 16px;
   box-shadow: 0 10px 30px 0 rgba(#D2E7D5, .9);
+  background-color: #f6f6f6;
 }
 h3 {
   margin: .5em 0;
@@ -196,6 +203,7 @@ h3 {
   box-shadow: 0 10px 30px 0 rgba(#D2E7D5, .9);
   color: black;
   line-height: 2.4;
+  background-color: #f6f6f6;
 }
 .carousel-image {
   position: relative;
