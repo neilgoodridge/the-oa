@@ -12,11 +12,20 @@ class CausesController < ApplicationController
     @cause = Cause.find(params[:id])
   end
   def cause_task_show
-    @cause = USER_CAUSES[0]
+    # if params[:id] == "selected" @cause = USER_CAUSES[0]
+    if params[:id].present?
+      @cause = Cause.find(params[:id])
+    else
+      @cause = USER_CAUSES[0]
+    end
     @organisations = @cause.organisations
     @time = params[:time]
     return redirect_to causes_path, alert: "Please select a cause and a time" if @cause.blank? || @time.blank?
-    @tasks = @cause.tasks.where("tasks.time <= ?", @time)
+    if params[:time] == "all"
+      @tasks = @cause.tasks.where("tasks.time <= ?", @time)
+    else
+      @tasks = @cause.tasks.where("tasks.time <= ?", @time)
+    end
     @index = 0
     if session[:tasks].blank?
       session[:tasks] = []
