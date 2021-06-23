@@ -1,5 +1,5 @@
 const toggleActiveClass = (event) => {
-  event.currentTarget.classList.toggle('active');
+  event.currentTarget.classList.add('active');
 };
 
 const toggleActiveOnClick = (cause) => {
@@ -17,6 +17,12 @@ const updateTimeValue = (time) => {
     const urlArray = url.split("=")
     urlArray[1] = selectedTime
     takeActionBtn.href = urlArray.join("=")
+    console.log('hello')
+    document.querySelectorAll('.select-time').forEach((card) => {
+      card.children[1].classList.add('time-selected')
+      });
+    event.currentTarget.lastElementChild.classList.remove('time-selected');
+
   });
 };
 

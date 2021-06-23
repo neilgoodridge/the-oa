@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0px 50px;
+  // margin-top: 20px;
   width: 100%;
   h2 {
     margin-bottom: 20px;
@@ -18,7 +19,7 @@
 .brand-name-footer {
   position:relative;
   box-sizing: border-box;
-  font-family: quicksand;
+  font-family: 'Quicksand', sans-serif;
   color: white;
   vertical-align: middle;
   display: inline-block;

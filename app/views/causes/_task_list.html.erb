@@ -7,9 +7,9 @@
   <div class="timeform">
     <%= simple_form_for :store_tasks, url: store_tasks_users_path do |f| %>
       <%= f.input :task_ids, label: "",
-      required: false, as: :check_boxes, class: "checkboxes",
+      required: false, as: :check_boxes, input_html: {class: "checkboxes"}, item_wrapper_class: 'tick',
       collection: @tasks,
-      label_method: lambda {|task| "<a href=\"#{task.url}\" target=\"_blank\">#{task.name}:&nbsp;#{task.content}</a>".html_safe } %>
+      label_method: lambda {|task| "<a href=\'#{task.url}\' target=\_blank\'>#{task.name}:&nbsp;#{task.content} <b><br> #{task.points} points</b></a>".html_safe } %>
   <div class="save">
     <%= f.submit "save", class: "save-button"%>
   </div>
