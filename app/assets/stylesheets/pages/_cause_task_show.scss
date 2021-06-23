@@ -37,7 +37,7 @@ body {
 border-bottom: solid 8px #6ec5ee;
 }
 .cause-show-card-right {
-  box-shadow: 0 10px 30px 0 rgba(#D2E7D5, .7);
+  box-shadow: 0 10px 30px 0 rgba(grey, .5);
 }
 .cause-show-card {
   height: 60vh;
@@ -116,17 +116,33 @@ border-bottom: solid 8px #6ec5ee;
   a { color: black;
     font-size: 20px;
     padding: 10px;
-    width: 100%;
+    margin-left: 42px;
+    width: 90%;
+    border-left: 1px solid lightgrey;
   }
 }
 .form-check-label:hover {
-  background-color: #d1dfd4;
-  transition: .2s ease-in-out;
-  a {color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  background: rgb(246,246,246);
+  background: linear-gradient(90deg, rgba(246,246,246,1) 8%, rgba(210,231,213,1) 8%);
+  transition: .4s ease;
+  a { border-left: 1px solid #D2E7D5;
+    transition: .4s ease;
   }
 }
+.timeform b {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 18px;
+}
+
 .timeform {
+  display: block;
+  padding: 20px;
+  height: 44vh;
+  overflow: scroll;
+}
+.twitter-card{
   display: block;
   padding: 20px;
   height: 44vh;
