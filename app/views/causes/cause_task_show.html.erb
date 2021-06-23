@@ -1,59 +1,59 @@
 <div class="page-container-background">
   <div class="page-container">
-  <div class="carousel-container">
-    <div class="cause-carousel">
-      <div class="carousel-image">
-        <div class="previous-button">
-          <%= link_to previous_cause_path(index: @index, time: @time) do  %>
-          <i class="fa fas fa-chevron-left arrow arrow-left" id="leftArrow"></i>
-          <% end  %>
+    <div class="carousel-container">
+      <div class="more-info-show">
+        <h4>More info:</h4>
+        <p><%= @cause.description %></p>
+      </div>
+      <div class="cause-carousel">
+        <div class="carousel-image">
+          <div class="previous-button">
+            <%= link_to previous_cause_path(index: @index, time: @time) do  %>
+            <i class="fa fas fa-chevron-left arrow arrow-left" id="leftArrow"></i>
+            <% end  %>
+          </div>
+            <% if @cause.photo.attached? %>
+              <%= cl_image_tag (@cause.photo.key)%>
+            <% else %>
+              <img src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1622768272/lym3euydklxpwbqztkui.jpg">
+            <% end %>
+          <div class="next-button">
+            <%= link_to next_cause_path(index: @index, time: @time) do  %>
+            <i class="fa fas fa-chevron-right arrow arrow-right" id="rightArrow"></i>
+            <% end  %>
+         </div>
         </div>
-          <% if @cause.photo.attached? %>
-            <%= cl_image_tag (@cause.photo.key)%>
-          <% else %>
-            <img src="https://res.cloudinary.com/k2x4b-523p/image/upload/v1622768272/lym3euydklxpwbqztkui.jpg">
-          <% end %>
-        <div class="next-button">
-          <%= link_to next_cause_path(index: @index, time: @time) do  %>
-          <i class="fa fas fa-chevron-right arrow arrow-right" id="rightArrow"></i>
-          <% end  %>
-       </div>
+      </div>
+      <div class="organisations-info">
+        <h4>Notable organisations:</h4>
+        <% @organisations.each do |organisation| %>
+        <p><a href="<%= organisation.url %>"></p><%= organisation.name %></a>
+        <%end%>
+      </div>
+    </div>
+    <div class="cause-container">
+      <div class="cause-show-cards">
+        <div class="cause-show-card cause-show-card-left">
+          <div class="card-topper card-topper-left">
+            <h3> Here is the latest news about <br> <%= @cause.name %></h3>
+            <h6> &nbsp;<br>&nbsp; </h6>
+          </div>
+          <div class="timeform">
+            <img src="<%= @cause.photo_url %>" class="top-container-image-style" style="height: 48px;width: 48px;" alt="">
+            <span>Jun 26, 2021 </span>
+            <img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg" style="height: 48px;width: 48px;" alt="">
+            <br>
+              <% @tweets.each do |tweet| %>
+              <div class="checkboxes">
+                User <b> @<%= tweet.user.screen_name %> </b> said: "<%= tweet.text %>" on <b> <%= tweet.created_at.strftime('%-m/%d/%Y') %> </b>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="cause-show-card cause-show-card-right">
+        <%= render 'task_list' %>
+        </div>
       </div>
     </div>
   </div>
-  <div class="cause-container">
-    <div class="cause-show-cards">
-      <div class="cause-show-card cause-show-card-left">
-        <div class="card-topper card-topper-left">
-          <h3> Here is the latest news about <br> <%= @cause.name %></h3>
-          <h6> &nbsp;<br>&nbsp; </h6>
-        </div>
-        <div class="timeform">
-          <img src="<%= @cause.photo_url %>" class="top-container-image-style" style="height: 48px;width: 48px;" alt="">
-          <span>Jun 26, 2021 </span>
-          <img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg" style="height: 48px;width: 48px;" alt="">
-          <br>
-            <% @tweets.each do |tweet| %>
-            <div class="checkboxes">
-              User <b> @<%= tweet.user.screen_name %> </b> said: "<%= tweet.text %>" on <b> <%= tweet.created_at.strftime('%-m/%d/%Y') %> </b>
-            </div>
-          <% end %>
-        </div>
-      </div>
-      <div class="cause-show-card cause-show-card-right">
-      <%= render 'task_list' %>
-      </div>
-    </div>
-  </div>
-  <div class="more-info-show cause-show-cards">
-    <h4>More info about this cause:<h4>
-    <%= @cause.description %>
-  </div>
-  <div class="organisations-info cause-show-cards">
-    <h4>Notable organisations:</h4>
-    <% @organisations.each do |organisation| %>
-    <p><%= organisation.name %></p><a href="<%= organisation.url %>">Click here</a>
-    <%end%>
-  </div>
-</div>
 </div>
