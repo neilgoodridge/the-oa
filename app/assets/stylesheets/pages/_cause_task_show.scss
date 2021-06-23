@@ -1,15 +1,7 @@
 body {
   background-color: #f6f6f6;
 }
-// .container {
-//   border: #d1dfd4 4px solid;
-//   padding: 4px;
-//   margin: 8px;
-//   width: auto;
-//   background-color: #fff;
-// }
 .welcome {
-  // border: #d1dfd4 4px solid;
   padding: 4px;
   margin: 8px;
 }
@@ -31,7 +23,6 @@ body {
   opacity: 0.9;
   background-position: 0px -120px;
 }
-
 .card-topper {
   height: 15vh;
   border-bottom: solid 8px #d1dfd4;
@@ -40,7 +31,7 @@ body {
 border-bottom: solid 8px #6ec5ee;
 }
 .cause-show-card-right {
-  box-shadow: 0 10px 30px 0 rgba(#D2E7D5, .7);
+  box-shadow: 0 10px 30px 0 rgba(grey, .5);
 }
 .cause-show-card {
   height: 60vh;
@@ -69,7 +60,6 @@ border-bottom: solid 8px #6ec5ee;
     text-align: center;
     padding-bottom: 15px;
     width: 100%;
-    box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
   }
 }
 .cause-show-cards {
@@ -115,15 +105,24 @@ border-bottom: solid 8px #6ec5ee;
   a { color: black;
     font-size: 20px;
     padding: 10px;
-    width: 100%;
+    margin-left: 42px;
+    width: 90%;
+    border-left: 1px solid lightgrey;
   }
 }
 .form-check-label:hover {
-  background-color: #d1dfd4;
-  transition: .2s ease-in-out;
-  a {color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  background: rgb(246,246,246);
+  background: linear-gradient(90deg, rgba(246,246,246,1) 8%, rgba(210,231,213,1) 8%);
+  transition: .4s ease;
+  a { border-left: 1px solid #D2E7D5;
+    transition: .4s ease;
   }
+}
+.timeform b {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 18px;
 }
 .timeform {
   display: block;
@@ -132,15 +131,20 @@ border-bottom: solid 8px #6ec5ee;
   overflow: scroll;
 }
 .carousel-container {
-  width: 80%;
+  display: flex;
+  width: 78%;
   margin: auto;
+}
+ .twitter-card{
+  display: block;
+  padding: 20px;
+  height: 44vh;
+  overflow: scroll;
+}
+.cause-carousel {
   display: flex;
   padding: 20px;
   position: relative;
-  h6 {
-  text-align: center;
-  margin-right: 8px;
-  }
 }
 .cause-carousel {
   flex: 1.4;
@@ -178,25 +182,26 @@ h3 {
   flex: 0.7;
   margin: 18% 2% 0 20px;
   padding: 20px;
-  display: block;
   height: 20vh;
   border-radius: 16px;
-  box-shadow: 0 10px 30px 0 rgba(#D2E7D5, .9);
+  box-shadow: 0 10px 30px 0 rgba(grey, .5);
   background-color: #f6f6f6;
-  h4, p, a { text-align: center;}
-
+  h4 { text-align: center;}
+  p { text-align: center;
+    font-size: 18px;
+    margin: 20px;}
 }
 .more-info-show {
   flex: 0.7;
   margin: 18% 20px 0 2%;
   padding: 20px;
-  display: block;
   height: 20vh;
   border-radius: 16px;
-  box-shadow: 0 10px 30px 0 rgba(#D2E7D5, .9);
+  box-shadow: 0 10px 30px 0 rgba(grey, .5);
   background-color: #f6f6f6;
   h4 { text-align: center;}
-  p { text-align: center;}
+  p { text-align: center;
+    text-decoration: none;}
 }
 h3 {
   margin: .5em 0;
@@ -204,6 +209,7 @@ h3 {
 }
 .carousel-image {
   position: relative;
+  margin-top: 7%;
 }
 .arrow-left {
   font-size: 50px;
@@ -229,3 +235,4 @@ h3 {
   text-transform: scale(1.03);
   cursor: pointer;
 }
+

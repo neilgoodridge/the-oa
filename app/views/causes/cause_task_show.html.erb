@@ -27,7 +27,7 @@
       <div class="organisations-info">
         <h4>Notable organisations:</h4>
         <% @organisations.each do |organisation| %>
-        <p><a href="<%= organisation.url %>"></p><%= organisation.name %></a>
+        <p><a href="<%= organisation.url %>"><%= organisation.name %></a></p>
         <%end%>
       </div>
     </div>
@@ -38,21 +38,20 @@
             <h3> Here is the latest news about <br> <%= @cause.name %></h3>
             <h6> &nbsp;<br>&nbsp; </h6>
           </div>
-          <div class="timeform">
+          <div class="twitter-card">
             <img src="<%= @cause.photo_url %>" class="top-container-image-style" style="height: 48px;width: 48px;" alt="">
             <span>Jun 26, 2021 </span>
             <img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg" style="height: 48px;width: 48px;" alt="">
             <br>
               <% @tweets.each do |tweet| %>
-              <div class="checkboxes">
-                User <b> @<%= tweet.user.screen_name %> </b> said: "<%= tweet.text %>" on <b> <%= tweet.created_at.strftime('%-m/%d/%Y') %> </b>
+              <div class="tweet">
+                User <b class="tweet-text"> @<%= tweet.user.screen_name %> </b> said: "<%= tweet.text %>" on <b class="tweet-created-at"> <%= tweet.created_at.strftime('%-m/%d/%Y') %> </b>
               </div>
             <% end %>
           </div>
         </div>
         <div class="cause-show-card cause-show-card-right">
         <%= render 'task_list' %>
-        </div>
       </div>
     </div>
   </div>
