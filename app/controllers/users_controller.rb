@@ -5,9 +5,9 @@ class UsersController < ApplicationController
     @causes = current_user.causes.order(:name).distinct
     @cause = @causes.first
     @index = 0
-    @tasks = current_user.tasks.where(cause_id: @cause.id)
+    @tasks = current_user.tasks.where(cause_id: @cause.id).distinct
     @name = current_user.name
-    @completed_task_count = Action.joins(:task).where("tasks.cause_id = ? and actions.user_id = ? and actions.completed = ?", @cause.id, current_user.id, true).count
+    @completed_task_count = @tasks.count
     user_points = 0
     @points = @tasks.each do |task|
       user_points += task.points
