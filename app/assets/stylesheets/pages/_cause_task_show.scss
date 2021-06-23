@@ -1,13 +1,6 @@
 body {
   background-color: #f6f6f6;
 }
-// .container {
-//   border: #d1dfd4 4px solid;
-//   padding: 4px;
-//   margin: 8px;
-//   width: auto;
-//   background-color: #fff;
-// }
 .welcome {
   // border: #d1dfd4 4px solid;
   padding: 4px;
@@ -23,12 +16,14 @@ body {
 .lock-h3 {
   height: 40vh;
 }
-
+.page-container {
+  height: 100%;
+}
 .page-container-background{
   background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url("https://res.cloudinary.com/k2x4b-523p/image/upload/v1623112549/n2omdnrbdzk3bk7w7jzf.jpg");
   opacity: 0.9;
+  background-position: 0px -120px;
 }
-
 .card-topper {
   height: 15vh;
   border-bottom: solid 8px #d1dfd4;
@@ -70,13 +65,9 @@ border-bottom: solid 8px #6ec5ee;
   }
 }
 .cause-show-cards {
-  margin: 16px;
+  margin: 0px 16px;
   display: flex;
   height: 40vh;
-}
-.carousel-container h6 {
-  text-align: center;
-  margin-right: 8px;
 }
 .progess-bar {
   border: #d1dfd4 4px solid;
@@ -135,14 +126,18 @@ border-bottom: solid 8px #6ec5ee;
   right: 10px;
   font-size: 18px;
 }
-
 .timeform {
   display: block;
   padding: 20px;
   height: 44vh;
   overflow: scroll;
 }
-.twitter-card{
+.carousel-container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+ .twitter-card{
   display: block;
   padding: 20px;
   height: 44vh;
@@ -150,13 +145,20 @@ border-bottom: solid 8px #6ec5ee;
 }
 .cause-carousel {
   display: flex;
+  padding: 20px;
+  position: relative;
+  h6 {
+  text-align: center;
+  margin-right: 8px;
+  }
+}
+.cause-carousel {
+  flex: 1.4;
+  margin: auto;
   align-items: center;
   justify-content: center;
   height: 40vh;
-  width: 80%;
-  margin: auto;
   border-radius: 8px;
-  padding-top: 25px;
   img {
     width: 40vw;
     height: 40vh;
@@ -183,47 +185,37 @@ h3 {
   color: black;
 }
 .organisations-info {
-  text-align: left;
-  color: black;
-  padding-top: 100px;
-  padding-bottom: 40px;
-  margin: 0;
-}
-.more-info {
-  margin: auto;
-  width: 30%;
+  flex: 0.7;
+  margin: 17% 3% 0 20px;
+  padding: 20px;
+  height: 20vh;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px 0 rgba(grey, .5);
+  background-color: #f6f6f6;
+  h4 { text-align: center;}
+  p { text-align: center;
+    margin: auto;
+    padding: 12px;
+    font-size: 18px;}
 }
 .more-info-show {
-  padding: 25px 50px 75px 100px;
-  margin: auto;
-  margin-bottom: 20px;
-  display: block;
+  flex: 0.7;
+  margin: 17% 20px 0 3%;
+  padding: 20px;
   height: 20vh;
-  width: 75%;
   border-radius: 16px;
-  box-shadow: 0 10px 30px 0 rgba(#D2E7D5, .9);
+  box-shadow: 0 10px 30px 0 rgba(grey, .5);
   background-color: #f6f6f6;
+  h4 { text-align: center;}
+  p { text-align: center;}
 }
 h3 {
   margin: .5em 0;
   color: black;
 }
-.organisations-info {
-  padding: 25px 50px 75px 100px;
-  margin: auto;
-  margin-bottom: 20px;
-  display: block;
-  height: 30vh;
-  width: 75%;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px 0 rgba(#D2E7D5, .9);
-  color: black;
-  line-height: 2.4;
-  background-color: #f6f6f6;
-}
 .carousel-image {
   position: relative;
-
+  margin-top: 40px;
 }
 .arrow-left {
   font-size: 50px;
