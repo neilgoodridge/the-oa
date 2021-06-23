@@ -52,6 +52,16 @@
         </div>
         <div class="cause-show-card cause-show-card-right">
         <%= render 'task_list' %>
+        <div class="twitter-card">
+          <img src="<%= @cause.photo_url %>" class="top-container-image-style" style="height: 48px;width: 48px;" alt="">
+          <span>Jun 26, 2021 </span>
+          <img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg" style="height: 48px;width: 48px;" alt="">
+          <br>
+            <% @tweets.each do |tweet| %>
+            <div class="tweet">
+              User <b> @<%= tweet.user.screen_name %> </b> said: "<%= tweet.text %>" on <b class="tweet-created-at"> <%= tweet.created_at.strftime('%-m/%d/%Y') %> </b>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
