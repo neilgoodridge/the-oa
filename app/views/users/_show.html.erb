@@ -46,4 +46,11 @@
 </div>
 <div class="keepup">
   <p> Keep up the great work! </p>
+  <div class="submit-container">
+    <div class="submit-card">
+    <%= link_to cause_id_task_path(id: @cause.id, time: "all") do %>
+    <i class="fa fas fa-plus"></i>
+    <% end %>
+    </div>
+  </div>
 </div>
