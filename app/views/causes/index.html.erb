@@ -1,7 +1,10 @@
 <div class="choose">
-  <!-- <h1 class="cause-container-title">Welcome Online Activist</h1> -->
+  <div class="box box-top" style="width: 65%;">
+    <img src="https://www.metiseurope.eu/wp-content/uploads/2021/02/united-nations-covid-19-response-sCY7W_uE8uE-unsplash-scaled-e1612610623999-1024x647.jpg" class="background-image">
+    <div class="shade" ></div>
+    <p class="ignite">Choose a cause you care about</p>
+  </div>
   <div class="cause-container">
-    <h2>Choose a cause you care about</h2>
     <div class="cause-cards">
       <% @causes.each do |cause|%>
       <%= link_to add_selected_cause_path(cause), remote: true do %>
@@ -26,23 +29,23 @@
     <% end %>
     </div>
     <div class="time-container">
-        <div class="box" style="width: 80%;">
-          <img src="https://www.metiseurope.eu/wp-content/uploads/2021/02/united-nations-covid-19-response-sCY7W_uE8uE-unsplash-scaled-e1612610623999-1024x647.jpg" class="background-image">
-          <div class="shade" ></div>
-          <p class="ignite">How many minutes can you spare to <strong>make a difference</strong> today?</p>
-        </div>
+      <div class="box" style="width: 80%;">
+        <img src="https://www.metiseurope.eu/wp-content/uploads/2021/02/united-nations-covid-19-response-sCY7W_uE8uE-unsplash-scaled-e1612610623999-1024x647.jpg" class="background-image">
+        <div class="shade" ></div>
+        <p class="ignite">How many minutes can you spare to <strong>make a difference</strong> today?</p>
+      </div>
       <div class="time-cards">
         <div class="time-card">
           <button class="select-time"><span class="test-time-span-small">2</span>
             <div class="time-selected">
-              <i class="far fa-clock test-time-span-small"></i>
+              <i class="far fa-clock test-time-span"></i>
             </div>
           </button>
         </div>
         <div class="time-card">
          <button class="select-time"><span class="test-time-span-small">5</span>
             <div class="time-selected">
-              <i class="far fa-clock test-time-span-small"></i>
+              <i class="far fa-clock test-time-span"></i>
             </div>
          </button>
         </div>
@@ -70,16 +73,16 @@
         <div class="time-card">
           <button class="select-time"><span class="test-time-span-small">∞</span>
             <div class="time-selected">
-              <i class="far fa-clock test-time-span-small"></i>
+              <i class="far fa-clock test-time-span"></i>
             </div>
           </button>
         </div>
       </div>
     </div>
-    <div class="submit-container">
-      <div class="submit-card">
-        <button class="button-ta"><%= link_to "Take Action", cause_task_path(time: @time), class: "take-action-btn" %></button>
-      </div>
+  </div>
+  <div class="submit-container">
+    <div class="submit-card">
+      <button class="button-ta"><%= link_to "Take Action", cause_task_path(time: @time), class: "take-action-btn" %></button>
     </div>
   </div>
 </div>

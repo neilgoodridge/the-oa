@@ -1,17 +1,14 @@
 // Specific CSS for your home-page
 .container {
-  // border: #d1dfd4 4px solid;
   padding: 4px;
 }
 
 .welcome {
-  // border: #d1dfd4 4px solid;
   margin: 8px;
   height: 100%;
 }
 
 .welcome-dashboard {
-  // border: #d1dfd4 4px solid;
   margin: 8px;
   height: 100%;
   display: flex;
@@ -19,10 +16,9 @@
 }
 
 .choose {
-  // border: #d1dfd4 4px solid;
   margin: auto;
   width: 100%;
-  height: 120vh;
+  height: 95vh;
 }
 
 .time-selected {
@@ -30,7 +26,6 @@
 }
 
 .cause-cards {
-  // border: #d1dfd4 4px solid;
   padding: 4px;
   margin: 8px;
   display: grid;
@@ -44,8 +39,6 @@
   height: 20vh;
   border-radius: 16px;
   position: relative;
-  // background-color: white;
-  // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   text-center: center;
   .text-description {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -62,8 +55,6 @@
   width: 100%;
   opacity: 1;
   transition: .4s ease-in-out;
-  // border: #D2E7D5 2px solid;
-  // background-color: #d1dfd4;
 }
 .text-description {
   color: black;
@@ -90,11 +81,18 @@
   vertical-align: middle;
   filter: grayscale(100%);
 }
+.submit-container {
+  height: 20vh;
+  width: 80%;
+  position: relative;
+}
 .submit-card {
-  // border: #d1dfd4 4px solid;
-  padding: 4px;
-  margin: -30px;
   text-align: center;
+  .button-ta {
+    position: absolute;
+    bottom: 60px;
+    left: 30%;
+  }
 }
 
 .button-card{
@@ -112,15 +110,12 @@
   width: 40%;
 }
 .time-cards {
-  // border: #d1dfd4 4px solid;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: space-between;
   text-align: center;
   width: 65%;
   margin: auto;
-  display: flex;
-  justify-content: center;
   button { text-align: center }
 }
 
@@ -200,7 +195,7 @@ a:hover {
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
   padding:  32px 68px;
   color:  white;
-  margin: 50px auto;
+  margin: 30px auto;
   font-family: 'Quicksand', sans-serif;
   font-size: 25px;
   text-align: center;
@@ -231,4 +226,7 @@ a:hover {
   text-decoration: none;
   width: 10%;
 }
-
+.box-top {
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
