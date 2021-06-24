@@ -1,5 +1,9 @@
 <div class="card-topper">
+  <% if params[:time] == "all" %>
+    <h3> Here are all the tasks you can achieve to support this cause </h3>
+    <% else %>
   <h3> Here are some tasks you can achieve in <br> <%= @time %> minutes to support this cause</h3>
+  <% end %>
   <h6>Click on the tasks below and follow the link for instructions. <br> Mark as complete once you're done.</h6>
 </div>
   <main>
