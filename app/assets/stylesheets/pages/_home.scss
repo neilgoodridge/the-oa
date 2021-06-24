@@ -176,7 +176,7 @@
   border-radius: 12px;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
   padding:  32px 68px;
-  color:  white;
+  color: rgba(0, 0, 0, 0.5);
   margin: 50px auto;
   font-family: 'Quicksand', sans-serif;
   font-size: 25px;
@@ -187,7 +187,7 @@
 .button-li {
   background: #D2E7D5;
   border:  1px solid #cccccc;
-  color: white;
+  color: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
   padding:  16px 32px;
@@ -206,7 +206,7 @@
    .button-gi {
    background: #D2E7D5;
    border:  1px solid #cccccc;
-   color: white;
+   color: rgba(0, 0, 0, 0.5);
    border-radius: 12px;
    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
    padding:  16px 32px;
@@ -229,7 +229,8 @@
    text-align: center;
    text-decoration: none;
    color: darkgrey;
-   a {color: white}
+   a {color: rgba(0, 0, 0, 0.5);
+}
  }
  .button-li:hover {
   transform: scale(1.03);
@@ -274,7 +275,7 @@ h3 {
   }
 // }
 .footer-section.fa {
-  color: white;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .fa-level-down-alt {
@@ -304,7 +305,7 @@ h3 {
   border:  1px solid #cccccc;
   border-radius: 12px;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
-  color:  white;
+  color: rgba(0, 0, 0, 0.5);
   font-family: 'Quicksand', sans-serif;
   font-size: 25px;
   text-align: center;
