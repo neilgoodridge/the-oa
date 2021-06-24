@@ -126,7 +126,7 @@ cause8.save!
 task1 = Task.create!(
   name: 'Sign this petition',
   points: '10',
-  content: 'Make a difference by signing the petition on Change.org.',
+  content: 'Make a difference by signing the petition on Change.org',
   cause_id: cause1.id,
   time: 10,
   url: 'https://www.change.org/t/black-lives-matter-en-us'
@@ -135,7 +135,7 @@ task1 = Task.create!(
 task2 = Task.create!(
   name: 'Email the representative at blm.com',
   points: '20',
-  content: 'This service will assist you by matching your ZIP code to your congressional district, with links to your members website and contact page.',
+  content: 'This service will assist you by matching your post code to your local branch, with links to your members website and contact page',
   cause_id: cause1.id,
   time: 20,
   url: 'https://ag.ny.gov/contact-attorney-general-letitia-james'
@@ -144,7 +144,7 @@ task2 = Task.create!(
   task3 = Task.create!(
   name: 'Research and contact the BLAM movement',
   points: '30',
-  content: 'Research the BLAM movement, a community outreach programme based around education, and find out what they can provide to your local area.',
+  content: 'Research the BLAM movement, a community outreach programme based around education, and find out what they can provide to your local area',
   cause_id: cause1.id,
   time: 30,
   url: 'https://blamuk.org/'
@@ -171,7 +171,7 @@ task5 = Task.create!(
 task6 = Task.create!(
   name: 'Donate to legal aid',
   points: '10',
-  content: 'Make a difference by donating to legal aid for cause related cases',
+  content: 'Make a difference by donating to legal aid for BLM related cases',
   cause_id: cause1.id,
   time: 10,
   url: 'https://www.change.org/t/black-lives-matter-en-us'
@@ -189,7 +189,7 @@ task7 = Task.create!(
 task8 = Task.create!(
   name: 'Contact Unison and raise awareness of unions',
   points: '10',
-  content: 'Contact Unison for material and information about trade unions, and begin spreading the word to raise awareness.',
+  content: 'Contact Unison for material and information about trade unions, and begin spreading the word to raise awareness',
   cause_id: cause2.id,
   time: 10,
   url: 'https://www.unison.org.uk/get-involved/grow-the-movement/#heading-1'
@@ -198,7 +198,7 @@ task8 = Task.create!(
 task9 = Task.create!(
   name: 'Volunteer with the Equality Trust in your local area',
   points: '40',
-  content: "Contact your local Equality Trust movement and volunteer your time! This is an ongoing task and you can choose a level of commitment that suits you.",
+  content: "Contact your local Equality Trust movement and volunteer your time! This is an ongoing task and you can choose a level of commitment that suits you",
   cause_id: cause2.id,
   time: 60,
   url: 'https://www.equalitytrust.org.uk/local-groups'
@@ -225,7 +225,7 @@ task11 = Task.create!(
 task12 = Task.create!(
   name: 'Sign this petition for protection of the ocean',
   points: '10',
-  content: "Sign this petition to call on the government to make a real difference to our oceans.",
+  content: "Sign this petition to call on the government to make a real difference to our oceans",
   cause_id: cause3.id,
   time: 5,
   url: 'https://action.greenpeace.org.uk/l/854853/2021-04-23/qwm74?source=UN&subsource=OCMRGLPEUN02GK&utm_source=bsd&utm_medium=redirect&utm_campaign=post%20pardot%20launch%20redirect'
@@ -241,9 +241,9 @@ task13 = Task.create!(
 )
 
 task14 = Task.create!(
-  name: 'Check out Sea7; a live streamed ocean activist training camp',
+  name: 'Check out Sea7, a live streamed ocean activist training camp',
   points: '60',
-  content: 'A wide range of resources to review following the G7 summit',
+  content: 'A wide range of resources to review following the G7 summit, and actions that can be taken',
   cause_id: cause3.id,
   time: 60,
   url: 'https://sea7.finisterre.com/'
@@ -270,7 +270,7 @@ task16 = Task.create!(
 task17 = Task.create!(
   name: 'Share on social media',
   points: '5',
-  content: "Share content on social media to spread the word and raise awareness",
+  content: 'Share content on social media to spread the word and raise awareness of Stop Asian Hate',
   cause_id: cause5.id,
   time: 5,
   url: 'https://stopasianhate.carrd.co/#videos'
@@ -315,10 +315,10 @@ task21 = Task.create!(
 task22 = Task.create!(
   name: 'Support local Asian businesses',
   points: '10',
-  content: 'Resource for supporting affected Asian business in your community',
+  content: 'Resource for supporting effected Asian business in your community',
   cause_id: cause5.id,
   time: 10,
-  url: 'https://www.stylist.co.uk/life/how-to-support-stop-asian-hate/530984'
+  url: 'https://www.goodhousekeeping.com/life/a35768747/asian-owned-businesses/'
 )
 
 task23 = Task.create!(
@@ -333,7 +333,7 @@ task23 = Task.create!(
 task24 = Task.create!(
   name: 'Save water in your own home',
   points: '5',
-  content: 'Save water in your own home with these practicak tips',
+  content: 'Save water in your own home with these practical tips',
   cause_id: cause3.id,
   time: 5,
   url: 'https://watersworthsaving.org.uk/top-tips/?utm_source=bing&utm_campaign=mt-wws21-how-save&utm_medium=cpc&utm_content=bing-how-save-1'
@@ -360,7 +360,7 @@ task26 = Task.create!(
 task27 = Task.create!(
   name: 'Hand out leaflets and flyers in your local area',
   points: '10',
-  content: 'Get involved practically and place our leaflets and posters around your area', 
+  content: 'Get involved practically and hand out our leaflets and posters around your area', 
   cause_id: cause1.id,
   time: 15,
   url: 'https://blacklivesmatter.com/'
@@ -373,6 +373,87 @@ task28 = Task.create!(
   cause_id: cause5.id,
   time: 15, 
   url: 'https://www.stophateuk.org/resources/'
+)
+
+task29 = Task.create!(
+  name: 'Resources directory',
+  points: '30',
+  content: 'A compilation of resources and tools that you can use to help Asian communities in the UK',
+  cause_id: cause5.id,
+  time: 30,
+  url: 'https://www.buzzfeed.com/victoriavouloumanos/anti-asian-racism-and-violence-resources'
+)
+
+task30 = Task.create!(
+  name: 'Share this playlist online',
+  points: '5',
+  content: 'Share this specially curated playlist on your social media to promote the cause',
+  cause_id: cause5.id,
+  time: 5,
+  url: 'https://qat.btrtoday.com/read/featured/stopasianhate-playlist-list-of-anti-asian-violence-resources/'
+)
+
+task31 = Task.create!(
+  name: 'Share this playlist online',
+  points: '5',
+  content: 'Share songs of empowerment and pride to promote the cause',
+  cause_id: cause1.id,
+  time: 5,
+  url: 'https://open.spotify.com/playlist/37i9dQZF1DWWAqc46ZJdZf'
+)
+
+task32 = Task.create!(
+  name: 'Black owned businesses directory',
+  points: '15',
+  content: 'Resource for supporting black owned businesses in the UK',
+  cause_id: cause1.id,
+  time: 15,
+  url: 'https://www.ukblackowned.co.uk/'
+)
+
+task33 = Task.create!(
+  name: 'Raise awareness of ESEA Sisters',
+  points: '5',
+  content: 'Promote this meeting space for Asian women as a safe space community',
+  cause_id: cause5.id,
+  time: 5,
+  url: 'https://theface.com/life/esea-sisters-anti-asian-hate-racism-britain-activism-ying-suen-susie-lau'
+)
+
+task34 = Task.create!(
+  name: 'Participate in a beach clean',
+  points: '60',
+  content: 'Get involved practically with a beach clean, check this website for resources',
+  cause_id: cause3.id,
+  time: 60,
+  url: 'https://beachcleans.org.uk/'
+)
+
+task35 = Task.create!(
+  name: 'BLM resources page',
+  points: '15',
+  content: 'Check out the BLM resources page for help with your activism',
+  cause_id: cause1.id,
+  time: 15,
+  url: 'https://blacklivesmatter.com/resources/?__cf_chl_jschl_tk__=55cb2d831ab7079bc0beb04b83dd3220bb7c2776-1624564333-0-AXogIZjXwOoRvEg58Dtb0L6upVAsg6zS7QbXzIcfEHrBmm-P8d6IyZlbzXpZsepry2ENnVaAnI1MUbEa3HeZc34m8rW1oqnwZxrFenVgH8jHa7blpSSDiYGQzVwOUjybpvsUl04OhpT09IEhHtXf_MLqrwoEUuC3fYujvkONxWG0xo86BIn86Wgq2_nGJPhJwvO-wBdeV7RW10EvRdXin6LR3N0K9XQJkwjr5vQvZLY6ZW_TItxVj0H2tzQ-vBNFz7W_g3_-BAVYY6cTPX-qhFNClRwmt2khMPWvOnyG4z16EUtyi95kSUx_1R62pKhv0Bj81a-QkG7hOFI9SgTcdQ8ZJGUVjc9ZahkyoDZwlKdTPhKuRURnyF5NXCCPEqZcdi1iNVkXswcJlq3LCBD7J0m-e_zi-KS2taf-CVObLQ505BJQumQ87tclIAGmZMEJ8O-wLuiTI_H8nvjRnphfr0c'
+)
+
+task36 = Task.create!(
+  name: 'Visit the Marine Consevation Society page',
+  points: '15', 
+  content: 'Check out the MCS and their information. Join or donate!',
+  cause_id: cause3.id,
+  time: 15,
+  url: 'https://www.mcsuk.org/'
+)
+
+task37 = Task.create!(
+  name: 'Mental health resources for BAME communities',
+  points: '15',
+  content: 'Use this resource to bare the mental effect of hate crimes in mind when undertaking your activism',
+  cause_id: cause5.id,
+  time: 15,
+  url: 'https://www.mentalhealth.org.uk/a-to-z/b/black-asian-and-minority-ethnic-bame-communities'
 )
 
 organisation1 = Organisation.create!(
