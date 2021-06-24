@@ -41,7 +41,7 @@
   position: relative;
   text-center: center;
   .text-description {
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     opacity: 0;
   }
 }
@@ -101,9 +101,10 @@
   border-radius: 12px;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
   padding:  32px 68px;
-  color:  white;
+  color: rgba(0, 0, 0, 0.5);
   margin: 50px auto;
   font-family: 'Quicksand', sans-serif;
+  color: black;
   font-size: 25px;
   text-align: center;
   text-decoration: none;
@@ -146,7 +147,7 @@ h2 {
   height: 20vh;
   border-radius: 16px;
   position: relative;
-  transition: 0.4s ease-out;
+  transition: 0.4s ease;
   img { border: solid 2px black;}
 }
 .cause-card {
@@ -194,7 +195,7 @@ a:hover {
   border-radius: 12px;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
   padding:  32px 68px;
-  color:  white;
+  color: rgba(0, 0, 0, 0.5);
   margin: 30px auto;
   font-family: 'Quicksand', sans-serif;
   font-size: 25px;
@@ -211,16 +212,16 @@ a:hover {
   transition: .2s ease-in-out;
   }
 }
-
 .button-time {
   background: #D2E7D5;
   border:  1px solid #cccccc;
   border-radius: 12px;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
   padding:  32px;
-  color:  white;
+  color: rgba(0, 0, 0, 0.5);
   margin: 50px auto;
   font-family: 'Quicksand', sans-serif;
+  color: black;
   font-size: 25px;
   text-align: center;
   text-decoration: none;
