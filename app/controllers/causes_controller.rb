@@ -22,7 +22,7 @@ class CausesController < ApplicationController
     @time = params[:time]
     return redirect_to causes_path, alert: "Please select a cause and a time" if @cause.blank? || @time.blank?
     if params[:time] == "all"
-      @tasks = @cause.tasks
+      @tasks = current_user.actions.where(completed: true)
     else
       @tasks = @cause.tasks.where("tasks.time <= ?", @time)
     end
