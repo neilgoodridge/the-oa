@@ -12,11 +12,20 @@ class CausesController < ApplicationController
     @cause = Cause.find(params[:id])
   end
   def cause_task_show
-    @cause = USER_CAUSES[0]
+    # if params[:id] == "selected" @cause = USER_CAUSES[0]
+    if params[:id].present?
+      @cause = Cause.find(params[:id])
+    else
+      @cause = USER_CAUSES[0]
+    end
     @organisations = @cause.organisations
     @time = params[:time]
     return redirect_to causes_path, alert: "Please select a cause and a time" if @cause.blank? || @time.blank?
-    @tasks = @cause.tasks.where("tasks.time <= ?", @time)
+    if params[:time] == "all"
+      @tasks = @cause.tasks
+    else
+      @tasks = @cause.tasks.where("tasks.time <= ?", @time)
+    end
     @index = 0
     if session[:tasks].blank?
       session[:tasks] = []
@@ -54,7 +63,11 @@ class CausesController < ApplicationController
      @index -= 1
     end
     @time = params[:time]
-    @tasks = @cause.tasks.where("tasks.time <= ?", @time)
+    if params[:time] == "all"
+      @tasks = @cause.tasks
+    else
+      @tasks = @cause.tasks.where("tasks.time <= ?", @time)
+    end
     client = Twitter::REST::Client.new do |config|
         config.consumer_key        = ENV["API_KEY"]
         config.consumer_secret     = ENV["API_SECRET_KEY"]
@@ -81,7 +94,11 @@ class CausesController < ApplicationController
     if USER_CAUSES.length > @index + 1
       @index += 1
     end
+    if params[:time] == "all"
+      @tasks = @cause.tasks
+    else
       @tasks = @cause.tasks.where("tasks.time <= ?", @time)
-      render :cause_task_show
+    end
+    render :cause_task_show
   end
 end

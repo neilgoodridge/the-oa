@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get '/causes/select_time', to: 'causes#select_time',as: 'select_time'
     get '/causes/next_cause', to: 'causes#next_cause',as: 'next_cause'
     get '/causes/previous_cause', to: 'causes#previous_cause',as: 'previous_cause'
+    get '/causes/:id/tasks/:time', to: 'causes#cause_task_show', as: 'cause_id_task'
     get '/causes/tasks', to: 'causes#cause_task_show', as: 'cause_task'
     get 'causes/tasks/time', to: 'causes#time', as: 'task_time'
     get '/users/dashboard/next_cause', to: 'users#next_cause',as: 'dashboard_next_cause'
