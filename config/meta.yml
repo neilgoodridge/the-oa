@@ -1,0 +1,5 @@
+meta_product_name: "The Online Activist"
+meta_title: "The Online Activist - Turn hashtags into action, retweets into revolution"
+meta_description: "The home of online activism"
+meta_image: "image.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
