@@ -56,11 +56,14 @@ class CausesController < ApplicationController
     render :index
   end
   def previous_cause
-    @index = params[:index].to_i
+    @index = params[:index].to_i - 1
     @cause = USER_CAUSES[@index]
     @organisations = @cause.organisations
-    if USER_CAUSES.length > (@index * -1)
-     @index -= 1
+    if @index == -1
+      @cause = USER_CAUSES.last
+      @index = USER_CAUSES.length - 1
+    else
+      @cause = USER_CAUSES[@index]
     end
     @time = params[:time]
     if params[:time] == "all"
@@ -79,7 +82,7 @@ class CausesController < ApplicationController
     render :cause_task_show
   end
   def next_cause
-    @index = params[:index].to_i
+    @index = params[:index].to_i + 1
     @cause = USER_CAUSES[@index]
     @organisations = @cause.organisations
     client = Twitter::REST::Client.new do |config|
@@ -91,8 +94,11 @@ class CausesController < ApplicationController
       # @tweets = tweets.search('#Blacklivesmatter')
       @tweets = client.user_timeline(@cause.twitter, count: 30)
     @time = params[:time]
-    if USER_CAUSES.length > @index + 1
-      @index += 1
+    if @index >= USER_CAUSES.length
+      @cause = USER_CAUSES.first
+      @index = 0
+    else
+      @cause = USER_CAUSES[@index]
     end
     if params[:time] == "all"
       @tasks = @cause.tasks
