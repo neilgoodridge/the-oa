@@ -2,6 +2,7 @@ require 'twitter'
 class CausesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index, :cause_task_show, :add_selected_cause, :select_time, :next_cause, :previous_cause]
   USER_CAUSES = [] # in caps at top to be accessible in every method
+
   def index
     @causes = Cause.all
     @selected_causes = []
@@ -82,9 +83,19 @@ class CausesController < ApplicationController
     render :cause_task_show
   end
   def next_cause
-    @index = params[:index].to_i + 1
+    if params[:index].to_i == USER_CAUSES.length - 1
+      @index = 0
+    else
+      @index = params[:index].to_i + 1
+    end
     @cause = USER_CAUSES[@index]
     @organisations = @cause.organisations
+    #  if @index == USER_CAUSES.length
+    #   @cause = USER_CAUSES.first
+    #   @index = 0
+    # else
+    #   @cause = USER_CAUSES[@index]
+    # end
     client = Twitter::REST::Client.new do |config|
         config.consumer_key        = ENV["API_KEY"]
         config.consumer_secret     = ENV["API_SECRET_KEY"]
@@ -94,12 +105,6 @@ class CausesController < ApplicationController
       # @tweets = tweets.search('#Blacklivesmatter')
       @tweets = client.user_timeline(@cause.twitter, count: 30)
     @time = params[:time]
-    if @index >= USER_CAUSES.length
-      @cause = USER_CAUSES.first
-      @index = 0
-    else
-      @cause = USER_CAUSES[@index]
-    end
     if params[:time] == "all"
       @tasks = @cause.tasks
     else
