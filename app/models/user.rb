@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_many :tasks, through: :actions
   has_many :causes, through: :tasks
 
+  def outstanding_tasks
+    Task.includes(:actions).references(:actions).where.not(actions: { user_id: self.id })
+  end
 end
