@@ -22,7 +22,18 @@ class CausesController < ApplicationController
     @time = params[:time]
     return redirect_to causes_path, alert: "Please select a cause and a time" if @cause.blank? || @time.blank?
     if params[:time] == "all"
-      @tasks = current_user.outstanding_tasks
+      outstanding_taskss = []
+      done_tasks  = []
+      @tasks = @cause.tasks.each do |task|
+        current_user.actions.each do |action|
+          if task.id == action.task_id
+            done_tasks << action.task
+          end
+
+        end
+      end
+      # @tasks = current_user.outstanding_tasks.where(cause_id: params[:id])
+     raise
     else
       @tasks = @cause.tasks.where("tasks.time <= ?", @time)
     end
