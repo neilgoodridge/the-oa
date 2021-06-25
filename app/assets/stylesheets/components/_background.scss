@@ -1,15 +1,16 @@
 .box {
   width: 100%;
-  height: 100px;
+  height: 50px;
   margin: 10px;
   position: relative;
-  border-radius: 16px;
+  border-radius: 8px;
+  margin: 20px auto 0 auto;
   img {
   width: 100%;
-  height: 100px;
+  height: 50px;
   opacity: 0.5;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 }
 
@@ -18,7 +19,7 @@
 .ignite {
   color: white;
   height: auto;
-  font-size: 32px;
+  font-size: 22px;
   margin: 0;
   transform: translate(-50%,-50%);
   text-align: center;
@@ -26,16 +27,16 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   top: 50%;
   left: 50%;
-  width: 80%;
+  width: 100%;
 }
 
 .shade {
   width: 100%;
-  height: 100%;
+  height: 50px;
   background: rgba(0,0,0,0.1);
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
