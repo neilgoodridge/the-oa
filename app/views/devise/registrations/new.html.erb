@@ -12,15 +12,15 @@
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "Your name" } %>
-        <%= f.input :email, class: "email fadeIn second", type: "text",
+        <%= f.input :email, class: "email fadeIn second", type: "text", placeholder: 'you@theoa.org',
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "email" }%>
-        <%= f.input :password, class: "password fadeIn third", type: "text",
+        <%= f.input :password, class: "password fadeIn third", type: "text", placeholder: '******',
                     required: true,
                     hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                     input_html: { autocomplete: "new-password" } %>
-        <%= f.input :password_confirmation, class: "password_confirm fadeIn fourth", type: "text",
+        <%= f.input :password_confirmation, class: "password_confirm fadeIn fourth", type: "text", placeholder: '******',
                     required: true,
                     input_html: { autocomplete: "new-password" } %>
         </div>
