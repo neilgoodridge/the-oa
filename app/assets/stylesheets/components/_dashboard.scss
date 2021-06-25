@@ -2,6 +2,9 @@
   margin: auto;
   text-align: center;
 }
+.page-container-dashboard {
+  height: 120vh;
+}
 .community-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -24,6 +27,12 @@
   font-size: 14px;
   font-family: 'Quicksand', sans-serif;
   }
+}
+.community-cards {
+  padding-top: 30px;
+}
+.cause-show {
+  height: 80vh;
 }
 .user-cards p {
   padding-top: 10px;
@@ -161,10 +170,11 @@
   height: auto;
   border-top: 8px solid #6ec5ee;
   h4 { width: 100%;
-    font-size: 18px;
-    font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
   padding: 5px;
+  margin-bottom: 0px;
   }
 }
 .carousel-image {
@@ -194,7 +204,8 @@
 }
 .keepup {
   text-align: center;
-  padding-top: 35px;
+  padding-top: 40px;
+  position: relative;
   p {
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
@@ -206,6 +217,6 @@
   font-weight: bold;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   position: absolute;
-  right: -21%;
-  top: -30%;
+  right: -35px;
+  bottom: -5px;
 }
