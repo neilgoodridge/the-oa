@@ -18,9 +18,11 @@
 .choose {
   margin: auto;
   width: 100%;
-  height: 95vh;
+  height: 90vh;
 }
-
+.cause-container {
+  height: 50%;
+}
 .time-selected {
   display: none;
 }
@@ -36,8 +38,8 @@
 .cause-card {
   padding: 4px;
   margin: 4px;
-  height: 20vh;
-  border-radius: 16px;
+  height: 19vh;
+  border-radius: 8px;
   position: relative;
   text-center: center;
   .text-description {
@@ -58,7 +60,7 @@
 }
 .text-description {
   color: black;
-  font-size: 18px;
+  font-size: 12px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -72,7 +74,7 @@
   display: block;
   margin: auto;
   padding: auto;
-  border-radius: 16px;
+  border-radius: 8px;
   height: 19vh;
   width: 100%;
   opacity: 0.15;
@@ -82,7 +84,7 @@
   filter: grayscale(100%);
 }
 .submit-container {
-  height: 20vh;
+  height: 10%;
   width: 80%;
   position: relative;
 }
@@ -90,15 +92,15 @@
   text-align: center;
   .button-ta {
     position: absolute;
-    bottom: 60px;
     left: 30%;
+    bottom: -80%;
   }
 }
 
 .button-card{
   background: #D2E7D5;
   border:  1px solid #cccccc;
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
   padding:  32px 68px;
   color: rgba(0, 0, 0, 0.5);
@@ -109,6 +111,10 @@
   text-align: center;
   text-decoration: none;
   width: 40%;
+}
+.time-container {
+  width: 100%;
+  margin-top: 20px;
 }
 .time-cards {
   display: grid;
@@ -144,8 +150,8 @@ h2 {
 .clickable {
   padding: 4px;
   margin: 8px;
-  height: 20vh;
-  border-radius: 16px;
+  height: 19vh;
+  border-radius: 8px;
   position: relative;
   transition: 0.4s ease;
   img { border: solid 2px black;}
@@ -153,6 +159,7 @@ h2 {
 .cause-card {
   h3 {
   color: black;
+  font-size: 22px;
   margin: auto;
   padding-top: 25%;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -192,11 +199,11 @@ a:hover {
 .select-time {
   background: #D2E7D5;
   border:  1px solid #cccccc;
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
-  padding:  32px 68px;
+  padding: 8px 50px;
   color: rgba(0, 0, 0, 0.5);
-  margin: 30px auto;
+  margin-top: 20px;
   font-family: 'Quicksand', sans-serif;
   font-size: 25px;
   text-align: center;
@@ -215,7 +222,7 @@ a:hover {
 .button-time {
   background: #D2E7D5;
   border:  1px solid #cccccc;
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
   padding:  32px;
   color: rgba(0, 0, 0, 0.5);
