@@ -2,7 +2,6 @@
   margin: auto;
   text-align: center;
 }
-
 .community-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -18,17 +17,18 @@
   height: 18vh;
 }
 .card-header {
-  height: 30%;
+  height: 40%;
   background-color: #ffefd8;
-  border-radius: 16px;
+  border-radius: 8px;
   h4 { text-align: center;
-  padding-top: 10px;
-  font-size: 18px;
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
   }
 }
 .user-cards p {
   padding-top: 10px;
-  font-size: 70px;
+  font-size: 40px;
+  font-family: 'Quicksand', sans-serif;
   opacity: 0.8;
   text-align: center;
   margin: auto;
@@ -39,27 +39,38 @@
 }
 .dashboard-card-left {
   box-shadow: 0 10px 30px 0 rgba(grey, .5);
-  height: 54vh;
+  height: 58vh;
   margin: 30px;
-  border-radius: 16px;
+  border-radius: 8px;
   flex: 2;
   background-color: #f6f6f6;
 }
 .dashboard-card-right {
   box-shadow: 0 10px 30px 0 rgba(grey, .5);
-  height: 54vh;
+  height: 58vh;
   margin: 30px;
-  border-radius: 16px;
+  border-radius: 8px;
   flex: 2;
   background-color: #f6f6f6;
 }
 .dashboard-topper-left {
-  height: 8vh;
+  height: 12vh;
+  padding: 10px;
   border-bottom: solid 8px #ffefd8;
+  h2 { font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+  }
 }
 .dashboard-topper-right {
-  height: 8vh;
+  height: 12vh;
+  padding: 10px;
   border-bottom: solid 8px #D2E7D5;
+  h2 { font-size: 24px;
+  font-family: 'Quicksand', sans-serif;
+  }
+}
+.community-cards {
+  margin-top: 40px;
 }
 .banner {
   background-size: cover;
@@ -67,7 +78,7 @@
 }
 .dashboard-card {
   height: 100%;
-  border-radius: 16px;
+  border-radius: 8px;
   box-shadow: 0 10px 30px 0 rgba(grey, .5);
 }
 .submit-container {
@@ -83,7 +94,7 @@
   margin: 30px;
 }
 .completed-task {
-  border-radius: 16px;
+  border-radius: 8px;
   box-shadow: 0 10px 30px 0 rgba(grey, .5);
   // padding: 10px;
   text-align: center;
@@ -94,19 +105,20 @@
 }
 .check {
   width: 40px;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
   color: #D2E7D5;
   padding-left: 15px;
-
 }
 .completed-task-header {
   background-color: #D2E7D5;
   padding: 5px;
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
 }
 .scroll-tasks {
   display: block;
-  height: 45%;
+  height: 40%;
   overflow: scroll;
 }
 .progress-info {
@@ -115,34 +127,42 @@
   grid-gap: 30px;
   margin: 0px 30px;
   text-align: center;
-  height: 23%;
+  height: 15%;
 }
 .progress-tasks {
-  font-size: 30px;
+  font-size: 36px;
   box-shadow: 0 10px 30px 0 rgba(grey, .5);
-  border-radius: 16px;
+  border-radius: 8px;
+  font-family: 'Quicksand', sans-serif;
 }
 .progress-points {
   box-shadow: 0 10px 30px 0 rgba(grey, .5);
-  font-size: 30px;
-  border-radius: 16px;
+  font-size: 36px;
+  border-radius: 8px;
+  font-family: 'Quicksand', sans-serif;
 }
 .task-count-header {
   background-color: #6ec5ee,;
   h4 { text-align: center;
-  font-size: 18px;
+  font-size: 14px;
   padding: 5px;
+  font-family: 'Quicksand', sans-serif;
+
   }
 }
 .time-points {
   margin: auto;
   padding: 10px;
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
 }
 .progress {
   background-color: #f6f6f6;
   height: auto;
-  padding-top: 10px;
+  border-top: 8px solid #6ec5ee;
   h4 { width: 100%;
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
   text-align: center;
   padding: 5px;
   }
@@ -174,8 +194,11 @@
 }
 .keepup {
   text-align: center;
-  font-size: 24px;
-  padding-top: 25px;
+  padding-top: 35px;
+  p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+  }
 }
 .fa-plus {
   font-size: 80px;
@@ -183,6 +206,6 @@
   font-weight: bold;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   position: absolute;
-  right: -108px;
-  top: -48px;
+  right: -21%;
+  top: -30%;
 }
