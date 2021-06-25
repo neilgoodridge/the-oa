@@ -154,7 +154,7 @@ task4 = Task.create!(
   name: 'Anti racism resources',
   points: '30',
   content: 'A wide range of anti racism resources to research and get involved with',
-  cause_id: cause1.id, 
+  cause_id: cause1.id,
   time: 30,
   url: 'https://survivorsnetwork.org.uk/anti-racism-resources/'
 )
@@ -163,7 +163,7 @@ task5 = Task.create!(
   name: 'Red Cross guide to teaching children about racism',
   points: '30',
   content: 'Raise awareness with children and young people about racism with this guide',
-  cause_id: cause1.id, 
+  cause_id: cause1.id,
   time: 30,
   url: 'https://www.redcross.org.uk/get-involved/teaching-resources/talking-with-children-and-young-people-about-race-and-racism'
 )
@@ -214,12 +214,12 @@ task10 = Task.create!(
 )
 
 task11 = Task.create!(
-  name: 'Share the trailer',
-  points: '5',
-  content: "Share the trailer for Seaspiracy to social media to raise awareness of the film and its message",
-  cause_id: cause3.id,
-  time: 2,
-  url: 'https://www.youtube.com/watch?v=1Q5CXN7soQg'
+  name: 'Volunteer online with Fueling Justic Coalition',
+  points: '25',
+  content: "Contact local representatives by phone with helpful prompts from FJC",
+  cause_id: cause1.id,
+  time: 30,
+  url: 'https://www.fuelingjustice.org/get-involved'
 )
 
 task12 = Task.create!(
@@ -290,7 +290,7 @@ task19 = Task.create!(
   points: '15',
   content: 'Check out these resources to find out how you can help with hate crime',
   cause_id: cause5.id,
-  time: 15, 
+  time: 15,
   url: 'https://www.stophateuk.org/resources/'
 )
 
@@ -338,7 +338,7 @@ task24 = Task.create!(
   time: 5,
   url: 'https://watersworthsaving.org.uk/top-tips/?utm_source=bing&utm_campaign=mt-wws21-how-save&utm_medium=cpc&utm_content=bing-how-save-1'
 )
- 
+
 task25 = Task.create!(
   name: 'Promote veganism',
   points: '15',
@@ -347,20 +347,20 @@ task25 = Task.create!(
   time: 15,
   url: 'https://www.peta.org.uk/'
 )
- 
+
 task26 = Task.create!(
   name: 'Protest fisheries',
   points: '30',
   content: 'Get involved with protests against fisheries',
   cause_id: cause3.id,
-  time: 30, 
+  time: 30,
   url: 'https://action.greenpeace.org.uk/l/854853/2021-04-23/qwlqv?source=UN&subsource=NBRENAPEUN03GG&utm_source=bsd&utm_medium=redirect&utm_campaign=post+pardot+launch+redirect'
 )
 
 task27 = Task.create!(
   name: 'Hand out leaflets and flyers in your local area',
   points: '10',
-  content: 'Get involved practically and hand out our leaflets and posters around your area', 
+  content: 'Get involved practically and hand out our leaflets and posters around your area',
   cause_id: cause1.id,
   time: 15,
   url: 'https://blacklivesmatter.com/'
@@ -369,9 +369,9 @@ task27 = Task.create!(
 task28 = Task.create!(
   name: 'Hand out leaflets and flyers in your local area',
   points: '10',
-  content: 'Get involved practically and place our leaflets and posters around your area', 
+  content: 'Get involved practically and place our leaflets and posters around your area',
   cause_id: cause5.id,
-  time: 15, 
+  time: 15,
   url: 'https://www.stophateuk.org/resources/'
 )
 
@@ -440,7 +440,7 @@ task35 = Task.create!(
 
 task36 = Task.create!(
   name: 'Visit the Marine Consevation Society page',
-  points: '15', 
+  points: '15',
   content: 'Check out the MCS and their information. Join or donate!',
   cause_id: cause3.id,
   time: 15,
