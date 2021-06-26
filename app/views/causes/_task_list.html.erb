@@ -6,16 +6,16 @@
   <% end %>
   <h6>Click on the tasks below and follow the link for instructions. <br> Mark as complete once you're done.</h6>
 </div>
-  <main>
+<main>
+  <%= simple_form_for :store_tasks, url: store_tasks_users_path do |f| %>
     <div class="timeform">
-      <%= simple_form_for :store_tasks, url: store_tasks_users_path do |f| %>
-        <%= f.input :task_ids, label: "",
-        required: false, as: :check_boxes, input_html: {class: "checkboxes"}, item_wrapper_class: 'tick',
-        collection: @tasks,
-        label_method: lambda {|task| "<a href=\'#{task.url}\' target=\_blank\'>#{task.name}:&nbsp;#{task.content} <b><br> #{task.points} points</b></a>".html_safe } %>
-      <div class="save">
-        <%= f.submit "Save", class: "save-button"%>
-      </div>
-    <% end %>
-  </div>
+      <%= f.input :task_ids, label: "",
+      required: false, as: :check_boxes, input_html: {class: "checkboxes"}, item_wrapper_class: 'tick',
+      collection: @tasks,
+      label_method: lambda {|task| "<a href=\'#{task.url}\' target=\_blank\'>#{task.name}:&nbsp;#{task.content} <b><br> #{task.points} points</b></a>".html_safe } %>
+    </div>
+    <div class="save">
+      <%= f.submit "Save", class: "save-button"%>
+    </div>
+  <% end %>
 </main>
