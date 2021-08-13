@@ -17,18 +17,14 @@ class CausesController < ApplicationController
   def cause_task_show
     # if params[:id] == "selected" @cause = USER_CAUSES[0]
     if params[:id].present?
-      @cause = Cause.find(params[:id])
+      show
     else
       @cause = USER_CAUSES[0]
     end
     @organisations = @cause.organisations
     @time = params[:time]
     return redirect_to causes_path, alert: "Please select a cause and a time" if @cause.blank? || @time.blank?
-    if params[:time] == "all"
-      @tasks = @cause.tasks
-    else
-      @tasks = @cause.tasks.where("tasks.time <= ?", @time)
-    end
+    set_time
     @index = 0
     if session[:tasks].blank?
       session[:tasks] = []
@@ -40,10 +36,6 @@ class CausesController < ApplicationController
     @causes = Cause.all
     cause = Cause.find(params[:id])
     USER_CAUSES << cause
-    @selected_causes = USER_CAUSES.uniq
-    # unless session[:tasks].include?(@task.id)
-    #   session[:tasks] << @task.id
-    # end
     @selected_causes = USER_CAUSES.uniq
     render :index
   end
@@ -64,12 +56,7 @@ class CausesController < ApplicationController
     else
       @cause = USER_CAUSES[@index]
     end
-    @time = params[:time]
-    if params[:time] == "all"
-      @tasks = @cause.tasks
-    else
-      @tasks = @cause.tasks.where("tasks.time <= ?", @time)
-    end
+    set_time
     cause_tweets
     render :cause_task_show
   end
@@ -83,11 +70,7 @@ class CausesController < ApplicationController
     @cause = USER_CAUSES[@index]
     @organisations = @cause.organisations
     @time = params[:time]
-    if params[:time] == "all"
-      @tasks = @cause.tasks
-    else
-      @tasks = @cause.tasks.where("tasks.time <= ?", @time)
-    end
+    set_time
     cause_tweets
     render :cause_task_show
   end
@@ -103,5 +86,14 @@ class CausesController < ApplicationController
     end
     # @tweets = tweets.search('#Blacklivesmatter')
     @tweets = client.user_timeline(@cause.twitter, count: 30)
+  end
+
+  def set_time
+    @time = params[:time]
+    if params[:time] == "all"
+      @tasks = @cause.tasks
+    else
+      @tasks = @cause.tasks.where("tasks.time <= ?", @time)
+    end
   end
 end
