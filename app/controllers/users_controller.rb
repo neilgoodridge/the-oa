@@ -8,11 +8,7 @@ class UsersController < ApplicationController
     @tasks = current_user.tasks.where(cause_id: @cause.id).distinct
     @name = current_user.name
     @completed_task_count = @tasks.count
-    user_points = 0
-    @points = @tasks.each do |task|
-      user_points += task.points
-    end
-    @points = user_points
+    display_points
   end
 
   def store_tasks
@@ -40,13 +36,8 @@ class UsersController < ApplicationController
     else
       @cause = @causes[@index]
     end
-    @tasks = current_user.tasks.where(cause_id: @cause.id)
-    @completed_task_count = Action.joins(:task).where("tasks.cause_id = ? and actions.user_id = ? and actions.completed = ?", @cause.id, current_user.id, true).count
-    user_points = 0
-    @points = @tasks.each do |task|
-      user_points += task.points
-    end
-    @points = user_points
+    show_tasks_completed
+    display_points
     render :dashboard
   end
 
@@ -59,18 +50,27 @@ class UsersController < ApplicationController
     else
       @cause = @causes[@index]
     end
+    show_tasks_completed
+    display_points
+    render :dashboard
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:name, task_ids: [])
+  end
+
+  def show_tasks_completed
     @tasks = current_user.tasks.where(cause_id: @cause.id)
     @completed_task_count = Action.joins(:task).where("tasks.cause_id = ? and actions.user_id = ? and actions.completed = ?", @cause.id, current_user.id, true).count
+  end
+
+  def display_points
     user_points = 0
     @points = @tasks.each do |task|
       user_points += task.points
     end
     @points = user_points
-    render :dashboard
-  end
-
-  private
-  def user_params
-    params.require(:user).permit(:name, task_ids: [])
   end
 end

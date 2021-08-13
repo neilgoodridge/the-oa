@@ -69,7 +69,6 @@ class CausesController < ApplicationController
     end
     @cause = USER_CAUSES[@index]
     @organisations = @cause.organisations
-    @time = params[:time]
     set_time
     cause_tweets
     render :cause_task_show
